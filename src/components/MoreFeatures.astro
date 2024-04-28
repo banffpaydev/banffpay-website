@@ -1,51 +1,61 @@
+---
+import { Image } from "astro:assets"
+
+import deviceUp from "@assets/device-up.png"
+import deviceDown from "@assets/device-down.png"
+import mockup from "@assets/mockup.png"
+
+
+---
+
 <section
-class="grid grid-cols-1 lg:grid-cols-3 lg:grid-rows-[auto] py-16 px-8 md:px-20 lg:px-16 xl:px-32 justify-center gap-5 relative"
+    class="grid grid-cols-1 lg:grid-cols-3 lg:grid-rows-[auto] py-16 px-8 md:px-20 lg:px-16 xl:px-32 justify-center gap-5 relative"
 >
-<div class="bg-brand-primary-200 rounded-xl pt-14 flex justify-center lg:hidden">
-    <img src="/device-up.png" alt="device mock" />
-</div>
-<div class="lg:col-start-1 lg:row-start-1">
-    <h3 class="font-semibold text-2xl py-3">Send money and make payments seamlessly</h3>
-    <p class="py-4 leading-7">
-        Our platform offers multiple currency wallets, simplifying the process of sending and receiving money in
-        your preferred currency, all within one global app accepted in our operating countries
-    </p>
-</div>
-<div class="bg-brand-primary-200 rounded-xl pb-14 flex justify-center lg:hidden">
-    <img src="/device-down.png" alt="device mock" />
-</div>
-<div class="lg:col-start-3 lg:row-start-2">
-    <h3 class="font-semibold text-2xl py-3 lg:text-brand-primary-400">
-        Swap currencies seamlessly with our transparent and competitive rates
-    </h3>
-    <p class="py-4 leading-7">
-        Our platform offers multiple currency wallets, simplifying the process of sending and receiving money in
-        your preferred currency, all within one global app accepted in our operating countries
-    </p>
-</div>
-<div class="bg-brand-primary-200 rounded-xl pt-14 flex justify-center lg:hidden">
-    <img src="/device-up.png" alt="device mock" />
-</div>
-<div class="lg:col-start-1 lg:row-start-3">
-    <h3 class="font-semibold text-2xl py-3 lg:text-brand-primary-400">Fund Multiple Accounts instantly</h3>
-    <p class="py-4 leading-7">
-        Our platform offers multiple currency wallets, simplifying the process of sending and receiving money in
-        your preferred currency, all within one global app accepted in our operating countries
-    </p>
-</div>
-<div class="bg-brand-primary-200 rounded-xl pt-14 flex justify-center lg:hidden">
-    <img src="/device-up.png" alt="device mock" />
-</div>
-<div class="lg:col-start-3 lg:row-start-4">
-    <h3 class="font-semibold text-2xl py-3">
-        Swap currencies seamlessly with our transparent and competitive rates.
-    </h3>
-    <p class="py-4 leading-7">
-        Our platform offers multiple currency wallets, simplifying the process of sending and receiving money in
-        your preferred currency, all within one global app accepted in our operating countries
-    </p>
-</div>
-<div class="hidden lg:flex lg:col-start-2 lg:justify-center sticky top-2">
-    <img class="max-w-xs" src="/mockup.png" alt="mockup" />
-</div>
+    <div class="bg-brand-primary-200 rounded-xl pt-14 flex justify-center lg:hidden">
+        <Image src={deviceUp} alt="device mock" />
+    </div>
+    <div class="lg:col-start-1 lg:row-start-1">
+        <h3 class="font-semibold text-2xl py-3">Send money and make payments seamlessly</h3>
+        <p class="py-4 leading-7">
+            Our platform offers multiple currency wallets, simplifying the process of sending and receiving money in
+            your preferred currency, all within one global app accepted in our operating countries
+        </p>
+    </div>
+    <div class="bg-brand-primary-200 rounded-xl pb-14 flex justify-center lg:hidden">
+        <Image src={deviceDown} alt="device mock" />
+    </div>
+    <div class="lg:col-start-3 lg:row-start-2">
+        <h3 class="font-semibold text-2xl py-3 lg:text-brand-primary-400">
+            Swap currencies seamlessly with our transparent and competitive rates
+        </h3>
+        <p class="py-4 leading-7">
+            Our platform offers multiple currency wallets, simplifying the process of sending and receiving money in
+            your preferred currency, all within one global app accepted in our operating countries
+        </p>
+    </div>
+    <div class="bg-brand-primary-200 rounded-xl pt-14 flex justify-center lg:hidden">
+        <Image src={deviceUp} alt="device mock" />
+    </div>
+    <div class="lg:col-start-1 lg:row-start-3">
+        <h3 class="font-semibold text-2xl py-3 lg:text-brand-primary-400">Fund Multiple Accounts instantly</h3>
+        <p class="py-4 leading-7">
+            Our platform offers multiple currency wallets, simplifying the process of sending and receiving money in
+            your preferred currency, all within one global app accepted in our operating countries
+        </p>
+    </div>
+    <div class="bg-brand-primary-200 rounded-xl pt-14 flex justify-center lg:hidden">
+        <Image src={deviceUp} alt="device mock" />
+    </div>
+    <div class="lg:col-start-3 lg:row-start-4">
+        <h3 class="font-semibold text-2xl py-3">
+            Swap currencies seamlessly with our transparent and competitive rates.
+        </h3>
+        <p class="py-4 leading-7">
+            Our platform offers multiple currency wallets, simplifying the process of sending and receiving money in
+            your preferred currency, all within one global app accepted in our operating countries
+        </p>
+    </div>
+    <div class="hidden lg:flex lg:col-start-2 lg:justify-center sticky top-2">
+        <Image class="max-w-xs" src={mockup} alt="mockup" />
+    </div>
 </section>

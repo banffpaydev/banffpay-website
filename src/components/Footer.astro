@@ -1,8 +1,14 @@
+---
+import { Image } from "astro:assets"
+
+import banffpayLogo from "@assets/banffpay-logo.svg"
+---
+
 <footer>
   <div class="h-16 bg-brand-primary-200"></div>
   <div class="py-14 px-6 grid grid-cols-8 gap-6">
       <div class="flex flex-col gap-2 items-start col-span-8 lg:col-span-3 xl:col-span-3">
-          <img src="/banffpay-logo.svg" alt="banffpay-logo" class="w-40" />
+          <Image src={banffpayLogo} alt="banffpay-logo" class="w-40" />
           <p class="my-4 text-gray-500">
               Send, receive and Swap Currencies Anyday, anywhere, anytime at the tip of your fingers.
           </p>

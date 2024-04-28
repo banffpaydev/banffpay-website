@@ -1,0 +1,33 @@
+---
+import NavBar from "../components/NavBar.astro"
+---
+
+<header class="flex flex-col gap-4 lg:bg-50% pb-10 md:pb-14">
+    <NavBar />
+    <div class="flex flex-col gap-10 md:gap-20">
+        <div class="self-center flex flex-col gap-12 items-center mt-20 mb-6 px-4">
+            <div
+                class="rounded-full bg-brand-primary-200 px-6 py-4 text-brand-primary-950 font-semibold text-base uppercase"
+            >
+                About Us
+            </div>
+            <h1 class="font-bold text-3xl xs:text-4xl md:text-6xl text-center">
+                Your one stop trial for <br />
+                Global Payments
+            </h1>
+        </div>
+        <picture>
+            <source media="(max-width: 600px)" srcset="/people_small.png" />
+            <source media="(min-width: 601px)" srcset="/people_large.png" />
+            <img src="people_large.png" alt="Description" class="w-full" />
+        </picture>
+    </div>
+</header>
+
+<style>
+      header {
+        background-image: url("/grid_background.png");
+        background-position: center bottom;
+        background-repeat: no-repeat;
+    }
+</style>

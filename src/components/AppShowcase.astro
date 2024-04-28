@@ -1,3 +1,10 @@
+---
+import { Image } from "astro:assets"
+import mockLeft from "@assets/mock-left.png"
+import mockRight from "@assets/mock-right.png"
+import mockupHalf from "@assets/mockup-half.png"
+---
+
 <section class="app_showcase flex flex-col items-center justify-between px-5">
   <div class="text-center text-white my-24">
       <h2 class="text-4xl md:text-6xl font-semibold mb-12">
@@ -11,13 +18,13 @@
   </div>
   <div class="flex max-w-2xl gap-2">
       <div class="hidden md:flex bg-brand-primary-50 bg-opacity-15 pl-12 pt-6 rounded-t-xl self-end">
-          <img src="/mock-left.png" alt="mock" class="self-end" />
+          <Image src={mockLeft} alt="mock" class="self-end" />
       </div>
       <div class="flex md:bg-brand-primary-50 md:bg-opacity-15 md:px-8 md:pt-14 md:rounded-t-2xl">
-          <img src="/mockup-half.png" alt="mock" class="self-end" />
+          <Image src={mockupHalf} alt="mock" class="self-end" />
       </div>
       <div class="hidden md:flex bg-brand-primary-50 bg-opacity-15 pr-12 pt-6 rounded-t-xl self-end">
-          <img src="/mock-right.png" alt="mock" class="self-end" />
+          <Image src={mockRight} alt="mock" class="self-end" />
       </div>
   </div>
 </section>
