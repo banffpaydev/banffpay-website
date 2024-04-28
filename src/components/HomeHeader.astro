@@ -1,0 +1,132 @@
+---
+import { Image } from "astro:assets"
+
+import banffLogo from "@assets/banffpay-logo.svg"
+import arrowDown from "@assets/arrow-down.svg"
+import count from "@assets/count.png"
+import userLarge from "@assets/user_large.png"
+import user1 from "@assets/user-1.png"
+import user2 from "@assets/user-2.png"
+import user3 from "@assets/user-3.png"
+import user4 from "@assets/user-4.png"
+import user5 from "@assets/user-5.png"
+import user6 from "@assets/user-6.png"
+---
+
+<header class="header min-h-[85vh] pt-2 relative bg-200% sm:bg-150% lg:bg-100% flex flex-col justify-between">
+    <nav
+        class="bg-brand-primary-200 flex py-2 px-2 mx-2 mb-4 xs:mx-6 rounded-full justify-between items-center sticky top-10 self-center z-10 w-[90%] md:w-[85%] xl:w-2/4"
+    >
+        <a href="/" class="bg-brand-primary-300 rounded-full px-2 xs:px-4 py-3">
+            <Image src={banffLogo} alt="logo" class="w-20 xs:w-full" />
+        </a>
+        <div class="flex gap-5">
+            <div class="hidden md:flex gap-x-1.5 items-center">
+                <a href="#" class="text-sm">Services</a>
+                <Image src={arrowDown} alt="arrow down icon" class="w-2.5" />
+            </div>
+            <div class="hidden md:flex gap-x-1.5 items-center">
+                <a href="#" class="text-sm">Support</a>
+                <Image src={arrowDown} alt="arrow down icon" class="w-2.5" />
+            </div>
+            <div class="flex gap-x-1.5 items-center">
+                <a href="/pages/about.html" class="text-sm">About Us</a>
+                <Image src={arrowDown} alt="arrow down icon" class="w-2.5" />
+            </div>
+        </div>
+        <div class="flex self-stretch gap-2">
+            <button class="rounded-full bg-brand-primary-950 px-4 text-white font-semibold text-sm">
+                Download App
+            </button>
+            <button class="rounded-full bg-white md:flex items-center px-2 gap-1.5 hidden">
+                <div class="rounded-full bg-gray-100 w-8 h-8 flex justify-center items-center">
+                    <Image src={arrowDown} alt="arrow down icon" class="w-3" />
+                </div>
+                <span class="text-sm font-medium mr-2">EN</span>
+            </button>
+        </div>
+    </nav>
+    <div class="md:my-16">
+        <div class="flex flex-col items-center gap-8">
+            <Image src={count} alt="available countries" class="w-1/3 md:w-1/5 2xl:w-1/6" />
+            <h1 class="font-extrabold text-3xl xs:text-4xl md:text-6xl text-center flex flex-col gap-2">
+                <span
+                    >Global
+                    <span
+                        class="text-transparent bg-gradient-to-r from-brand-primary-950 via-brand-primary-500 to-brand-primary-900 bg-clip-text"
+                        >Payments</span
+                    >
+                    at the</span
+                >
+                <span>Tip of your Fingers</span>
+            </h1>
+            <p class="flex flex-col text-center text-gray-500 font-medium text-base md:text-xl">
+                <span>Empowering Your Financial Success Unleashing</span>
+                <span>the Power of Numbers</span>
+            </p>
+        </div>
+    </div>
+    <div class="flex justify-center w-full relative">
+        <Image src={userLarge} alt="user" class="w-[60%] lg:w-auto" />
+        <div class="absolute right-40 top-1/3 bg-white w-20 h-20 rounded-full hidden lg:block">
+            <Image
+                src={user1}
+                alt="users"
+                class="absolute w-16 h-16 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"
+            />
+        </div>
+        <div class="absolute right-60 top-1 bg-white w-20 h-20 rounded-full hidden lg:block">
+            <Image
+                src={user2}
+                alt="users"
+                class="absolute w-14 h-14 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"
+            />
+        </div>
+        <div class="absolute right-20 -top-1/3 bg-white w-24 h-24 rounded-full hidden lg:block">
+            <Image
+                src={user3}
+                alt="users"
+                class="absolute w-20 h-20 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"
+            />
+        </div>
+        <div class="absolute left-60 bottom-1/3 bg-white w-20 h-20 rounded-full hidden lg:block">
+            <Image
+                src={user5}
+                alt="users"
+                class="absolute w-16 h-16 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"
+            />
+        </div>
+        <div class="absolute left-[60%] -top-1 bg-white w-24 h-24 rounded-full hidden lg:block">
+            <Image
+                src={user4}
+                alt="users"
+                class="absolute w-20 h-20 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"
+            />
+        </div>
+        <div
+            class="group absolute left-40 -top-1/3 bg-white w-20 h-20 rounded-full hover:w-72 transition-all duration-200 hidden lg:block"
+        >
+            <Image
+                src={user6}
+                alt="users"
+                class="absolute w-16 h-16 top-10 left-10 -translate-x-1/2 -translate-y-1/2"
+            />
+            <div
+                class="w-56 absolute left-20 top-3 -translate-y-16 hidden group-hover:block group-hover:translate-y-0 transition-transform duration-500 delay-500"
+            >
+                <span class="text-green-500 text-lg font-semibold uppercase inline-block">+ &#8358;420,000</span>
+                <span class="text-gray-400 font-medium inline-block">From Priscilia &bull; 4:28pm</span>
+            </div>
+        </div>
+    </div>
+</header>
+
+<style>
+    header {
+        background-image: url("../assets/mapbase.png"),
+            linear-gradient(177.28deg, #e6f5ff 1.8%, #f5fbff 12.9%, #bde2fd30 38.9%, #ffffff5c 74.92%);
+        background-position: center bottom;
+        background-repeat: no-repeat;
+        /* background-size: 200%; */
+    }
+</style>
