@@ -2,76 +2,12 @@
 import BaseLayout from "@layouts/BaseLayout.astro"
 import NavBar from "@components/NavBar.astro"
 
-const data = [
-    {
-        link: "Introduction",
-        content: "Lorem ipsum dolor",
-    },
-    {
-        link: "Consent",
-        content: "Sit amet consectetur",
-    },
-    {
-        link: "Notice",
-        content: "Adipiscing elit",
-    },
-    {
-        link: "Information We Collect",
-        content: "Sed do eiusmod",
-    },
-    {
-        link: "How We Collect Your Personal Information in the wakanda empire",
-        content: "Tempor incididunt",
-    },
-    {
-        link: "How We Use Your Information We Collect",
-        content: "Labore et dolore",
-    },
-    {
-        link: "Data Sharing",
-        content: "Magna aliqua",
-    },
-    {
-        link: "Log Files",
-        content: "Ut enim ad minim",
-    },
-    {
-        link: "Cookies and Monitoring Mechanisms",
-        content: "Quis nostrud exercitation",
-    },
-    {
-        link: "Information Security",
-        content: "Ullamco laboris nisi",
-    },
-    {
-        link: "Third Party Privacy Policies",
-        content: "Ex ea commodo",
-    },
-    {
-        link: "A Special Note About Children Information",
-        content: "Consequat duis aute",
-    },
-    {
-        link: "Access And Corrections",
-        content: "Irure dolor in reprehenderit",
-    },
-    {
-        link: "How Long We Keep My Personal Information?",
-        content: "Voluptate velit esse",
-    },
-    {
-        link: "Policy Changes",
-        content: "Cillum dolore eu",
-    },
-    {
-        link: "Get In Touch",
-        content: "Fugiat nulla pariatur",
-    },
-]
+import { data } from "@components/privacyContent"
+import ListButton from "@components/ListButton.astro"
 ---
 
 <BaseLayout title="BanffPay - Privacy Policy">
-    <header class="flex flex-col gap-4 bg-75% pb-20 md:pb-28">
+    <header class="flex flex-col gap-4 bg-75% pb-16 md:pb-20">
         <NavBar />
         <div class="flex flex-col gap-10 md:gap-20">
             <div class="self-center flex flex-col gap-12 items-center mt-20 mb-6 px-4">
@@ -89,42 +25,260 @@ const data = [
             </div>
         </div>
     </header>
-    <div class="px-28 grid grid-cols-12 gap-10">
+    <div class="px-28 py-24 grid grid-cols-12 gap-10">
         <aside class="col-span-3 relative pb-10">
-            <nav class="">
+            <nav class="sticky top-10 h-[80vh] overflow-auto">
                 <ul class="flex flex-col gap-4">
-                    {
-                        data.map((item) => (
-                            <li class="bg-brand-primary-200 py-3.5 pl-6 rounded-full text-nowrap text-ellipsis overflow-hidden">
-                                <a href="#">{item.link}</a>
-                            </li>
-                        ))
-                    }
+                    {data.map((item) => <ListButton item={item} />)}
                 </ul>
             </nav>
         </aside>
         <main class="col-span-9 flex flex-col gap-5">
-            {
-                data.map((item) => (
-                    <section class="flex flex-col gap-4">
-                        <h2 class="text-2xl font-semibold">{item.link}</h2>
-                        <p>
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro ipsam officiis rem repellat
-                            nobis harum eius, neque molestiae odio facilis natus accusantium mollitia atque consectetur
-                            modi explicabo quod quia dolores doloribus aperiam! Asperiores amet nihil eveniet optio
-                            laudantium sequi rem odio aliquam, sint quo quisquam, nisi totam blanditiis accusamus
-                            aspernatur!
-                        </p>
-                    </section>
-                ))
-            }
+            <section class="flex flex-col gap-4">
+                <h2 class="text-2xl font-semibold text-black" id="introduction">Introduction</h2>
+                <p class="text-gray-500">
+                    At Banffpay, we take privacy and protection of your data very seriously and we are committed to
+                    handling your information in an open and transparent manner and keeping your information secure. We
+                    go above-and-beyond Canadian legal requirements in order to help protect your privacy. As a customer
+                    of Banffpay, you can be assured that we treat your personal information with utmost care that
+                    exceeds our obligations as a regulated Fintech and Money Services Business.
+                </p>
+            </section>
+            <section class="flex flex-col gap-4">
+                <h2 class="text-2xl font-semibold text-black" id="introduction">Consent</h2>
+                <p class="text-gray-500">
+                    By visiting this website, our partners' websites, or providing your personal information when you
+                    browse our website, register for an account, request for an exchange of currency, enter a
+                    competition, promotion, survey or when you contact one of our employees, for example by telephone or
+                    email, you accept and expressly consent to our use and disclosure of your personal information and
+                    direct us to do so in the manner described in this Privacy Policy.
+                </p>
+            </section>
+            <section class="flex flex-col gap-4">
+                <h2 class="text-2xl font-semibold text-black" id="introduction">Notice</h2>
+                <p class="text-gray-500">
+                    Please read this notice carefully, together with our Terms and Conditions and any other documents
+                    referred to in it. Here we set out the basis on which any information we collect about you or from
+                    you, or that you provide to us, will be processed by us and other parties in providing you with the
+                    services accessed through the website, apps or over the phone. Banffpay (“our”, “us” and “we”)
+                    commits to using your information only in accordance with the terms of this Privacy Policy.However,
+                    Terms of Use shall govern if there is a conflict with this privacy policy.
+                </p>
+            </section>
+            <section class="flex flex-col gap-4">
+                <h2 class="text-2xl font-semibold text-black" id="introduction">Information We Collect</h2>
+                <p class="text-gray-500">
+                    The personal information that you are asked to provide, and the reasons why you are asked to provide
+                    it, will be made clear to you at the point we ask you to provide your personal information.
+                    <ol class="list-decimal flex flex-col gap-6 px-12 text-gray-500">
+                        <li>
+                            If you contact us directly, we may receive additional information about you such as your
+                            name, email address, phone number, the contents of the message and/or attachments you may
+                            send us, and any other information you may choose to provide.
+                        </li>
+                        <li>
+                            When you register for a wallet, we may ask for your name, email address, (current mailing
+                            address and telephone number), proof of identification, social media information (in some
+                            cases, other basic information inclusive of age, date of birth, gender, interests, and zip
+                            code.
+                        </li>
+                        <li>
+                            The information provided may be used for legal and regulatory compliance, wallet setup,
+                            confirmation delivery, provision of service information upon request, service requirements
+                            including transaction processing and other maintenance. Subject to applicable law, Banffpay
+                            may provide information to other external service providers of Banffpay (“Service
+                            Providers”) who may collect, use, transfer, store or otherwise process it (collectively
+                            'process') in various jurisdiction.
+                        </li>
+                    </ol>
+                </p>
+            </section>
+            <section class="flex flex-col gap-4">
+                <h2 class="text-2xl font-semibold text-black" id="introduction">How We Collect Your Personal Information</h2>
+                <ol class="list-decimal flex flex-col gap-6 px-6 text-gray-500">
+                    <li>
+                        Information you provide to us: We may collect and store any information you provide to us when
+                        you use Banffpay Services, including when you add information on our website, mobile platform,
+                        add or update your account information, or dispute resolutions, or when you otherwise correspond
+                        with us regarding Banffpay Services, participate in discussion boards or other social media
+                        functions on our Website or App, enter a competition, promotion or survey, and when you report a
+                        problem with our services. The information you give us may include your name, address, e-mail
+                        address, phone number, financial information (including bank account information), payment
+                        reason, geographical location, personal description and photograph. We may also need additional
+                        commercial and/or identification information from you e.g., if you send or receive certain
+                        high-value or high-volume transactions or as needed to comply with our anti-money laundering
+                        obligations under applicable law.
+                    </li>
+                    <li>
+                        Information from other sources: We may also obtain information about you from third parties such
+                        as identity verification services and credit bureaus. This process is known as a “soft pull”. A
+                        soft pull is restricted only to Name, Address, and Date of Birth, in order to match the
+                        information found on the credit bureaus' database. The nature of the pull is that only you, as
+                        the owner of your credit bureau report can see this inquiry. It does not affect your credit
+                        score.
+                    </li>
+                    <li>
+                        Information from social networks: If you log in to our services using your social media account
+                        (for example, Facebook, Instagram) we will receive relevant information that is necessary to
+                        enable our Services and authenticate you. The social media network will provide us with access
+                        to certain information that you have provided to them, including your name, profile image and
+                        e-mail address. We use such information, together with any other information you directly
+                        provide to us when registering or using our Services, to create your account and to communicate
+                        with you about the information, products and services that you request from us. You may also be
+                        able to specifically request that we have access to the contacts in your social media account,
+                        so that you can send a referral link to your family and friends. We will use, disclose and store
+                        all of this information in accordance with this privacy policy.
+                    </li>
+                    <li>
+                        Authentication and Fraud Detection: In order to help protect you from fraud and misuse of your
+                        personal information, we may collect information about you and your interactions with Banffpay
+                        Services.
+                    </li>
+                </ol>
+            </section>
+            <section class="flex flex-col gap-4 text-gray-500">
+                <h2 class="text-2xl font-semibold text-black" id="introduction">How We Use Your Information We Collect</h2>
+                <p>
+                    <span>We use the information we collect in various ways, among the following:</span>
+                    <ol class="list-decimal flex flex-col gap-2 px-12 text-gray-500">
+                        <li>Provide Banffpay Money Transfer Services and customer support.</li>
+                        <li>Process transactions and send notices about your transactions.</li>
+                        <li>Verify your identity, including during account creation and password reset processes.</li>
+                        <li>
+                            Manage risk, or to detect, prevent, and/or remediate fraud or other potentially prohibited
+                            or illegal activities.
+                        </li>
+                        <li>Detect, prevent or remediate violations of policies or applicable user agreements.</li>
+                        <li>Improve Banffpay Services by customizing your user experience.</li>
+                        <li>Measure the performance of Banffpay Services and improve their content and layout.</li>
+                        <li>Manage and protect our information technology infrastructure.</li>
+                        <li>
+                            Provide targeted marketing and advertising, provide service update notices, and deliver
+                            promotional offers based on your communication preferences.
+                        </li>
+                        <li>
+                            Perform creditworthiness and solvency checks, compare information for accuracy and verify it
+                            with third parties.
+                        </li>
+                        <li>Provide, operate, and maintain our services and platforms.</li>
+                        <li>Improve, personalize, and expand our services and platforms</li>
+                        <li>Understand and analyze how you use our services</li>
+                        <li>Develop new products, services, features, and functionality</li>
+                        <li>
+                            Communicate with you, either directly or through one of our partners, including for customer
+                            service, to provide you with updates and other information relating to the website, and for
+                            marketing and promotional purposes
+                        </li>
+                        <li>Send you emails</li>
+                        <li>Find and prevent fraud</li>
+                    </ol>
+                </p>
+            </section>
+            <section class="flex flex-col gap-4 text-gray-500">
+                <h2 class="text-2xl font-semibold text-black" id="introduction">Data Sharing</h2>
+                <p>
+                    Banffpay will only share your information with another party with your consent. Third party
+                    information sharing will only be done in methods outlined in this policy. Your information may be
+                    shared with the recipients of funds transmitted through our company. With your knowledge information
+                    may also be shared with credit reference organizations. Your information may also be accessible to
+                    companies that are directly connected to Banffpay who play a specific role in assisting the delivery
+                    of service to our customers. The information shared with these companies may only be used in the
+                    event that it is needed to carry out services and transactions.
+                </p>
+                <p>In the scenarios listed below we may be obligated to disclose your personal information:</p>
+                <ol class="list-decimal flex flex-col gap-2 px-12 text-gray-500">
+                    <li>out of necessity to protect our rights or for the protection of you or others, for legal purposes, fraud or other types of investigations.</li>
+                    <li>request of government or another regulatory board.</li>
+                    <li>by court order, subpoena, etc.</li>
+                    <li>with your permission.</li>
+                    <li>change of existing conditions.</li>
+                </ol>
+                <p>
+                    You will be notified via email, or through our website of any changes relating to Banffpay’s affairs concerning mergers, acquisition, or the sale of assets. All such changes will be announced through our website or via user email.
+                </p>
+                <p>
+                    As it relates to the transfer of personal information overseas and to authorities with disparate data protection measures we endeavor to take steps to safeguard your data.
+                </p>
+            </section>
+            <section class="flex flex-col gap-4">
+                <h2 class="text-2xl font-semibold text-black" id="introduction">Introduction</h2>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro ipsam officiis rem repellat nobis
+                    harum eius, neque molestiae odio facilis natus accusantium mollitia atque consectetur modi explicabo
+                    quod quia dolores doloribus aperiam! Asperiores amet nihil eveniet optio laudantium sequi rem odio
+                    aliquam, sint quo quisquam, nisi totam blanditiis accusamus aspernatur!
+                </p>
+            </section>
+            <section class="flex flex-col gap-4">
+                <h2 class="text-2xl font-semibold text-black" id="introduction">Introduction</h2>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro ipsam officiis rem repellat nobis
+                    harum eius, neque molestiae odio facilis natus accusantium mollitia atque consectetur modi explicabo
+                    quod quia dolores doloribus aperiam! Asperiores amet nihil eveniet optio laudantium sequi rem odio
+                    aliquam, sint quo quisquam, nisi totam blanditiis accusamus aspernatur!
+                </p>
+            </section>
+            <section class="flex flex-col gap-4">
+                <h2 class="text-2xl font-semibold text-black" id="introduction">Introduction</h2>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro ipsam officiis rem repellat nobis
+                    harum eius, neque molestiae odio facilis natus accusantium mollitia atque consectetur modi explicabo
+                    quod quia dolores doloribus aperiam! Asperiores amet nihil eveniet optio laudantium sequi rem odio
+                    aliquam, sint quo quisquam, nisi totam blanditiis accusamus aspernatur!
+                </p>
+            </section>
         </main>
     </div>
 </BaseLayout>
+
 <style>
     header {
         background-image: url("../../assets/banffpay_bg.png");
         background-position: center;
         background-repeat: no-repeat;
     }
+    /* width */
+    nav::-webkit-scrollbar {
+        width: 5px;
+    }
+
+    /* Track */
+    nav::-webkit-scrollbar-track {
+        background: #f1f1f1;
+    }
+
+    /* Handle */
+    nav::-webkit-scrollbar-thumb {
+        background: #888;
+    }
+
+    /* Handle on hover */
+    nav::-webkit-scrollbar-thumb:hover {
+        background: #555;
+    }
 </style>
+
+<script>
+    const listItem = document.querySelectorAll("li")
+    const headings = document.querySelectorAll("h2")
+
+    const toggleBackground = (current) => {
+        listItem.forEach((item) => {
+            item.classList.remove("bg-brand-primary-200", "text-brand-primary-950")
+        })
+
+        current.classList.add("bg-brand-primary-200", "text-brand-primary-950")
+    }
+
+    listItem.forEach((item) => {
+        item.addEventListener("click", () => {
+            toggleBackground(item)
+
+            headings.forEach((heading) => {
+                if (heading.id === item.id) {
+                    heading.scrollIntoView({ behavior: "smooth", block: "center" })
+                }
+            })
+        })
+    })
+</script>
