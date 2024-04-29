@@ -1,0 +1,130 @@
+---
+import BaseLayout from "@layouts/BaseLayout.astro"
+import NavBar from "@components/NavBar.astro"
+
+const data = [
+    {
+        link: "Introduction",
+        content: "Lorem ipsum dolor",
+    },
+    {
+        link: "Consent",
+        content: "Sit amet consectetur",
+    },
+    {
+        link: "Notice",
+        content: "Adipiscing elit",
+    },
+    {
+        link: "Information We Collect",
+        content: "Sed do eiusmod",
+    },
+    {
+        link: "How We Collect Your Personal Information in the wakanda empire",
+        content: "Tempor incididunt",
+    },
+    {
+        link: "How We Use Your Information We Collect",
+        content: "Labore et dolore",
+    },
+    {
+        link: "Data Sharing",
+        content: "Magna aliqua",
+    },
+    {
+        link: "Log Files",
+        content: "Ut enim ad minim",
+    },
+    {
+        link: "Cookies and Monitoring Mechanisms",
+        content: "Quis nostrud exercitation",
+    },
+    {
+        link: "Information Security",
+        content: "Ullamco laboris nisi",
+    },
+    {
+        link: "Third Party Privacy Policies",
+        content: "Ex ea commodo",
+    },
+    {
+        link: "A Special Note About Children Information",
+        content: "Consequat duis aute",
+    },
+    {
+        link: "Access And Corrections",
+        content: "Irure dolor in reprehenderit",
+    },
+    {
+        link: "How Long We Keep My Personal Information?",
+        content: "Voluptate velit esse",
+    },
+    {
+        link: "Policy Changes",
+        content: "Cillum dolore eu",
+    },
+    {
+        link: "Get In Touch",
+        content: "Fugiat nulla pariatur",
+    },
+]
+---
+
+<BaseLayout title="BanffPay - Privacy Policy">
+    <header class="flex flex-col gap-4 bg-75% pb-20 md:pb-28">
+        <NavBar />
+        <div class="flex flex-col gap-10 md:gap-20">
+            <div class="self-center flex flex-col gap-12 items-center mt-20 mb-6 px-4">
+                <div
+                    class="rounded-full bg-brand-primary-200 px-6 py-3 text-brand-primary-950 font-semibold text-sm md:text-base uppercase"
+                >
+                    Privacy Policy
+                </div>
+                <h1 class="font-bold text-3xl xs:text-4xl md:text-6xl text-center max-w-sm md:max-w-4xl">
+                    We are also on the lookout for your utmost Privacy
+                </h1>
+                <div class="rounded-full bg-gray-100 px-6 py-3 font-semibold text-sm">
+                    Last Updated • 5 October 2023
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="px-28 grid grid-cols-12 gap-10">
+        <aside class="col-span-3 relative pb-10">
+            <nav class="">
+                <ul class="flex flex-col gap-4">
+                    {
+                        data.map((item) => (
+                            <li class="bg-brand-primary-200 py-3.5 pl-6 rounded-full text-nowrap text-ellipsis overflow-hidden">
+                                <a href="#">{item.link}</a>
+                            </li>
+                        ))
+                    }
+                </ul>
+            </nav>
+        </aside>
+        <main class="col-span-9 flex flex-col gap-5">
+            {
+                data.map((item) => (
+                    <section class="flex flex-col gap-4">
+                        <h2 class="text-2xl font-semibold">{item.link}</h2>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro ipsam officiis rem repellat
+                            nobis harum eius, neque molestiae odio facilis natus accusantium mollitia atque consectetur
+                            modi explicabo quod quia dolores doloribus aperiam! Asperiores amet nihil eveniet optio
+                            laudantium sequi rem odio aliquam, sint quo quisquam, nisi totam blanditiis accusamus
+                            aspernatur!
+                        </p>
+                    </section>
+                ))
+            }
+        </main>
+    </div>
+</BaseLayout>
+<style>
+    header {
+        background-image: url("../../assets/banffpay_bg.png");
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+</style>
