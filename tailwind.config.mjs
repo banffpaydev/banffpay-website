@@ -24,6 +24,19 @@ export default {
                 },
             },
         },
+        screens: {
+            xs: "475px",
+            ...defaultTheme.screens,
+        },
+        backgroundSize: {
+            auto: "auto",
+            cover: "cover",
+            contain: "contain",
+            "50%": "50%",
+            "100%": "100%",
+            "150%": "150%",
+            "200%": "200%",
+        },
     },
     plugins: [],
 }

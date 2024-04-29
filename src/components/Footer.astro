@@ -5,41 +5,50 @@ import banffpayLogo from "@assets/banffpay-logo.svg"
 ---
 
 <footer>
-  <div class="h-16 bg-brand-primary-200"></div>
-  <div class="py-14 px-6 grid grid-cols-8 gap-6">
-      <div class="flex flex-col gap-2 items-start col-span-8 lg:col-span-3 xl:col-span-3">
-          <Image src={banffpayLogo} alt="banffpay-logo" class="w-40" />
-          <p class="my-4 text-gray-500">
-              Send, receive and Swap Currencies Anyday, anywhere, anytime at the tip of your fingers.
-          </p>
-          <button class="rounded-full bg-brand-primary-950 px-6 py-4 text-white font-semibold text-sm">
-              Download App
-          </button>
-      </div>
-      <div class="col-span-5 sm:col-span-3 xl:col-span-2">
-          <h3 class="font-semibold text-lg mb-3">Services</h3>
-          <ul class="text-gray-500 font-light flex flex-col gap-4">
-              <li><a href="#" class="hover:text-gray-700 transition-all">Exchange Currencies</a></li>
-              <li><a href="#" class="hover:text-gray-700 transition-all">Multi-currency Wallet</a></li>
-              <li><a href="#" class="hover:text-gray-700 transition-all">Send Money</a></li>
-              <li><a href="#" class="hover:text-gray-700 transition-all">Add Money</a></li>
-          </ul>
-      </div>
-      <div class="col-span-3 sm:col-span-2 xl:col-span-2">
-          <h3 class="font-semibold text-lg mb-3">Company</h3>
-          <ul class="text-gray-500 font-light flex flex-col gap-4">
-              <li><a href="/pages/about.html" class="hover:text-gray-700 transition-all">About Us</a></li>
-              <li><a href="#" class="hover:text-gray-700 transition-all">Privacy Policy</a></li>
-              <li><a href="#" class="hover:text-gray-700 transition-all">Terms of Use</a></li>
-              <li><a href="#" class="hover:text-gray-700 transition-all">Blog</a></li>
-          </ul>
-      </div>
-      <div class="col-span-full sm:col-span-2 xl:col-span-1">
-          <h3 class="font-semibold text-lg mb-3">Support</h3>
-          <ul class="text-gray-500 font-light flex flex-col gap-4">
-              <li><a href="#" class="hover:text-gray-700 transition-all">Contact Us</a></li>
-              <li><a href="#" class="hover:text-gray-700 transition-all">FAQs</a></li>
-          </ul>
-      </div>
-  </div>
+    <div class="h-16 bg-brand-primary-200"></div>
+    <div class="py-14 px-6 md:px-16 lg:px-24 grid grid-cols-8 gap-6">
+        <div class="flex flex-col gap-2 items-start col-span-8 lg:col-span-3 xl:col-span-3">
+            <Image src={banffpayLogo} alt="banffpay-logo" class="w-40" />
+            <p class="my-4 text-gray-500">
+                Send, receive and Swap Currencies Anyday, anywhere, anytime at the tip of your fingers.
+            </p>
+            <button class="rounded-full bg-brand-primary-950 px-6 py-4 text-white font-semibold text-sm">
+                Download App
+            </button>
+        </div>
+        <div class="col-span-5 sm:col-span-3 xl:col-span-2">
+            <h3 class="font-semibold text-lg mb-3">Services</h3>
+            <ul class="text-gray-500 font-light flex flex-col gap-4">
+                <li><a href="#" class="hover:text-gray-700 transition-all">Exchange Currencies</a></li>
+                <li><a href="#" class="hover:text-gray-700 transition-all">Multi-currency Wallet</a></li>
+                <li><a href="#" class="hover:text-gray-700 transition-all">Send Money</a></li>
+                <li><a href="#" class="hover:text-gray-700 transition-all">Add Money</a></li>
+            </ul>
+        </div>
+        <div class="col-span-3 sm:col-span-2 xl:col-span-2">
+            <h3 class="font-semibold text-lg mb-3">Company</h3>
+            <ul class="text-gray-500 font-light flex flex-col gap-4">
+                <li><a href="/pages/about.html" class="hover:text-gray-700 transition-all">About Us</a></li>
+                <li><a href="#" class="hover:text-gray-700 transition-all">Privacy Policy</a></li>
+                <li><a href="#" class="hover:text-gray-700 transition-all">Terms of Use</a></li>
+                <li><a href="#" class="hover:text-gray-700 transition-all">Blog</a></li>
+            </ul>
+        </div>
+        <div class="col-span-full sm:col-span-2 xl:col-span-1">
+            <h3 class="font-semibold text-lg mb-3">Support</h3>
+            <ul class="text-gray-500 font-light flex flex-col gap-4">
+                <li><a href="#" class="hover:text-gray-700 transition-all">Contact Us</a></li>
+                <li><a href="#" class="hover:text-gray-700 transition-all">FAQs</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="px-6 md:px-16 lg:px-24 py-6 border-t">
+        <p class="text-gray-400">&copy; <span id="currentYear"></span> Banffpay. All rights reserved</p>
+    </div>
 </footer>
+
+
+<script>
+    const currentYear = new Date().getFullYear();
+    document.getElementById('currentYear').innerText = currentYear.toString();
+</script>
