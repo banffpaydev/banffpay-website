@@ -3,18 +3,7 @@
 @tailwind utilities;
 
 @layer base {
-    .app_showcase {
-        background-image: url("/mapbase.png"), linear-gradient(172.99deg, #002a47 18.03%, #000000 128.22%);
-        background-position: left bottom;
-        background-repeat: no-repeat;
-        background-size: 100%;
-    }
 
-    .grid-bg {
-        background-image: url("/grid_background.png");
-        background-position: center bottom;
-        background-repeat: no-repeat;
-    }
     .logo-bg {
         background-image: url("/banffpay_bg.png");
         background-position: center;
