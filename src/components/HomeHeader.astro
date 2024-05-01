@@ -3,6 +3,15 @@ import { Image } from "astro:assets"
 
 import count from "@assets/count.png"
 import mainUser from "@assets/main_user.png"
+
+// Countries
+import nigeria from "@assets/flag-nigeria.png"
+import liberia from "@assets/flag-liberia.png"
+import ghana from "@assets/flag-ghana.png"
+import angola from "@assets/flag-angola.png"
+import canada from "@assets/flag-canada.png"
+
+// Users
 import user1 from "@assets/user-5.png"
 import user2 from "@assets/user-4.png"
 import user3 from "@assets/user-1.png"
@@ -15,7 +24,34 @@ import NavBar from "./NavBar.astro"
     <NavBar />
     <div class="md:my-16">
         <div class="flex flex-col items-center gap-8">
-            <Image src={count} alt="available countries" class="w-1/3 md:w-1/5 2xl:w-1/6" />
+            <!-- <Image src={count} alt="available countries" class="w-1/3 md:w-1/5 2xl:w-1/6" /> -->
+            <div class="flex justify-center">
+                <Image
+                    src={liberia}
+                    alt="Liberia"
+                    title="Liberia"
+                    class="w-16 h-16 rounded-full border-8 border-white -mr-4"
+                />
+                <Image
+                    src={angola}
+                    alt="Angola"
+                    title="Angola"
+                    class="w-16 h-16 rounded-full border-8 border-white -mr-4"
+                />
+                <Image
+                    src={ghana}
+                    alt="Ghana"
+                    title="Ghana"
+                    class="w-16 h-16 rounded-full border-8 border-white -mr-4"
+                />
+                <Image
+                    src={nigeria}
+                    alt="Nigeria"
+                    title="Nigeria"
+                    class="w-16 h-16 rounded-full border-8 border-white -mr-4"
+                />
+                <Image src={canada} alt="Canada" title="Canada" class="w-16 h-16 rounded-full border-8 border-white" />
+            </div>
             <h1 class="font-extrabold text-3xl xs:text-4xl md:text-6xl text-center flex flex-col gap-2">
                 <span
                     >Global
