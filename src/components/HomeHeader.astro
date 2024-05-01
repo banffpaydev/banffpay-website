@@ -18,6 +18,7 @@ import user3 from "@assets/user-1.png"
 import user4 from "@assets/user-3.png"
 import user5 from "@assets/user-6.png"
 import NavBar from "./NavBar.astro"
+import AnimatedButton from "./AnimatedButton.astro"
 ---
 
 <header class="header min-h-[85vh] pt-2 relative bg-200% sm:bg-150% lg:bg-100% flex flex-col justify-between">
@@ -106,8 +107,9 @@ import NavBar from "./NavBar.astro"
                 class="absolute w-20 h-20 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"
             />
         </div>
+        <!-- <AnimatedButton classList="right-10 bottom-1" imgSrc={user4} transactionAmt="420,000" /> -->
         <div
-            class="group absolute left-40 bg-white w-20 h-20 rounded-full hover:w-72 transition-all duration-200 hidden lg:block"
+            class="group absolute left-40 bg-white w-20 h-20 rounded-full hover:w-72 transition-all duration-300 hidden lg:block overflow-hidden"
         >
             <Image
                 src={user5}
@@ -115,12 +117,13 @@ import NavBar from "./NavBar.astro"
                 class="absolute w-16 h-16 top-10 left-10 -translate-x-1/2 -translate-y-1/2"
             />
             <div
-                class="w-56 absolute left-20 top-3 -translate-y-16 hidden group-hover:block group-hover:translate-y-0 transition-transform duration-500 delay-500"
+                class="w-56 absolute left-20 top-3 -translate-y-16 group-hover:translate-y-0 transition-transform duration-500 delay-100"
             >
                 <span class="text-green-500 text-lg font-semibold uppercase inline-block">+ &#8358;420,000</span>
                 <span class="text-gray-400 font-medium inline-block">From Priscilia &bull; 4:28pm</span>
             </div>
         </div>
+        <!-- <AnimatedButton classList="left-40" imgSrc={user5} transactionAmt="420,000" /> -->
     </div>
 </header>
 

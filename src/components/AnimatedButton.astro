@@ -1,0 +1,17 @@
+---
+import { Image } from "astro:assets"
+
+const { classList, imgSrc, transactionAmt } = Astro.props
+---
+
+<div
+    class=`group absolute ${classList} bg-white w-20 h-20 rounded-full hover:w-72 transition-all duration-300 hidden lg:block overflow-hidden`
+>
+    <Image src={imgSrc} alt="users" class="absolute w-16 h-16 top-10 left-10 -translate-x-1/2 -translate-y-1/2" />
+    <div
+        class="w-56 absolute left-20 top-3 -translate-y-16 group-hover:translate-y-0 transition-transform duration-500 delay-100"
+    >
+        <span class="text-green-500 text-lg font-semibold uppercase inline-block">+ &#8358;{transactionAmt}</span>
+        <span class="text-gray-400 font-medium inline-block">From Priscilia &bull; 4:28pm</span>
+    </div>
+</div>

@@ -3,6 +3,11 @@ import { Image } from "astro:assets"
 
 import banffLogo from "@assets/banffpay-logo.svg"
 import arrowDown from "@assets/arrow-down.svg"
+
+import iconCall from "@assets/icon-call.svg"
+import iconEmail from "@assets/icon-email.svg"
+import iconFb from "@assets/icon-fb.svg"
+import iconMsg from "@assets/icon-message.svg"
 ---
 
 <nav
@@ -12,24 +17,101 @@ import arrowDown from "@assets/arrow-down.svg"
         <Image src={banffLogo} alt="logo" class="w-20 xs:w-full" loading="eager" />
     </a>
     <div class="flex gap-5">
-        <div class="hidden md:flex gap-x-1.5 items-center">
-            <a href="#" class="text-sm">Services</a>
-            <Image src={arrowDown} alt="arrow down icon" class="w-2.5" />
-        </div>
-        <div class="hidden md:flex gap-x-1.5 items-center">
-            <a href="#" class="text-sm">Support</a>
-            <Image src={arrowDown} alt="arrow down icon" class="w-2.5" />
+        <button id="servicesBtn" class="hidden md:flex gap-x-1.5 items-center relative cursor-pointer">
+            <span class="text-sm dropdown-span">Services</span>
+            <Image
+                src={arrowDown}
+                alt="arrow down icon"
+                id="servicesBtn_arrow"
+                class="w-2.5 transition-all duration-300"
+            />
+            <nav
+                id="servicesBtn_dropdown"
+                class="dropdown-content transition-all duration-300 hidden absolute top-10 right-0 min-w-48 bg-white"
+            >
+                <ul class="flex flex-col py-6 px-4 gap-3 text-gray-500">
+                    <li>
+                        <a href="#" class="hover:border-b border-gray-500">Send money</a>
+                    </li>
+                    <li>
+                        <a href="#" class="hover:border-b border-gray-500">Exchange currency</a>
+                    </li>
+                    <li>
+                        <a href="#" class="hover:border-b border-gray-500">Add money</a>
+                    </li>
+                </ul>
+            </nav>
+        </button>
+        <div id="supportBtn" class="hidden md:flex gap-x-1.5 items-center relative cursor-pointer">
+            <span class="text-sm dropdown-span">Support</span>
+            <Image
+                src={arrowDown}
+                alt="arrow down icon"
+                id="supportBtn_arrow"
+                class="w-2.5 transition-all duration-300"
+            />
+            <nav
+                id="supportBtn_dropdown"
+                class="dropdown-content transition-all duration-300 hidden absolute top-10 left-0 min-w-64 px-4 py-8 bg-white flex-col gap-4"
+            >
+                <div>
+                    <h3 class="font-medium">Talk to us</h3>
+                    <p class="text-gray-500 text-sm pb-2 border-b">We will repond within 24 hours.</p>
+                </div>
+                <div class="flex flex-col gap-5">
+                    <div class="flex gap-4 pb-2 border-b">
+                        <Image src={iconCall} alt="call icon" class="w-5" />
+                        <div class="flex flex-col gap-0.5">
+                            <p class="text-gray-400 font-medium text-sm">Call us on:</p>
+                            <a href="tel:+14034535703" class="font-medium text-sm hover:underline transition-all"
+                                >+14034535703</a
+                            >
+                        </div>
+                    </div>
+                    <div class="flex gap-4 pb-2 border-b">
+                        <Image src={iconEmail} alt="email icon" class="w-5" />
+                        <div class="flex flex-col gap-0.5">
+                            <p class="text-gray-400 font-medium text-sm">Email us on:</p>
+                            <a
+                                href="mailto:care@banffpay.com"
+                                class="font-medium text-sm hover:underline transition-all">care@banffpay.com</a
+                            >
+                        </div>
+                    </div>
+                    <div class="flex gap-4 pb-2 border-b">
+                        <Image src={iconFb} alt="facebook icon" class="w-5" />
+                        <div class="flex flex-col gap-0.5">
+                            <p class="text-gray-400 font-medium text-sm">Connect with us on:</p>
+                            <a
+                                href="https://www.facebook.com/profile.php?id=61556882105813"
+                                class="font-medium text-sm hover:underline transition-all">Facebook</a
+                            >
+                        </div>
+                    </div>
+                    <div class="flex gap-4">
+                        <Image src={iconMsg} alt="facebook icon" class="w-5" />
+                        <div class="flex flex-col gap-0.5">
+                            <a
+                                href="https://forms.zohopublic.com/cofor/form/Submitanenquiry/formperma/LHrDtHdNr1v6A8FZAkOeHFROYttVfp_z1Xi-rHlzbAA"
+                                title="Submit an enquiry"
+                                target="_blank"
+                                onclick="zforms_open_window(this.href, 648, 700); return false"
+                                class="font-medium text-base hover:underline transition-all">Submit an enquiry</a
+                            >
+                        </div>
+                    </div>
+                </div>
+            </nav>
         </div>
         <div class="flex gap-x-1.5 items-center">
             <a href="/about" class="text-sm">About Us</a>
-            <Image src={arrowDown} alt="arrow down icon" class="w-2.5" />
         </div>
     </div>
     <div class="flex self-stretch gap-2">
         <button class="rounded-full bg-brand-primary-950 px-4 text-white font-semibold text-sm">
             <a
-                href="https://forms.zohopublic.com/cofor/form/Submitanenquiry/formperma/LHrDtHdNr1v6A8FZAkOeHFROYttVfp_z1Xi-rHlzbAA"
-                title="Submit an enquiry"
+                href="https://forms.zohopublic.com/cofor/form/Waitlist/formperma/3gfkggPKGMa3U8H3OWpOE_DkdPXJLJgyBtHl91gVA4g"
+                title="Join Waitlist"
                 target="_blank"
                 onclick="zforms_open_window(this.href, 648, 700); return false">Download App</a
             >
@@ -42,3 +124,45 @@ import arrowDown from "@assets/arrow-down.svg"
         </button>
     </div>
 </nav>
+
+<style>
+    .show {
+        display: flex;
+    }
+    .flip {
+        transform: rotate(180deg);
+    }
+</style>
+
+<script>
+    const supportBtn = document.querySelector("#supportBtn")
+    supportBtn.addEventListener("click", () => {
+        document.querySelector("#supportBtn_arrow").classList.toggle("flip")
+        document.querySelector("#supportBtn_dropdown").classList.toggle("show")
+    })
+
+    const servicesBtn = document.querySelector("#servicesBtn")
+    servicesBtn.addEventListener("click", () => {
+        document.querySelector("#servicesBtn_arrow").classList.toggle("flip")
+        document.querySelector("#servicesBtn_dropdown").classList.toggle("show")
+    })
+
+    // Close the dropdown if the user clicks outside of it
+    window.onclick = function (event) {
+        if (
+            !event.target.matches(".dropdown-span") &&
+            !event.target.matches("#servicesBtn_arrow") &&
+            !event.target.matches("#supportBtn_arrow")
+        ) {
+            console.log("clicked outside")
+            let dropdowns = document.querySelectorAll(".dropdown-content")
+            for (let i = 0; i < dropdowns.length; i++) {
+                let openDropdown = dropdowns[i]
+                if (openDropdown.classList.contains("show")) {
+                    openDropdown.classList.remove("show")
+                    openDropdown.previousElementSibling.classList.remove("flip")
+                }
+            }
+        }
+    }
+</script>
