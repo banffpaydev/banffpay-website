@@ -10,120 +10,121 @@ import iconFb from "@assets/icon-fb.svg"
 import iconMsg from "@assets/icon-message.svg"
 ---
 
-<nav
-    class="bg-brand-primary-200 flex py-2 px-2 mx-2 mb-4 xs:mx-6 rounded-full justify-between items-center sticky top-10 self-center z-10 w-[90%] md:w-[85%] xl:w-2/4"
->
-    <a href="/" class="bg-brand-primary-300 rounded-full px-2 xs:px-4 py-3">
-        <Image src={banffLogo} alt="logo" class="w-20 xs:w-full" loading="eager" />
-    </a>
-    <div class="flex gap-5">
-        <button id="servicesBtn" class="hidden md:flex gap-x-1.5 items-center relative cursor-pointer">
-            <span class="text-sm dropdown-span">Services</span>
-            <Image
-                src={arrowDown}
-                alt="arrow down icon"
-                id="servicesBtn_arrow"
-                class="w-2.5 transition-all duration-300"
-            />
-            <nav
-                id="servicesBtn_dropdown"
-                class="dropdown-content transition-all duration-300 hidden absolute top-10 right-0 min-w-48 bg-white"
-            >
-                <ul class="flex flex-col py-6 px-4 gap-3 text-gray-500">
-                    <li>
-                        <a href="#" class="hover:border-b border-gray-500">Send money</a>
-                    </li>
-                    <li>
-                        <a href="#" class="hover:border-b border-gray-500">Exchange currency</a>
-                    </li>
-                    <li>
-                        <a href="#" class="hover:border-b border-gray-500">Add money</a>
-                    </li>
-                </ul>
-            </nav>
-        </button>
-        <div id="supportBtn" class="hidden md:flex gap-x-1.5 items-center relative cursor-pointer">
-            <span class="text-sm dropdown-span">Support</span>
-            <Image
-                src={arrowDown}
-                alt="arrow down icon"
-                id="supportBtn_arrow"
-                class="w-2.5 transition-all duration-300"
-            />
-            <nav
-                id="supportBtn_dropdown"
-                class="dropdown-content transition-all duration-300 hidden absolute top-10 left-0 min-w-64 px-4 py-8 bg-white flex-col gap-4"
-            >
-                <div>
-                    <h3 class="font-medium">Talk to us</h3>
-                    <p class="text-gray-500 text-sm pb-2 border-b">We will repond within 24 hours.</p>
-                </div>
-                <div class="flex flex-col gap-5">
-                    <div class="flex gap-4 pb-2 border-b">
-                        <Image src={iconCall} alt="call icon" class="w-5" />
-                        <div class="flex flex-col gap-0.5">
-                            <p class="text-gray-400 font-medium text-sm">Call us on:</p>
-                            <a href="tel:+14034535703" class="font-medium text-sm hover:underline transition-all"
-                                >+14034535703</a
-                            >
+<div class="flex gap-4 justify-center items-center self-center z-10 w-[90%] xl:w-3/4 md:w-[85%] sticky top-10">
+    <nav class="bg-brand-primary-200 flex gap-4 justify-between py-2 px-2 rounded-full">
+        <a href="/" class="bg-brand-primary-300 rounded-full px-2 xs:px-4 py-3">
+            <Image src={banffLogo} alt="logo" class="w-20 xs:w-full" loading="eager" />
+        </a>
+        <div class="flex gap-5">
+            <button id="servicesBtn" class="hidden md:flex gap-x-1.5 items-center relative cursor-pointer">
+                <span class="text-sm dropdown-span">Services</span>
+                <Image
+                    src={arrowDown}
+                    alt="arrow down icon"
+                    id="servicesBtn_arrow"
+                    class="w-2.5 transition-all duration-300"
+                />
+                <nav
+                    id="servicesBtn_dropdown"
+                    class="dropdown-content transition-all duration-300 hidden absolute top-10 right-0 min-w-48 bg-white"
+                >
+                    <ul class="flex flex-col py-6 px-4 gap-3 text-gray-500">
+                        <li>
+                            <a href="#" class="hover:border-b border-gray-500">Send money</a>
+                        </li>
+                        <li>
+                            <a href="#" class="hover:border-b border-gray-500">Exchange currency</a>
+                        </li>
+                        <li>
+                            <a href="#" class="hover:border-b border-gray-500">Add money</a>
+                        </li>
+                    </ul>
+                </nav>
+            </button>
+            <div id="supportBtn" class="hidden md:flex gap-x-1.5 items-center relative cursor-pointer">
+                <span class="text-sm dropdown-span">Support</span>
+                <Image
+                    src={arrowDown}
+                    alt="arrow down icon"
+                    id="supportBtn_arrow"
+                    class="w-2.5 transition-all duration-300"
+                />
+                <nav
+                    id="supportBtn_dropdown"
+                    class="dropdown-content transition-all duration-300 hidden absolute top-10 left-0 min-w-64 px-4 py-8 bg-white flex-col gap-4"
+                >
+                    <div>
+                        <h3 class="font-medium">Talk to us</h3>
+                        <p class="text-gray-500 text-sm pb-2 border-b">We will repond within 24 hours.</p>
+                    </div>
+                    <div class="flex flex-col gap-5">
+                        <div class="flex gap-4 pb-2 border-b">
+                            <Image src={iconCall} alt="call icon" class="w-5" />
+                            <div class="flex flex-col gap-0.5">
+                                <p class="text-gray-400 font-medium text-sm">Call us on:</p>
+                                <a href="tel:+14034535703" class="font-medium text-sm hover:underline transition-all"
+                                    >+14034535703</a
+                                >
+                            </div>
+                        </div>
+                        <div class="flex gap-4 pb-2 border-b">
+                            <Image src={iconEmail} alt="email icon" class="w-5" />
+                            <div class="flex flex-col gap-0.5">
+                                <p class="text-gray-400 font-medium text-sm">Email us on:</p>
+                                <a
+                                    href="mailto:care@banffpay.com"
+                                    class="font-medium text-sm hover:underline transition-all">care@banffpay.com</a
+                                >
+                            </div>
+                        </div>
+                        <div class="flex gap-4 pb-2 border-b">
+                            <Image src={iconFb} alt="facebook icon" class="w-5" />
+                            <div class="flex flex-col gap-0.5">
+                                <p class="text-gray-400 font-medium text-sm">Connect with us on:</p>
+                                <a
+                                    href="https://www.facebook.com/profile.php?id=61556882105813"
+                                    class="font-medium text-sm hover:underline transition-all">Facebook</a
+                                >
+                            </div>
+                        </div>
+                        <div class="flex gap-4">
+                            <Image src={iconMsg} alt="facebook icon" class="w-5" />
+                            <div class="flex flex-col gap-0.5">
+                                <a
+                                    href="https://forms.zohopublic.com/cofor/form/Submitanenquiry/formperma/LHrDtHdNr1v6A8FZAkOeHFROYttVfp_z1Xi-rHlzbAA"
+                                    title="Submit an enquiry"
+                                    target="_blank"
+                                    onclick="zforms_open_window(this.href, 648, 700); return false"
+                                    class="font-medium text-base hover:underline transition-all">Submit an enquiry</a
+                                >
+                            </div>
                         </div>
                     </div>
-                    <div class="flex gap-4 pb-2 border-b">
-                        <Image src={iconEmail} alt="email icon" class="w-5" />
-                        <div class="flex flex-col gap-0.5">
-                            <p class="text-gray-400 font-medium text-sm">Email us on:</p>
-                            <a
-                                href="mailto:care@banffpay.com"
-                                class="font-medium text-sm hover:underline transition-all">care@banffpay.com</a
-                            >
-                        </div>
-                    </div>
-                    <div class="flex gap-4 pb-2 border-b">
-                        <Image src={iconFb} alt="facebook icon" class="w-5" />
-                        <div class="flex flex-col gap-0.5">
-                            <p class="text-gray-400 font-medium text-sm">Connect with us on:</p>
-                            <a
-                                href="https://www.facebook.com/profile.php?id=61556882105813"
-                                class="font-medium text-sm hover:underline transition-all">Facebook</a
-                            >
-                        </div>
-                    </div>
-                    <div class="flex gap-4">
-                        <Image src={iconMsg} alt="facebook icon" class="w-5" />
-                        <div class="flex flex-col gap-0.5">
-                            <a
-                                href="https://forms.zohopublic.com/cofor/form/Submitanenquiry/formperma/LHrDtHdNr1v6A8FZAkOeHFROYttVfp_z1Xi-rHlzbAA"
-                                title="Submit an enquiry"
-                                target="_blank"
-                                onclick="zforms_open_window(this.href, 648, 700); return false"
-                                class="font-medium text-base hover:underline transition-all">Submit an enquiry</a
-                            >
-                        </div>
-                    </div>
-                </div>
-            </nav>
-        </div>
-        <div class="flex gap-x-1.5 items-center">
-            <a href="/about" class="text-sm">About Us</a>
-        </div>
-    </div>
-    <div class="flex self-stretch gap-2">
-        <button class="rounded-full bg-brand-primary-950 px-4 text-white font-semibold text-sm">
-            <a
-                href="https://forms.zohopublic.com/cofor/form/Waitlist/formperma/3gfkggPKGMa3U8H3OWpOE_DkdPXJLJgyBtHl91gVA4g"
-                title="Join Waitlist"
-                target="_blank"
-                onclick="zforms_open_window(this.href, 648, 700); return false">Download App</a
-            >
-        </button>
-        <button class="rounded-full bg-white md:flex items-center px-2 gap-1.5 hidden">
-            <div class="rounded-full bg-gray-100 w-8 h-8 flex justify-center items-center">
-                <Image src={arrowDown} alt="arrow down icon" class="w-3" />
+                </nav>
             </div>
-            <span class="text-sm font-medium mr-2">EN</span>
-        </button>
-    </div>
-</nav>
+            <div class="flex gap-x-1.5 items-center">
+                <a href="/about" class="text-sm">About Us</a>
+            </div>
+        </div>
+        <div class="flex self-stretch gap-2">
+            <button class="rounded-full bg-brand-primary-950 px-4 text-white font-semibold text-sm">
+                <a
+                    href="https://forms.zohopublic.com/cofor/form/Waitlist/formperma/3gfkggPKGMa3U8H3OWpOE_DkdPXJLJgyBtHl91gVA4g"
+                    title="Join Waitlist"
+                    target="_blank"
+                    onclick="zforms_open_window(this.href, 648, 700); return false">Download App</a
+                >
+            </button>
+            <button class="rounded-full bg-white md:flex items-center px-2 gap-1.5 hidden">
+                <div class="rounded-full bg-gray-100 w-8 h-8 flex justify-center items-center">
+                    <Image src={arrowDown} alt="arrow down icon" class="w-3" />
+                </div>
+                <span class="text-sm font-medium mr-2">EN</span>
+            </button>
+        </div>
+    </nav>
+    <button class="hidden lg:block border-8 border-brand-primary-300 bg-white rounded-full px-6 self-stretch"> Sign in on web </button>
+</div>
 
 <style>
     .show {

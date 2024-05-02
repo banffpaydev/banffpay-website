@@ -1,6 +1,11 @@
 ---
 import BaseLayout from "@layouts/BaseLayout.astro"
 import AboutHeader from "@components/AboutHeader.astro"
+
+import { Image } from "astro:assets"
+import arrowLeft from "@assets/dot-arrow-left.png"
+import arrowRight from "@assets/dot-arrow-right.png"
+
 ---
 
 <BaseLayout title="BanffPay — About Us">
@@ -21,18 +26,20 @@ import AboutHeader from "@components/AboutHeader.astro"
     </section>
     <!-- MISSION AND VISION -->
     <section
-        class="logo-bg bg-gray-50 py-20 md:py-28 px-8 md:px-16 lg:px-36 xl:px-40 flex flex-col gap-y-12 lg:gap-y-20 xl:gap-y-28"
+        class="logo-bg bg-gray-50 py-36 md:py-28 px-8 md:px-16 lg:px-36 xl:px-40 flex flex-col gap-y-12 lg:gap-y-20 xl:gap-y-28"
     >
-        <div class="flex flex-wrap gap-4 lg:gap-0">
-            <h2 class="text-4xl md:text-6xl lg:text-8xl xl:text-9xl font-bold lg:basis-1/2">Mission</h2>
-            <p class="mb-4 lg:mb-0 text-gray-600 lg:text-xl lg:basis-1/2 lg:self-center">
+        <div class="flex flex-wrap justify-between gap-4 lg:gap-0">
+            <h2 class="text-4xl md:text-6xl lg:text-8xl xl:text-9xl font-bold lg:basis-2/6">Mission</h2>
+            <Image src={arrowRight} alt="arrow icon" class="hidden xl:block self-center" />
+            <p class="mb-4 lg:mb-0 text-gray-600 lg:text-xl lg:basis-2/6 lg:self-center">
                 To provide seamless, secure, and innovative financial solutions that empower individuals and businesses
                 alike.
             </p>
         </div>
-        <div class="flex flex-wrap gap-4 lg:gap-0">
-            <h2 class="text-4xl md:text-6xl lg:text-8xl xl:text-9xl font-bold lg:basis-1/2 lg:order-2">Vision</h2>
-            <p class="mb-4 lg:mb-0 text-gray-600 lg:text-xl lg:basis-1/2 lg:self-center">
+        <div class="flex flex-wrap justify-between gap-4 lg:gap-0">
+            <h2 class="text-4xl md:text-6xl lg:text-8xl xl:text-9xl font-bold lg:basis-1/2 lg:order-3">Vision</h2>
+            <Image src={arrowLeft} alt="arrow icon" class="hidden xl:block self-center lg:order-2" />
+            <p class="mb-4 lg:mb-0 text-gray-600 lg:text-xl lg:basis-2/6 lg:self-center lg:order-1">
                 To provide seamless, secure, and innovative financial solutions that empower individuals and businesses
                 alike.
             </p>
@@ -42,9 +49,9 @@ import AboutHeader from "@components/AboutHeader.astro"
 
 <style>
     .logo-bg {
-        background-image: url("../../assets/banffpay_bg.png");
+        background-image: url("../../assets/banffpay_bg.png"), url("../../assets/grid_background.png");
         background-position: center;
         background-repeat: no-repeat;
-        background-size: 75%;
+        background-size: 75%, 40%;
     }
 </style>
