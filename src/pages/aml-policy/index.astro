@@ -1,0 +1,591 @@
+---
+import BaseLayout from "@layouts/BaseLayout.astro"
+import NavBar from "@components/NavBar.astro"
+
+import { antiMoneyLaundering } from "@components/content"
+import ListButton from "@components/ListButton.astro"
+---
+
+<BaseLayout title="BanffPay - Privacy Policy">
+    <!-- HEADER INCL. NAVBAR -->
+    <header class="flex flex-col gap-4 bg-75% pb-16 md:pb-20">
+        <NavBar />
+        <div class="flex flex-col gap-10 md:gap-20">
+            <div class="self-center flex flex-col gap-12 items-center mt-20 mb-6 px-4">
+                <div
+                    class="rounded-full bg-brand-primary-200 px-6 py-3 text-brand-primary-950 font-semibold text-sm md:text-base uppercase"
+                >
+                    AML/ CFT POLICY
+                </div>
+                <h1 class="font-bold text-3xl xs:text-4xl md:text-6xl text-center max-w-sm md:max-w-4xl">
+                    We are also on the lookout for your utmost Privacy
+                </h1>
+                <!-- <div class="rounded-full bg-gray-100 px-6 py-3 font-semibold text-sm">
+                    Last Updated • 5 October 2023
+                </div> -->
+            </div>
+        </div>
+    </header>
+    <div class="px-6 md:px-14 lg:px-28 py-10 md:py-14 grid lg:grid-cols-12 gap-10">
+        <!-- SIDEBAR - CONTENT HEADINGS -->
+        <aside class="hidden lg:block col-span-3 relative pb-10">
+            <nav class="sticky top-10 h-[80vh] overflow-auto">
+                <ul class="flex flex-col gap-4">
+                    {antiMoneyLaundering.map((item) => <ListButton item={item} />)}
+                </ul>
+            </nav>
+        </aside>
+        <!-- MAIN CONTENTS -->
+        <main class="lg:col-span-9 lg:px-6 lg:py-16 flex flex-col gap-5">
+            <section class="text-gray-500 flex flex-col gap-4">
+                <h2 class="text-2xl font-semibold text-black" id="purpose">Purpose</h2>
+                <p>
+                    Banffpay LIMITED supports a culture of compliance and strives to meet all obligations required to
+                    operate as a Money Services Business. Voluntary self-declarations of non-compliance (VSDONC) in
+                    which the Company informs FINTRAC that the Company has not met certain requirements is also
+                    encouraged. This document's purpose is to meet all the required documentation for a Money Service
+                    Business (“MSB”) Compliance Policies and Procedures, in accordance with the relevant legislation.
+                </p>
+                <p>
+                    Banffpay is committed to implementing sound anti-money laundering policies and procedures which will
+                    ensure that it is not used as a conduit for money laundering or financing of other illicit
+                    businesses. We seek to protect the company against fraud, reputational and other financial market
+                    risks, and to protect the integrity of the business against all forms of abuse, fraudulent and
+                    unfair trade practices.
+                </p>
+            </section>
+            <section class="text-gray-500 flex flex-col gap-4">
+                <h2 class="text-2xl font-semibold text-black" id="business-acceptance-policy">
+                    Business/Customer Acceptance Policy
+                </h2>
+                <p>Banffpay will adopt the following criteria for business/customer relationship:</p>
+                <ol class="list-decimal flex flex-col gap-6 px-6 text-gray-500">
+                    <li>Banffpay will not open an account in anonymous or fictitious names.</li>
+                    <li>
+                        Banffpay will accept customers only after verifying their identity, as laid down in the KYC
+                        Procedures.
+                    </li>
+                    <li>
+                        Parameters of risk perception shall be clearly defined in terms of the nature of business
+                        activity, location of business and clients, mode of payments, volume of turnover, social and
+                        financial status etc, to enable customer and business risk categorization.
+                    </li>
+                    <li>
+                        The nature and extent of Due Diligence to be carried out on the business or customer will depend
+                        on the risk classification of the business/customer. Normal Due Diligence will be carried out on
+                        all categories of business/customer, while higher risk business/customer will undergo Enhanced
+                        Due Diligence.
+                    </li>
+                </ol>
+                <p>
+                    Banffpay shall close an existing account or shall not open a new account where it is unable to apply
+                    appropriate business/customer due diligence measures or unable to verify the identity and/or obtain
+                    documents required as per the risk categorization due to noncooperation of the business/customer or
+                    non-reliability of data/information furnished to Banffpay.
+                </p>
+            </section>
+            <section class="text-gray-500 flex flex-col gap-4">
+                <h2 class="text-2xl font-semibold text-black" id="kyc-policy">
+                    Customer Identification/Know Your Customer Policy
+                </h2>
+
+                <ol class="list-decimal flex flex-col gap-6 px-6 text-gray-500">
+                    <li>
+                        Prior to establishing business relationship with a prospective customer, Banffpay will obtain
+                        sufficient information about the customer, necessary to establish to its satisfaction the
+                        identity of the customer and the purpose and nature of the business that the customer expects to
+                        undertake.
+                    </li>
+                    <li>
+                        It will normally carry out Due Diligence on all customers and Enhanced Due Diligence on higher
+                        risk customers.
+                    </li>
+                </ol>
+                <h3 class="font-semibold">Due Diligence Measures:</h3>
+                <p>Banffpay will:</p>
+                <ol class="list-decimal flex flex-col gap-6 px-6 text-gray-500">
+                    <li>
+                        Identify its customers (whether permanent or occasional; natural or legal persons; or legal
+                        arrangements) and verify the customers' identities using reliable, independently sourced
+                        documents, data or information. The nature of information/documents required would depend on the
+                        type of customer (Individual, corporate, etc).
+                    </li>
+                    <li>
+                        For customers that are natural persons, Banffpay shall obtain sufficient identification data to
+                        verify the identity of the customer, his address/location; and also his recent photograph.
+                    </li>
+                    <li>
+                        In respect of customers that are legal persons or legal arrangements, Banffpay will take steps
+                        to;
+                    </li>
+                    <li>
+                        Verify the legal status of the legal person or legal arrangement by obtaining proof of
+                        incorporation from the incorporation authorities or similar evidence of establishment or
+                        existence and any other relevant information.
+                    </li>
+                    <li>
+                        Identify the beneficial-owner and take reasonable measures to verify his/her identity using
+                        relevant information or data obtained from a reliable source, to satisfy itself that it knows
+                        who the beneficial owner is.
+                    </li>
+                    <li>
+                        Verify any person purporting to have been authorized to act on behalf of such a customer by
+                        obtaining evidence of his/her identity verifying the identity of such a person; and
+                    </li>
+                    <li>
+                        Determine whether or not a customer is acting on behalf of another person. Where the customer is
+                        acting on behalf of another person, Banffpay will take reasonable steps to obtain sufficient
+                        identification data and to verify the identity of that other person.
+                    </li>
+                </ol>
+            </section>
+            <section class="text-gray-500 flex flex-col gap-4">
+                <h2 class="text-2xl font-semibold text-black" id="ml-risk-assessment">
+                    Money Laundering/Terrorism Financing Risk Assessment Process
+                </h2>
+                <p>
+                    Banffpay adopts risk-based approach that are commensurate with the specific risks of money
+                    laundering and terrorist financing. Higher money laundering risks demand stronger controls. However,
+                    all categories of risk — whether low, medium or high — must be mitigated by the application of
+                    applicable controls as provided in this policy, such as verification of customer identification,
+                    Know Your Customer (KYC) policies, and so on.
+                </p>
+                <p>
+                    The ensuing paragraphs provide a framework for identifying the degree of potential ML/TF risks
+                    associated with specific customers and transactions in order to ensure focused monitoring of those
+                    customers and transactions that potentially pose the greatest risks of ML/TF.
+                </p>
+                <h3 class="font-semibold">Identifying Specific Risk Categories</h3>
+                <p>
+                    Attempts to conduct illegal activities through Banffpay may come from many different sources
+                    throughout the system. Certain products, services, agents, and geographic locations in which the
+                    company operates may be particularly vulnerable or may have been historically used by criminals for
+                    ML/TF activities.
+                </p>
+            </section>
+            <section class="text-gray-500 flex flex-col gap-4">
+                <h2 class="text-2xl font-semibold text-black" id="risk-assessment">Risk Assessment</h2>
+                <p>
+                    The purpose of the Risk Assessment is to ensure that the Company remains compliant with the relevant
+                    legislation and to assess the risks linked to the Company's business activities and clients. The
+                    Company follows a risk-based approach (RBA) cycle in order to identify and mitigate ML/TF risks.
+                </p>
+                <p>
+                    A two-pronged assessment must be conducted during an RBA cycle exercise: A business-based risk
+                    assessment and relationship-based risk assessment (together, the “Risk Assessments”).
+                </p>
+                <p>
+                    Risk Assessments will be conducted prior to the Commencement Date, and 6 months after the
+                    Commencement Date. After that, Risk Assessments must be conducted every two-years starting from the
+                    Commencement Date. For clarity, if the Commencement date is December 02, 2022, then the Risk
+                    Assessments must occur December 02, 2024, December 02, 2026, etc. The Compliance Officer will add
+                    reminder in their calendar (Outlook, Google etc.) for each of the dates.
+                </p>
+                <p>
+                    Relationship-based assessment will help identify where risks occur across business lines, clients or
+                    products or services. This is important in the Company's industry because of the constant innovation
+                    and changing processes of virtual currency. The individual conducting the risk assessment must be
+                    aware of the changing virtual currency landscape.
+                </p>
+            </section>
+            <section class="text-gray-500 flex flex-col gap-4">
+                <h2 class="text-2xl font-semibold text-black" id="products-channels">
+                    Products, Services and Delivery Channels
+                </h2>
+                <p>
+                    The risk assessment must consider any services and delivery channels that are provided and used
+                    during the course of business. The Compliance Officer should be aware of the constant innovation and
+                    change in technology associated with virtual currency, creating an inherent risk to the business. In
+                    evaluating the ML/TF risk with respect to products, services and delivery channels, the following
+                    become relevant:
+                </p>
+                <p>Does a particular product or service, new or current:</p>
+                <ol class="list-disc flex flex-col gap-4 px-8 text-gray-500">
+                    <li>
+                        Have an especially high transactions or investment value or involves international transaction?
+                    </li>
+                    <li>Allow payments to third parties?</li>
+                    <li>Have unusual complexity?</li>
+                    <li>Require government verification of agent eligibility?</li>
+                    <li>Allow the agent to be treated anonymously?</li>
+                    <li>Is highly cash intensive?</li>
+                </ol>
+            </section>
+            <section class="text-gray-500 flex flex-col gap-4">
+                <h2 class="text-2xl font-semibold text-black" id="rb-approach-customerID">
+                    Risk Based Approach to Customer Identification
+                </h2>
+                <p>
+                    Banffpay will put in place systems, processes and controls using a risk-based approach to enable it
+                    to identify, monitor and manage the money laundering and terrorist financing using the following
+                    criteria:
+                </p>
+                <p>Does a particular product or service, new or current:</p>
+                <ol class="list-decimal flex flex-col gap-6 px-6 text-gray-500">
+                    <li>Customer characteristics</li>
+                    <li>Geography</li>
+                    <li>Products and Services</li>
+                    <li>Require government verification of agent eligibility?</li>
+                    <li>Delivery Channels</li>
+                    <li>Other Risk variables</li>
+                </ol>
+                <p>
+                    In each case, the criteria may be modified by other risk variables specific to any particular
+                    customer or transaction and may include but not limited to:
+                </p>
+                <ol class="list-disc flex flex-col gap-4 px-8 text-gray-500">
+                    <li>Size of transaction</li>
+                    <li>Length of relationship and regularity of contact</li>
+                    <li>Familiarity with a jurisdiction</li>
+                    <li>Nature/Line of business</li>
+                </ol>
+                <p>
+                    Using these criteria and risk variables, customers will be classified into three risk categories
+                    namely High, medium and Low based on the money laundering risk that they pose.
+                </p>
+                <p>
+                    The risk categorization will determine the extent of Customer Due Diligence including customer
+                    identification, identity verification and any additional customer information as well as on-going
+                    monitoring that is required for a customer; in a way that ensures that Banffpay focuses its efforts
+                    where it is needed and will have most impact and minimizes the discomfiture to customers.
+                </p>
+            </section>
+            <section class="text-gray-500 flex flex-col gap-4">
+                <h2 class="text-2xl font-semibold text-black" id="matrix-and-rating">Matrix and Rating</h2>
+                <p>
+                    The Company will engage in a three-level scoring system, displayed below. As the business matures,
+                    this scoring system should change and must be reviewed during any reviews of the Compliance Program.
+                </p>
+                <p>
+                    Banffpay will apply reduced or simplified measures when identifying and verifying the identity of
+                    customers categorized as low risks. There are low risks in circumstances where the risk of money
+                    laundering or terrorist financing is lower, where information on the identity of the customer and
+                    the beneficial owner or a customer is publicly available or where adequate checks and controls exist
+                    elsewhere in national systems.
+                </p>
+                <p>
+                    Customers' that are likely to pose higher than average risk to Banffpay may be categorized as high
+                    risk depending on customer's background, nature and location of activity, country of origin, sources
+                    of funds etc. Banffpay will perform enhanced due diligence for higher-risk categories of customers,
+                    business relationships or transactions.
+                </p>
+                <p>Examples of higher-risk customer categories where Enhanced Due Diligence will be applied include:</p>
+                <ol class="list-decimal flex flex-col gap-6 px-6 text-gray-500">
+                    <li>Non- Resident customers</li>
+                    <li>Private Banking (High Net worth) customers</li>
+                    <li>Politically Exposed Persons (PEPs)</li>
+                    <li>Trusts, Charities, and NGOs</li>
+                    <li>Companies that have nominee shareholders or shares in bearer form</li>
+                    <li>Firms with sleeping partners</li>
+                    <li>Non-face-to-face customers</li>
+                    <li>
+                        Non-traditional financial entities, including currency exchange houses, money transmitters and
+                        check cashing facilities
+                    </li>
+                    <li>Bureau De Change</li>
+                    <li>Client Designated Accounts</li>
+                    <li>
+                        Companies that are part of unusual or complicated corporate or trust structures particularly
+                        those that involve several different jurisdictions. This includes international business
+                        companies and trust set up in poorly regulated off-shore jurisdictions, particularly those that
+                        have limited registration and regulatory requirements including the ability to issue bearer
+                        shares.
+                    </li>
+                    <li>
+                        Customers who intend to carry out unusually high-value transactions or a high volume of
+                        low-value transactions.
+                    </li>
+                    <li>Other High-Risk Individuals or Business Types</li>
+                    <ol class="list-disc flex flex-col gap-4 px-8 text-gray-500">
+                        <li>Individuals or firms who are or have been involved in any of the following</li>
+                        <li>Unregulated investment or banking schemes, including pyramid selling;</li>
+                        <li>The manufacture or sale of armaments;</li>
+                        <li>The extraction, refining, shipping or sale of oil, gas or related products;</li>
+                        <li>
+                            Dealing with dangerous, radioactive or toxic substances which may carry substantial human or
+                            environmental risks.
+                        </li>
+                        <li>ndividuals who have been accused or convicted of a serious crime</li>
+                        <li>Individuals who have been directors of insolvent companies or made personally bankrupt;</li>
+                        <li>
+                            Individuals where a professional adviser, regulator or trusted contact has expressed
+                            concern,
+                        </li>
+                        <li>
+                            Individual whose business or source of wealth involves activities susceptible to money
+                            laundering (e.g. casinos, gambling, nightclubs).
+                        </li>
+                        <li>Car, Used cars and boat dealers</li>
+                        <li>Travel agencies</li>
+                        <li>Brokers and dealers</li>
+                        <li>Jewel, Gem, and precious metal dealers</li>
+                        <li>Import/Export companies</li>
+                        <li>Cash-intensive businesses</li>
+                        <li>
+                            Individuals or firms based in or conducting business with countries associated with
+                            terrorist financing, Drug production and trafficking
+                        </li>
+                    </ol>
+                </ol>
+            </section>
+            <section class="text-gray-500 flex flex-col gap-4">
+                <h2 class="text-2xl font-semibold text-black" id="updating-risk-assessment">Updating the Risk Assessment</h2>
+                <ol>
+                    <li>HIGH: Quarterly;</li>
+                    <li>MEDIUM: Half Yearly;</li>
+                    <li>LOW: Yearly.</li>
+                </ol>
+                <p>
+                    Should circumstances however dictate a review of an account in any of the categories, this can be
+                    conducted at any time more frequently than as set out above.
+                </p>
+                <p>
+                    Banffpay will take a risk based approach to the rating of each customer and this will in turn affect
+                    the level of KYC information collected. This would include not only the level of documentation held
+                    but also the number and content of additional checks performed over the Internet or by obtaining
+                    media information. These factors may alter the Banffpay's perceived rating and the risk level
+                    altered accordingly.
+                </p>
+                <p>CLIENT CHARACTERISTICS AND PATTERNS OF ACTIVITY OR TRANSACTIONS</p>
+                <p>
+                    Periodically throughout the client relationship, the Compliance Officer should consider the purpose
+                    and intended nature of the relationship. Doing so will help understand the clients' activities and
+                    transaction patterns, in order to determine their level of ML/TF risk.
+                </p>
+            </section>
+            <section class="text-gray-500 flex flex-col gap-4">
+                <h2 class="text-2xl font-semibold text-black" id="politically-exposed-persons">Politically Exposed Persons</h2>
+
+                <p>
+                    “Politically Exposed Persons” (PEPs) are individuals who are or have been entrusted with prominent
+                    public functions in any country, for example Heads of national or subnational government, senior
+                    politicians, senior government appointees, judicial or military officials, senior executives of
+                    government-owned corporations, important political party officials and any “close associate” of a
+                    senior political figure (local/foreign). PEP also include persons who are or have been entrusted
+                    with a prominent function by an international organization, including members of senior management
+                    including directors, deputy directors and members of the board or equivalent functions other than
+                    middle ranking or more junior individuals. Business relationships with family members or close
+                    associates of PEPs involve reputation risks similar to those with PEPs themselves.
+                </p>
+                <h3 class="font-semibold">What is the risk in doing business with PEP?</h3>
+                <p>
+                    Accepting and managing funds from corrupt PEPs can severely damage Banffpay's own reputation and can
+                    undermine public confidence in the ethical standards of Banffpay, since such cases usually receive
+                    extensive media attention and strong political reaction.
+                </p>
+                <p>
+                    In addition, Banffpay may be subject to costly information requests and seizure orders from law
+                    enforcement or judicial authorities (including international mutual assistance procedures in
+                    criminal matters) and could be liable to actions for damages by the state concerned or the victims
+                    of a regime.
+                </p>
+                <p>
+                    Under certain circumstances, Banffpay and/or its officers and employees themselves can be exposed to
+                    charges of money laundering, if they know or should have known that the funds stemmed from
+                    corruption or other serious crimes.
+                </p>
+                <p>
+                    Where to begin as with most aspects of compliance, the place to begin is with a risk assessment.
+                    Banffpay conducts a risk assessment of its products/services, customers, and geographies where
+                    business is conducted. The outcome of this assessment forms the basis of a PEP/KYC compliance
+                    program.
+                </p>
+                <h3 class="font-semibold">PEP Risk Assessment</h3>
+                <p>
+                    Banffpay assesses the risks posed to its Banking activities on the basis of the scope of operations
+                    and the complexity of Banffpay's customers' relationships. Management establishes a risk profile for
+                    each customer to be used in prioritizing oversight resources and for ongoing monitoring of
+                    relationship activities.
+                </p>
+                <p>
+                    The following factors are considered when identifying risk characteristics of Politically Exposed
+                    Persons:
+                </p>
+                <ol class="list-disc flex flex-col gap-4 px-8 text-gray-500">
+                    <li>
+                        Nature of the customer and the customer's business- The source of customer's wealth, the nature
+                        of the business and the extent to which the business history presents an increased risk for
+                        money laundering and terrorist financing.
+                    </li>
+                    <li>
+                        Purpose and activity- The size, purpose, types of accounts, products, and services involved in
+                        the relationship, and the anticipated activity of the account.
+                    </li>
+                    <li>
+                        Relationship- The nature and duration of Banffpay's relationship (including relationships with
+                        affiliates) with the customer.
+                    </li>
+                </ol>
+                <h3 class="font-semibold">Risk Minimization</h3>
+                <ol class="list-disc flex flex-col gap-4 px-8 text-gray-500">
+                    <li>
+                        Conducting detailed due diligence at the outset of the relationship and on an ongoing basis
+                        where they know or suspect that the business relationship is with a “politically exposed
+                        person”.
+                    </li>
+                    <li>
+                        Banffpay is more vigilant where its customers are involved in those businesses which appear to
+                        be most vulnerable to corruption, especially cash intensive transactions.
+                    </li>
+                    <li>
+                        Every effort is made to establish the source of wealth (including the economic activity that
+                        created the wealth) as well as the source of funds involved in the relationship – again
+                        establishing that these are legitimate, both at the outset of the relationship and on an ongoing
+                        basis.
+                    </li>
+                    <li>
+                        The development of a profile of expected activity on the business relationship so as to provide
+                        a basis for future monitoring. The profile would be regularly reviewed and updated.
+                    </li>
+                    <li>
+                        Close scrutiny of any unusual features, such as very large transactions, particular demands for
+                        secrecy.
+                    </li>
+                </ol>
+                <p>
+                    Banffpay's obligations and position on PEP wallets before any account is opened for any PEP, Senior
+                    Management approval must be obtained. This will be done as part of account opening formalities. No
+                    account would be opened for any PEP without the approval being in place.
+                </p>
+                <p>
+                    The customer due diligence efforts do not end at account opening; ongoing account monitoring is
+                    expected. Activities on PEP accounts will be reviewed on transactions related to them and filing, as
+                    appropriate, STRs related to them. Monthly returns will be sent to FINTRAC on PEP transactions. This
+                    is to assist the regulators in monitoring the activities of PEPs. Banffpay will take reasonable
+                    steps to ascertain the source of wealth and the source of funds of PEPs and report anomalies to
+                    FINTRAC and other relevant authorities.
+                </p>
+                <p>
+                    On an annual basis, the distribution managers shall certify that none of the accounts reporting to
+                    them became PEP in the course of the year. In the event that any transaction is noted to be
+                    abnormal, such must be immediately flagged and reported to the Compliance Department immediately.
+                </p>
+            </section>
+            <section class="text-gray-500 flex flex-col gap-4">
+                <h2 class="text-2xl font-semibold text-black" id="compliance-training-program">Compliance Training Program</h2>
+                <p>Sole proprietors do not need a training program.</p>
+                <p>
+                    All of the Company's employees, or other individuals authorized to act on behalf of compliance
+                    officer, need either a compliance training program to be created for their training or have courses
+                    provided to them to teach them the compliance program, as required by law.
+                </p>
+                <p>
+                    The Company will provide general AML training to its officers, employees to ensure awareness of the
+                    AML laws and regulations and this Policy. The training will include, at a minimum: how to identify
+                    potential signs of money laundering and to determine the appropriate corrective measure; what duties
+                    and responsibilities the officers, employees have in the Company's compliance efforts and how to
+                    perform such duties and responsibilities; escalation procedures; the Company's recordkeeping
+                    requirements; and disciplinary consequences for non-compliance with this Policy (up to and including
+                    termination).
+                </p>
+                <h3 class="font-semibold">Plan for the Compliance Program Review</h3>
+                <p>
+                    The Compliance Officer must review the Compliance Program on the Compliance Program Review Date,
+                    every two years starting from the Commencement Date.
+                </p>
+                <p>The following must be analyzed and tested during a Compliance Program review:</p>
+                <ol class="list-disc flex flex-col gap-4 px-8 text-gray-500">
+                    <li>
+                        Interviews with those handling transactions to evaluate their knowledge of your policies and
+                        procedures and related record keeping client identification and reporting requirements;
+                    </li>
+                    <li>
+                        a review of a sample of your records to assess whether your client identification policies and
+                        procedures are being followed;
+                    </li>
+                    <li>
+                        a review of transactions to assess whether suspicious transactions were reported to FINTRAC;
+                    </li>
+                    <li>
+                        a review of large cash transactions to assess whether they were reported to FINTRAC with
+                        accurate information and within the prescribed timelines;
+                    </li>
+                    <li>
+                        a review of electronic funds transfers to assess whether reportable transfers were reported to
+                        FINTRAC with accurate information and within the prescribed timelines (applicable to RE sectors
+                        that have EFT obligations);
+                    </li>
+                    <li>
+                        a review of a sample of your client records to see whether the risk assessment was applied in
+                        accordance with your risk assessment process;
+                    </li>
+                    <li>
+                        a review of a sample of your client records to see whether the frequency of your ongoing
+                        monitoring is adequate and carried out in accordance with the client's risk level assessment;
+                    </li>
+                    <li>
+                        a review of a sample of high-risk client records to confirm that enhanced mitigation measures
+                        were taken;
+                    </li>
+                    <li>
+                        a review of a sample of your records to confirm that proper record keeping procedures are being
+                        followed;
+                    </li>
+                    <li>a review of your risk assessment to confirm that it reflects your current operations; and</li>
+                    <li>
+                        a review of your policies and procedures to ensure that they are up to date and reflect the
+                        current legislative requirements and that they reflect your current business practices.
+                    </li>
+                </ol>
+                <p>
+                    The Compliance Officer must use their best judgment to determine if an interim review is needed
+                    based on changes to the business model or significant changes in client relationships. For example,
+                    adding employees (trigging a need for a compliance training plan) or servicing new types of clients
+                    (e.g., a high-net-worth client from a different jurisdiction).
+                </p>
+            </section>
+        </main>
+    </div>
+
+    <style>
+        header {
+            background-image: url("../../assets/banffpay_bg.png");
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+        /* width */
+        nav::-webkit-scrollbar {
+            width: 5px;
+        }
+
+        /* Track */
+        nav::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
+
+        /* Handle */
+        nav::-webkit-scrollbar-thumb {
+            background: #888;
+        }
+
+        /* Handle on hover */
+        nav::-webkit-scrollbar-thumb:hover {
+            background: #555;
+        }
+    </style>
+
+    <script>
+        const listItem = document.querySelectorAll(".link-buttons")
+        const headings = document.querySelectorAll("h2")
+
+        const toggleBackground = (current) => {
+            listItem.forEach((item) => {
+                item.classList.remove("bg-brand-primary-200", "text-brand-primary-950")
+            })
+
+            current.classList.add("bg-brand-primary-200", "text-brand-primary-950")
+        }
+
+        listItem.forEach((item) => {
+            item.addEventListener("click", () => {
+                toggleBackground(item)
+
+                headings.forEach((heading) => {
+                    if (heading.id === item.id) {
+                        heading.scrollIntoView({ behavior: "smooth", block: "center" })
+                    }
+                })
+            })
+        })
+    </script>
+</BaseLayout>

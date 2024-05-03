@@ -123,3 +123,50 @@ export const termsData = [
         id: "how-regulated",
     },
 ]
+
+export const antiMoneyLaundering = [
+    {
+        title: "Purpose",
+        id: "purpose",
+    },
+    {
+        title: "Business/Customer Acceptance Policy",
+        id: "business-acceptance-policy",
+    },
+    {
+        title: "Customer Identification/Know Your Customer Policy",
+        id: "kyc-policy",
+    },
+    {
+        title: "Money Laundering/Terrorism Financing Risk Assessment Process ",
+        id: "ml-risk-assessment",
+    },
+    {
+        title: "Risk Assessment",
+        id: "risk-assessment",
+    },
+    {
+        title: "Products, Services and Delivery Channels",
+        id: "products-channels",
+    },
+    {
+        title: "Risk Based Approach to Customer Identification",
+        id: "rb-approach-customerID",
+    },
+    {
+        title: "Matrix and Rating",
+        id: "matrix-and-rating",
+    },
+    {
+        title: "Updating the Risk Assessment ",
+        id: "updating-risk-assessment",
+    },
+    {
+        title: "Politically Exposed Persons ",
+        id: "politically-exposed-persons",
+    },
+    {
+        title: "Compliance Training Program",
+        id: "compliance-training-program",
+    },
+]
