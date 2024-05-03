@@ -2,7 +2,7 @@
 import BaseLayout from "@layouts/BaseLayout.astro"
 import NavBar from "@components/NavBar.astro"
 
-import { data } from "@components/privacyContent"
+import { privacyData } from "@components/content"
 import ListButton from "@components/ListButton.astro"
 ---
 
@@ -25,15 +25,15 @@ import ListButton from "@components/ListButton.astro"
             </div>
         </div>
     </header>
-    <div class="px-28 py-14 grid grid-cols-12 gap-10">
-        <aside class="col-span-3 relative pb-10">
+    <div class="px-6 md:px-14 lg:px-28 py-10 md:py-14 grid lg:grid-cols-12 gap-10">
+        <aside class="hidden lg:block col-span-3 relative pb-10">
             <nav class="sticky top-10 h-[80vh] overflow-auto">
                 <ul class="flex flex-col gap-4">
-                    {data.map((item) => <ListButton item={item} />)}
+                    {privacyData.map((item) => <ListButton item={item} />)}
                 </ul>
             </nav>
         </aside>
-        <main class="col-span-9 flex flex-col gap-5">
+        <main class="lg:col-span-9 flex flex-col gap-5">
             <section class="flex flex-col gap-4">
                 <h2 class="text-2xl font-semibold text-black" id="introduction">Introduction</h2>
                 <p class="text-gray-500">
@@ -45,7 +45,7 @@ import ListButton from "@components/ListButton.astro"
                 </p>
             </section>
             <section class="flex flex-col gap-4">
-                <h2 class="text-2xl font-semibold text-black" id="introduction">Consent</h2>
+                <h2 class="text-2xl font-semibold text-black" id="consent">Consent</h2>
                 <p class="text-gray-500">
                     By visiting this website, our partners' websites, or providing your personal information when you
                     browse our website, register for an account, request for an exchange of currency, enter a
@@ -55,7 +55,7 @@ import ListButton from "@components/ListButton.astro"
                 </p>
             </section>
             <section class="flex flex-col gap-4">
-                <h2 class="text-2xl font-semibold text-black" id="introduction">Notice</h2>
+                <h2 class="text-2xl font-semibold text-black" id="notice">Notice</h2>
                 <p class="text-gray-500">
                     Please read this notice carefully, together with our Terms and Conditions and any other documents
                     referred to in it. Here we set out the basis on which any information we collect about you or from
@@ -66,11 +66,11 @@ import ListButton from "@components/ListButton.astro"
                 </p>
             </section>
             <section class="flex flex-col gap-4">
-                <h2 class="text-2xl font-semibold text-black" id="introduction">Information We Collect</h2>
+                <h2 class="text-2xl font-semibold text-black" id="information-we-collect">Information We Collect</h2>
                 <p class="text-gray-500">
                     The personal information that you are asked to provide, and the reasons why you are asked to provide
                     it, will be made clear to you at the point we ask you to provide your personal information.
-                    <ol class="list-decimal flex flex-col gap-6 px-12 text-gray-500">
+                    <ol class="list-decimal flex flex-col gap-6 px-4 lg:px-12 text-gray-500">
                         <li>
                             If you contact us directly, we may receive additional information about you such as your
                             name, email address, phone number, the contents of the message and/or attachments you may
@@ -94,7 +94,9 @@ import ListButton from "@components/ListButton.astro"
                 </p>
             </section>
             <section class="flex flex-col gap-4">
-                <h2 class="text-2xl font-semibold text-black" id="introduction">How We Collect Your Personal Information</h2>
+                <h2 class="text-2xl font-semibold text-black" id="how-we-collect">
+                    How We Collect Your Personal Information
+                </h2>
                 <ol class="list-decimal flex flex-col gap-6 px-6 text-gray-500">
                     <li>
                         Information you provide to us: We may collect and store any information you provide to us when
@@ -137,10 +139,12 @@ import ListButton from "@components/ListButton.astro"
                 </ol>
             </section>
             <section class="flex flex-col gap-4 text-gray-500">
-                <h2 class="text-2xl font-semibold text-black" id="introduction">How We Use Your Information We Collect</h2>
+                <h2 class="text-2xl font-semibold text-black" id="how-we-use">
+                    How We Use Your Information We Collect
+                </h2>
                 <p>
                     <span>We use the information we collect in various ways, among the following:</span>
-                    <ol class="list-decimal flex flex-col gap-2 px-12 text-gray-500">
+                    <ol class="list-decimal flex flex-col gap-2 px-4 lg:px-12 text-gray-500">
                         <li>Provide Banffpay Money Transfer Services and customer support.</li>
                         <li>Process transactions and send notices about your transactions.</li>
                         <li>Verify your identity, including during account creation and password reset processes.</li>
@@ -175,7 +179,7 @@ import ListButton from "@components/ListButton.astro"
                 </p>
             </section>
             <section class="flex flex-col gap-4 text-gray-500">
-                <h2 class="text-2xl font-semibold text-black" id="introduction">Data Sharing</h2>
+                <h2 class="text-2xl font-semibold text-black" id="data-sharing">Data Sharing</h2>
                 <p>
                     Banffpay will only share your information with another party with your consent. Third party
                     information sharing will only be done in methods outlined in this policy. Your information may be
@@ -186,99 +190,220 @@ import ListButton from "@components/ListButton.astro"
                     event that it is needed to carry out services and transactions.
                 </p>
                 <p>In the scenarios listed below we may be obligated to disclose your personal information:</p>
-                <ol class="list-decimal flex flex-col gap-2 px-12 text-gray-500">
-                    <li>out of necessity to protect our rights or for the protection of you or others, for legal purposes, fraud or other types of investigations.</li>
+                <ol class="list-decimal flex flex-col gap-2 px-4 lg:px-12 text-gray-500">
+                    <li>
+                        out of necessity to protect our rights or for the protection of you or others, for legal
+                        purposes, fraud or other types of investigations.
+                    </li>
                     <li>request of government or another regulatory board.</li>
                     <li>by court order, subpoena, etc.</li>
                     <li>with your permission.</li>
                     <li>change of existing conditions.</li>
                 </ol>
                 <p>
-                    You will be notified via email, or through our website of any changes relating to Banffpay’s affairs concerning mergers, acquisition, or the sale of assets. All such changes will be announced through our website or via user email.
+                    You will be notified via email, or through our website of any changes relating to Banffpay’s affairs
+                    concerning mergers, acquisition, or the sale of assets. All such changes will be announced through
+                    our website or via user email.
                 </p>
                 <p>
-                    As it relates to the transfer of personal information overseas and to authorities with disparate data protection measures we endeavor to take steps to safeguard your data.
-                </p>
-            </section>
-            <section class="flex flex-col gap-4">
-                <h2 class="text-2xl font-semibold text-black" id="introduction">Introduction</h2>
-                <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro ipsam officiis rem repellat nobis
-                    harum eius, neque molestiae odio facilis natus accusantium mollitia atque consectetur modi explicabo
-                    quod quia dolores doloribus aperiam! Asperiores amet nihil eveniet optio laudantium sequi rem odio
-                    aliquam, sint quo quisquam, nisi totam blanditiis accusamus aspernatur!
+                    As it relates to the transfer of personal information overseas and to authorities with disparate
+                    data protection measures we endeavor to take steps to safeguard your data.
                 </p>
             </section>
-            <section class="flex flex-col gap-4">
-                <h2 class="text-2xl font-semibold text-black" id="introduction">Introduction</h2>
+            <section class="flex flex-col gap-4 text-gray-500">
+                <h2 class="text-2xl font-semibold text-black" id="log-files">Log Files</h2>
                 <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro ipsam officiis rem repellat nobis
-                    harum eius, neque molestiae odio facilis natus accusantium mollitia atque consectetur modi explicabo
-                    quod quia dolores doloribus aperiam! Asperiores amet nihil eveniet optio laudantium sequi rem odio
-                    aliquam, sint quo quisquam, nisi totam blanditiis accusamus aspernatur!
+                    Banffpay follows a standard procedure of using log files. These files log visitors when they visit
+                    websites. All hosting companies do this and are a part of hosting services' analytics. The
+                    information collected by log files include internet protocol (IP) addresses, browser type, Internet
+                    Service Provider (ISP), date and time stamp, referring/exit pages, and possibly the number of
+                    clicks. These are not linked to any information that is personally identifiable.
+                </p>
+                <p>
+                    The purpose of the information is for analyzing trends, administering the site, tracking users'
+                    movement on the website, and gathering demographic information.
                 </p>
             </section>
-            <section class="flex flex-col gap-4">
-                <h2 class="text-2xl font-semibold text-black" id="introduction">Introduction</h2>
+            <section class="flex flex-col gap-4 text-gray-500">
+                <h2 class="text-2xl font-semibold text-black" id="cookies">Cookies and Monitoring Mechanisms</h2>
                 <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro ipsam officiis rem repellat nobis
-                    harum eius, neque molestiae odio facilis natus accusantium mollitia atque consectetur modi explicabo
-                    quod quia dolores doloribus aperiam! Asperiores amet nihil eveniet optio laudantium sequi rem odio
-                    aliquam, sint quo quisquam, nisi totam blanditiis accusamus aspernatur!
+                    It is possible to manage cookie usage on your personal browser. You may work with or without cookies
+                    within our website but operating with cookies disabled will restrict your ability to use some of our
+                    features. In such a scenerio, you may find that your online experience is restricted. Cookies are
+                    used to store user settings, preferences and authentication. We encourage you to view our cookies
+                    policy for more information about opting out.
+                </p>
+                <p>
+                    Banffpay uses cookies, tags, scripts, and beacons along with our partners, marketing and otherwise.
+                    These technologies are also managed along with analytics, our affiliates or service providers.
+                    Tracking technologies are utilized to identify trends for website moderation and management,
+                    deciphering user website usage and collecting demographic data about the entire user base. Website
+                    administration may receive timely reports in line with these technologies. Reports may be on the
+                    individual basis, or as a combination of units.
+                </p>
+                <p>
+                    As it relates to advertising, the above also applies. Banffpay partners with third parties for
+                    internal (on our website) and external (on other sites) advertising. Third parties may use cookies
+                    to collect data related to your web usage. As a result, you may receive targeted advertising
+                    directly connected to personal web browsing.
+                </p>
+                <p>
+                    It is possible to opt out if you do not wish to have your information used in this way. In most
+                    cases, you will continue to receive non-specific advertisements. Website Widgets
+                </p>
+                <p>
+                    Social media widgets have become increasingly popular making it easy for Internet users to access
+                    mainstream sites via sites like ours.
+                </p>
+                <p>
+                    Features include content sharing, the Facebook Like button, and Twitter options. These widgets make
+                    it easy to use features attached to other sites while operating within our website. Users are
+                    encouraged to note that personal information including your email address and other personal data is
+                    sometimes collected through these widgets. You may be able to adjust the information collected by
+                    widgets, but data collection is governed by policies attached to individual sites.
+                </p>
+            </section>
+            <section class="flex flex-col gap-4 text-gray-500">
+                <h2 class="text-2xl font-semibold text-black" id="information-security">Information Security</h2>
+                <p>
+                    Banffpay abides by industry standards and policies as it relates to user privacy and information
+                    security, thus, users can be assured that information will be protected from the moment it is
+                    submitted all the way through to being delivered to us for processing. Generally, data transmitted
+                    via the Internet, or the usage of electronic storage poses risks and Banffpay cannot guarantee
+                    absolute security. We will endeavor to do our part to ensure that your information remains safe.
+                </p>
+                <p>
+                    Services rendered through our website are governed by our privacy regulations. It is important to us
+                    that user privacy is respected, and personal information secured. Data submitted onto our site via
+                    order forms is encrypted for your safety during transmission processes through socket layer
+                    technology (SSL).
+                </p>
+                <p>
+                    Banffpay accepts third party information under specific conditions. In the event that you provide
+                    Banffpay with information about others you must show evidence of having the appropriate permission.
+                </p>
+            </section>
+            <section class="flex flex-col gap-4 text-gray-500">
+                <h2 class="text-2xl font-semibold text-black" id="third-party">Third Party Privacy Policies</h2>
+                <p>
+                    Banffpay's Privacy Policy does not apply to other advertisers or websites. Thus, we are advising you
+                    to consult the respective Privacy Policies of these third-party ad servers for more detailed
+                    information. It may include their practices and instructions about how to opt-out of certain
+                    options.
+                </p>
+                <p>
+                    You can choose to disable cookies through your individual browser options. To know more detailed
+                    information about cookie management with specific web browsers, it can be found at the browsers'
+                    respective websites.
+                </p>
+            </section>
+            <section class="flex flex-col gap-4 text-gray-500">
+                <h2 class="text-2xl font-semibold text-black" id="children-information">
+                    A Special Note About Children Information
+                </h2>
+                <p>
+                    Children are not eligible to use Banffpay Services. We respectfully ask that minors (persons under
+                    the age of 18) do not submit any information to us or use Banffpay.
+                </p>
+            </section>
+            <section class="flex flex-col gap-4 text-gray-500">
+                <h2 class="text-2xl font-semibold text-black" id="access-and-corrections">Access And Corrections</h2>
+                <p>
+                    We want to have accurate information about our customers and users, and we want you to be able to
+                    access the information we have collected about you. You can write to us to gain access to your
+                    personal information. Customers and users shall clearly demonstrate who they are before divulging
+                    personal information because we are mindful of attempts to impersonate people in order to gain
+                    access to their personal information inappropriately.
+                </p>
+                <p>
+                    If you would like to correct an error regarding your personal information, please use the provided
+                    functionality within the Banffpay Platform or write to us with an explanation of the correction.
+                </p>
+            </section>
+            <section class="flex flex-col gap-4 text-gray-500">
+                <h2 class="text-2xl font-semibold text-black" id="how-long-we-keep">
+                    How Long We Keep Your Personal Information?
+                </h2>
+                <p>
+                    As a regulated financial institution, we keep your personal information to enable your continued use
+                    of Banffpay Services and storage of your data extends beyond the closure of your account with us, as
+                    it is required by Law. Your data is only accessed internally on a need-to-know basis, which is done
+                    only if necessary.
+                </p>
+                <p>
+                    Banffpay will always delete data that is no longer required by a relevant law or jurisdiction in
+                    which we operate.
+                </p>
+            </section>
+            <section class="flex flex-col gap-4 text-gray-500">
+                <h2 class="text-2xl font-semibold text-black" id="policy-changes">Policy Changes</h2>
+                <p>
+                    This policy may be updated at any time. Users will either be notified of changes that may directly
+                    affect them via the email address provided during sign up, by way of a website announcement, or
+                    through a mobile link. These notifications will be transmitted prior to the change(s) taking effect.
+                </p>
+            </section>
+            <section class="flex flex-col gap-4 text-gray-500">
+                <h2 class="text-2xl font-semibold text-black" id="get-in-touch">Get In Touch</h2>
+                <p>
+                    If you have any questions or concerns about this Privacy Policy or our practices, please contact us
+                    at <a href="mailto:care@banffpay.com" class="text-brand-primary-950 font-semibold hover:underline"
+                        >care@banffpay.com</a
+                    >
                 </p>
             </section>
         </main>
     </div>
-</BaseLayout>
 
-<style>
-    header {
-        background-image: url("../../assets/banffpay_bg.png");
-        background-position: center;
-        background-repeat: no-repeat;
-    }
-    /* width */
-    nav::-webkit-scrollbar {
-        width: 5px;
-    }
+    <style>
+        header {
+            background-image: url("../../assets/banffpay_bg.png");
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+        /* width */
+        nav::-webkit-scrollbar {
+            width: 5px;
+        }
 
-    /* Track */
-    nav::-webkit-scrollbar-track {
-        background: #f1f1f1;
-    }
+        /* Track */
+        nav::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
 
-    /* Handle */
-    nav::-webkit-scrollbar-thumb {
-        background: #888;
-    }
+        /* Handle */
+        nav::-webkit-scrollbar-thumb {
+            background: #888;
+        }
 
-    /* Handle on hover */
-    nav::-webkit-scrollbar-thumb:hover {
-        background: #555;
-    }
-</style>
+        /* Handle on hover */
+        nav::-webkit-scrollbar-thumb:hover {
+            background: #555;
+        }
+    </style>
 
-<script>
-    const listItem = document.querySelectorAll("li")
-    const headings = document.querySelectorAll("h2")
+    <script>
+        const listItem = document.querySelectorAll(".link-buttons")
+        const headings = document.querySelectorAll("h2")
 
-    const toggleBackground = (current) => {
+        const toggleBackground = (current) => {
+            listItem.forEach((item) => {
+                item.classList.remove("bg-brand-primary-200", "text-brand-primary-950")
+            })
+
+            current.classList.add("bg-brand-primary-200", "text-brand-primary-950")
+        }
+
         listItem.forEach((item) => {
-            item.classList.remove("bg-brand-primary-200", "text-brand-primary-950")
-        })
+            item.addEventListener("click", () => {
+                toggleBackground(item)
 
-        current.classList.add("bg-brand-primary-200", "text-brand-primary-950")
-    }
-
-    listItem.forEach((item) => {
-        item.addEventListener("click", () => {
-            toggleBackground(item)
-
-            headings.forEach((heading) => {
-                if (heading.id === item.id) {
-                    heading.scrollIntoView({ behavior: "smooth", block: "center" })
-                }
+                headings.forEach((heading) => {
+                    if (heading.id === item.id) {
+                        heading.scrollIntoView({ behavior: "smooth", block: "center" })
+                    }
+                })
             })
         })
-    })
-</script>
+    </script>
+</BaseLayout>

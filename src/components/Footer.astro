@@ -48,13 +48,15 @@ import banffpayLogo from "@assets/banffpay-logo.svg"
         </div>
     </div>
     <div class="px-6 md:px-16 lg:px-24 py-6 border-t">
-        <p class="text-gray-400">&copy; <span id="currentYear"></span> Banffpay. All rights reserved</p>
+        <p class="text-gray-400">&copy; <span class="currentYear"></span> Banffpay. All rights reserved</p>
     </div>
 </footer>
 
 <script>
     const currentYear = new Date().getFullYear()
-    document.getElementById("currentYear").innerText = currentYear.toString()
+    const curYearEl = document.querySelectorAll(".currentYear")
+    curYearEl.forEach(element => element.textContent = currentYear.toString())
+   // document.getElementById("currentYear").innerText = currentYear.toString()
 </script>
 
 <script type="text/javascript">

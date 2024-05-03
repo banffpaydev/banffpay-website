@@ -3,8 +3,8 @@ const { item } = Astro.props
 ---
 
 <li
-    class="py-3.5 pl-6 rounded-full text-sm font-medium text-nowrap text-ellipsis overflow-hidden cursor-pointer mr-2 transition-all"
+    class="link-buttons py-3.5 pl-6 rounded-full text-sm font-medium text-nowrap text-ellipsis overflow-hidden cursor-pointer mr-2 transition-all"
     id={item.id}
 >
-    <a href=`#${item.id}`>{item.title}</a>
+    {item.title}
 </li>

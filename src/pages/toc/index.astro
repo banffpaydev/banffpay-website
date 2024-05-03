@@ -1,0 +1,476 @@
+---
+import BaseLayout from "@layouts/BaseLayout.astro"
+import NavBar from "@components/NavBar.astro"
+
+import { termsData } from "@components/content"
+import ListButton from "@components/ListButton.astro"
+---
+
+<BaseLayout title="BanffPay - Privacy Policy">
+    <header class="flex flex-col gap-4 bg-75% pb-16 md:pb-20">
+        <NavBar />
+        <div class="flex flex-col gap-10 md:gap-20">
+            <div class="self-center flex flex-col gap-12 items-center mt-20 mb-6 px-4">
+                <div
+                    class="rounded-full bg-brand-primary-200 px-6 py-3 text-brand-primary-950 font-semibold text-sm md:text-base uppercase"
+                >
+                    Privacy Policy
+                </div>
+                <h1 class="font-bold text-3xl xs:text-4xl md:text-6xl text-center max-w-sm md:max-w-4xl">
+                    We are also on the lookout for your utmost Privacy
+                </h1>
+                <div class="rounded-full bg-gray-100 px-6 py-3 font-semibold text-sm">
+                    Last Updated • 5 October 2023
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="px-6 md:px-14 lg:px-28 py-10 md:py-14 grid lg:grid-cols-12 gap-10">
+        <aside class="hidden lg:block col-span-3 relative pb-10">
+            <nav class="sticky top-10 h-[80vh] overflow-auto">
+                <ul class="flex flex-col gap-4">
+                    {termsData.map((item) => <ListButton item={item} />)}
+                </ul>
+            </nav>
+        </aside>
+        <main class="lg:col-span-9 flex flex-col gap-5">
+            <section class="text-gray-500 flex flex-col gap-4">
+                <h2 class="text-2xl font-semibold text-black" id="introduction">Introduction</h2>
+                <p>
+                    These terms and conditions outline the rules and regulations for the use of Banffpay's services
+                    website (www.Banffpay.com), App and Other Channels.
+                </p>
+                <p>
+                    By accessing this website and using our cross-border payment application and channels, you accept
+                    and agree to the terms and conditions which constitute the entire agreement ("Agreement") in this
+                    agreement. The Agreement governs your access to and use of Banffpay applications and channels
+                    including any content, functionality and services offered on or through the www.Banffpay.com
+                    domains, subdomains or sub-directories, regardless of your means of access and use (whether online
+                    or mobile, including by way of mobile application), whether as a guest or a registered user. Do not
+                    continue to use Banffpay if you do not agree to all the terms and conditions stated on this page.
+                    The following terminology applies to these agreement: "Client", "You" and "Your" refers to you, the
+                    person who log-on to this website and compliant to the Company's terms and conditions. "Banffpay”
+                    “The Company", "Ourselves", "We", "Our" and "Us", refers to Banffpay Limited. "Party", "Parties", or
+                    "Us", refers to both the Client and ourselves. All terms refer to the offer, acceptance and
+                    consideration of payment necessary to undertake the process of providing services to the Client in
+                    the most appropriate manner for the express purpose of meeting the Client's needs in respect of
+                    provision of the Company's stated services which can include contract or contracts for the exchange,
+                    sale and delivery of currency (the “Contracts”) and agree that all Contracts shall be carried out on
+                    the terms and conditions set out herein , in accordance with and subject to, prevailing law of
+                    Canada. Any use of the above terminology or other words in the singular, plural, capitalization
+                    and/or he/she or they, are taken as interchangeable and therefore as referring to same.
+                </p>
+            </section>
+            <section class="text-gray-500 flex flex-col gap-4">
+                <h2 class="text-2xl font-semibold text-black" id="consent">General Information</h2>
+                <p>
+                    In entering into a contract, the Client must not treat any information or comments by Banffpay as
+                    advice and must rely only on its own judgment. Each party agrees to make timely delivery of the
+                    service in accordance with the Contract and as specified in the verification, define therein below.
+                </p>
+                <p>
+                    The Client shall pay by electronic funds transfer (or by such other means as agreed with Banffpay in
+                    any particular case) in cleared funds into a financial account nominated by Banffpay, the full value
+                    for services (including all applicable fees and charges if any) as detailed and defined process by
+                    Banffpay. Failure by the Client to make necessary payments shall relieve Banffpay of any obligation
+                    to deliver any corresponding services it may be required to make under the Contract. The Client
+                    authorizes Banffpay to use the financial information provided by the Client for the completion of a
+                    service request.
+                </p>
+                <p>
+                    The Client represents to Banffpay that, both at the date of acceptance by the Client of this
+                    agreement and at the time each service request is made or carried out:
+                </p>
+                <ol class="list-decimal flex flex-col gap-6 px-6 text-gray-500">
+                    <li>
+                        The Client is acting as principal for its own account and has full power and authority and has
+                        taken all necessary steps to enable it lawfully to enter into and fulfil this agreement.
+                    </li>
+                    <li>
+                        All sums paid to Banffpay under the service belong to the Client and are not subject to any
+                        charge or other rights of third parties.
+                    </li>
+                    <li>
+                        All information supplied to Banffpay by the Client is, or at the time it is supplied will be,
+                        accurate in all material respects and the Client will not omit or withhold any information which
+                        would make such information inaccurate in any material respect.
+                    </li>
+                    <li>
+                        In the event that the information provided by the client is wrong and services have been
+                        rendered, Banffpay is not liable for a refund. It's the Client's responsibility to pursue a
+                        refund, Banffpay will support where necessary.
+                    </li>
+                </ol>
+                <p>
+                    Banffpay warrants that it abides with its privacy policy which can be found at
+                    https://www.Banffpay.com/privacy_policy.
+                </p>
+                <p>
+                    This agreement and any relationship between Banffpay and the Client shall be governed by the laws of
+                    the Province of Alberta and the laws of Canada applicable therein and shall be subject to the
+                    exclusive jurisdiction of the courts and tribunals of Alberta, Canada.
+                </p>
+                <p>
+                    The parties confirm that it is their express wish that this agreement, as well as any other
+                    documents relating to this agreement, including notices, have been and shall be drawn up in the
+                    English language only. Client has the right to close his/her wallet any time it deems necessary to
+                    stop transacting with Banffpay.
+                </p>
+            </section>
+            <section class="text-gray-500 flex flex-col gap-4">
+                <h2 class="text-2xl font-semibold text-black" id="notice">Registration</h2>
+                <ol class="list-decimal flex flex-col gap-6 px-6 text-gray-500">
+                    <li>All new users must sign up for Banffpay wallet before using any Banffpay Services.</li>
+                    <li>
+                        Your Banffpay wallet is not issued by a bank. Therefore, no interest will accrue or be paid on
+                        the wallet balances.
+                    </li>
+                    <li>
+                        In compliance with Canada Anti-Money Laundering law, we are required to obtain, verify, and
+                        record information about you. Therefore, you agree: to provide us with all relevant information
+                        and documents requested by us, and all other information as prompted by the service's
+                        registration form; that all information provided to Banffpay at any time, is accurate and
+                        current, and no material information has been withheld; that you will update any information
+                        immediately at the time of changing, to keep it accurate, current and complete; and that
+                        Banffpay may lawfully conduct necessary investigations directly or through a third party to
+                        verify your identity as part of the registration process.
+                    </li>
+                    <li>
+                        Furthermore, by entering into this agreement, you are consenting to Banffpay making inquiries
+                        with third parties, including credit bureaus', to verify the information that you supply as part
+                        of wallet creation.
+                    </li>
+                    <li>
+                        You consent to the storing of this information for the purposes of identity verification. WHERE
+                        INFORMATION PROVIDED IS MISREPRESENTED, OR WE HAVE GROUNDS TO SUSPECT THAT SUCH INFORMATION IS
+                        INACCURATE, NOT CURRENT, OR INCOMPLETE, Banffpay RESERVES THE RIGHT AT ALL TIMES, TO SUSPEND OR
+                        TERMINATE THE SERVICE.
+                    </li>
+                </ol>
+            </section>
+            <section class="text-gray-500 flex flex-col gap-4">
+                <h2 class="text-2xl font-semibold text-black" id="information-we-collect">Eligibility</h2>
+                <p>To be eligible to register for and use our Services, you must:</p>
+                <ol class="list-decimal flex flex-col gap-6 px-4 lg:px-12 text-gray-500">
+                    <li>Be at least (18) years or are of legal age.</li>
+                    <li>Canada resident, physically located in Canada.</li>
+                    <li>
+                        Intend to use the Banffpay services for your own use and not on behalf of, or as agent to, any
+                        other person or entity.
+                    </li>
+                    <li>Not a person listed on any sanctions list in Canada or any other country.</li>
+                    <li>
+                        Not a Politically Exposed Person as defined in Canada anti-money
+                        laundering/anti-terrorist-financing legislation.
+                    </li>
+                    <li>
+                        Meet Banffpay's anti-money laundering standards applied at our sole discretion.<a
+                            href="#"
+                            class="text-brand-primary-900 font-medium hover:underline">View AML / CFT Policy.</a
+                        >
+                    </li>
+                </ol>
+                <p>
+                    IT IS YOUR RESPONSILITY TO READ AND UNDERSTAND THE PARTNER TERMS BECAUSE THEY CONTAIN TERMS AND
+                    CONDITIONS CONCERNING YOUR Banffpay WALLET, INCLUDING BUT NOT LIMITED TO LIMITATIONS, REVERSALS, AND
+                    ARBITRATION PROVISIONS, AND YOUR RELEVANT RIGHTS AND LIABILITIES
+                </p>
+            </section>
+            <section class="text-gray-500 flex flex-col gap-4">
+                <h2 class="text-2xl font-semibold text-black" id="how-we-collect">Liabilities</h2>
+                <ol class="list-decimal flex flex-col gap-6 px-6 text-gray-500">
+                    <li>
+                        <span class="text-gray-900">Disclaimer of Warranties</span>
+                        <p>
+                            Banffpay Service is provided on an “as is” and “as available” basis. Except as warranted in
+                            this Terms of Use, we expressly disclaim all warranties of any kind, whether express or
+                            implied or statutory, including, but not limited to the implied warranties of
+                            merchantability, fitness for a particular purpose, data accuracy & completeness, and any
+                            warranties relating to non-infringement in the Service. We shall not be responsible or
+                            liable for the authenticity, accuracy, completeness, errors, omission, typographic errors,
+                            disruption, delay, interruption, failure, deletion, defect of any information, research,
+                            reports, analysis, quotes etc. in this Web site or any part thereof.
+                        </p>
+                        <p>
+                            Also, we shall not incur any liability direct or indirect, to you or any third party, as a
+                            consequence of non-functioning of any equipment belonging to you, any third party or us. We
+                            shall not be responsible for any downtime of such equipment.
+                        </p>
+                    </li>
+                    <li>
+                        <span class="text-gray-900">Indemnification</span>
+                        <p>
+                            You will defend, indemnify and hold harmless Banffpay, its parents, affiliates, licensors,
+                            suppliers, Issuer, contractors and their respective shareholders, directors and officers,
+                            assigns, and successors-in-interest from any and all liabilities, damages caused by any
+                            virus, personal injury, loss of profits, data or other intangible, any damages arising from
+                            interruption, suspension or termination of Service, including but not limited to direct,
+                            indirect, incidental, special, consequential or exemplary damages, whether such
+                            interruption, suspension or termination was justified or not, negligent or intentional,
+                            inadvertent or advertent, causes of action and costs arising out of or resulting from:
+                        </p>
+                        <ol class="pl-4 my-2">
+                            <li>a. your failure to comply with this agreement.</li>
+                            <li>b. your use of the Services, or any part of them.</li>
+                            <li>
+                                c. your alleged or actual negligent or willful acts or omissions, or those of your
+                                agents or employees.
+                            </li>
+                            <li>d. any third party's use of your Account or your Services.</li>
+                        </ol>
+                        <p>
+                            In no event will our liability for any claim, whether in contract, tort, or any other theory
+                            of liability, exceed one Canadian dollar only.
+                        </p>
+                        <p>
+                            You also agree that your sole remedy under this Terms of Use is cancellation of the Service.
+                        </p>
+                    </li>
+                    <li>
+                        <span class="text-gray-900">Undertaking to Banffpay</span>
+                        <p>
+                            You represent and warrant that all information that you enter regarding the services is true
+                            and complete. When processing a service request, Banffpay may rely on the registration
+                            information and service request information that you provided. You acknowledge that any
+                            errors in the information, including misidentification of Beneficiary (s), incorrect or
+                            inconsistent account names and numbers, or misspellings, are your responsibility and that
+                            Banffpay shall have no liability for executing a service request based upon the inaccurate
+                            or incomplete information you provided.
+                        </p>
+                    </li>
+                    <li>
+                        <span class="text-gray-900">Cancellation Of Instruction</span>
+                        <p>
+                            Once we have received your Instruction, you cannot cancel it. Notwithstanding this clause,
+                            we may in our absolute discretion, attempt to reverse your Instruction if you have informed
+                            us that you wish us to do so. In some cases, we may have initiated an irreversible request
+                            for funds to be paid out to your Payee by a Service Provider. If this is the case, we cannot
+                            guarantee that the reversal will be successful.
+                        </p>
+                    </li>
+                </ol>
+            </section>
+            <section class="flex flex-col gap-4 text-gray-500">
+                <h2 class="text-2xl font-semibold text-black" id="how-we-use">Reward</h2>
+                <p>
+                    You may choose not to provide certain information, but this may limit your ability to use certain
+                    features of our App or Site. You can also review and update your account information at any time by
+                    logging into your account settings.
+                </p>
+            </section>
+            <section class="flex flex-col gap-4 text-gray-500">
+                <h2 class="text-2xl font-semibold text-black" id="how-we-use">Charges and currency exchange</h2>
+                <p>
+                    You must pay us the fee stated for each service. We will not charge you any other fee for such
+                    services thereafter. For each transaction you initiate, you authorize us (or anyone authorized by
+                    us) to take payment from your wallet for the transaction amount, plus a fee, that shall be charged
+                    to you for initiating the transaction (the "Fee"). Please note that in addition to the Fee
+                    applicable to a transaction, a currency exchange rate may also be applied.
+                </p>
+            </section>
+            <section class="flex flex-col gap-4 text-gray-500">
+                <h2 class="text-2xl font-semibold text-black" id="data-sharing">
+                    Restriction on Maximum Transaction value
+                </h2>
+                <p>
+                    There are limits on the amount you are able to send. We will, as necessary, tell you what they are.
+                    We may refuse to send the money or allow it to be collected if we reasonably believe that:
+                </p>
+                <ol class="list-decimal flex flex-col gap-2 px-4 lg:px-12 text-gray-500">
+                    <li>by doing so we might break any law, regulation, code, or other duty that applies to us.</li>
+                    <li>doing so may expose us to action from any government or regulator.</li>
+                    <li>
+                        it may be linked with fraudulent or illegal activity. Unless the law prevents us, you can call
+                        us, and we will tell you the reasons for our refusal and how you can put right any errors that
+                        led to our refusal. If you prefer (and the law allows), or if the law requires, we will return
+                        the money to you.
+                    </li>
+                </ol>
+            </section>
+            <section class="flex flex-col gap-4 text-gray-500">
+                <h2 class="text-2xl font-semibold text-black" id="how-we-use">Data Protection and Privacy</h2>
+                <p>
+                    We may process data provided by you and the details of your transaction on our systems in order to
+                    provide you with requested services and or to prevent fraud. We may also use information collected
+                    for servicing of your relationship with us (including the administration of your account, protection
+                    from fraudulent activity, market research, special promotions, and sending you information about our
+                    services) as permitted by applicable law. You hereby appoint us to provide your details and explicit
+                    consent to your mobile network operator and their authorised data sources so that they can provide
+                    further information about you to us, including (if available), your name, address, email and device
+                    data for these purposes. You also warrant that you have consent for all personal information you
+                    will share with us.
+                </p>
+                <p>
+                    We may, for the above purposes, share the collected personal information with our parent,
+                    affiliates, agents, or service providers, any of whom may be in a country other than your own. We
+                    will not share the information with anyone else except as permitted or required by law or
+                    regulation.
+                </p>
+                <p>
+                    You may request access to your personal information, ask for the information to be corrected or
+                    updated, or withdraw your consent for marketing use at any time by e-mailing us at care@Banffpay.com
+                    calling us at +1 403 453 5703. Please allow at least 4 weeks for processing of your request.
+                </p>
+            </section>
+            <section class="flex flex-col gap-4 text-gray-500">
+                <h2 class="text-2xl font-semibold text-black" id="data-sharing">
+                    Termination and Enforcement of action
+                </h2>
+                <p>
+                    We may, without notice (except as required by law) and without liability to you, terminate or
+                    suspend your access to the Banffpay App/platform at any time, including without limitation, if:
+                </p>
+                <ol class="list-decimal flex flex-col gap-2 px-4 lg:px-12 text-gray-500">
+                    <li>
+                        you attempt to Transfer or charge funds from an account that does not belong to you or from an
+                        account which does not have sufficient available funds or has expired
+                    </li>
+                    <li>
+                        your financial institution attempts to charge back a Transfer on the basis of a dispute related
+                        to a Transfer.
+                    </li>
+                    <li>you provide incorrect or false information about yourself or about a Recipient.</li>
+                    <li>
+                        you attempt to tamper, hack, modify or otherwise corrupt the security or functionality of the
+                        Banffpay Platform.
+                    </li>
+                    <li>
+                        you have breached a term or condition of this Agreement, or any representation or warranty that
+                        you make under this Agreement is false.
+                    </li>
+                    <li>we determine that your Profile is inactive.</li>
+                    <li>
+                        we believe that your transaction may expose us to action from any government or regulator. We
+                        may, without liability to you, terminate or suspend your access to the Banffpay Service at any
+                        time and for any reason by giving you 30 days' notice.
+                    </li>
+                </ol>
+                <p>
+                    To close your Profile, contact Customer Service through the Website. If we close your Profile for
+                    any reason, we may, in our sole discretion, cancel your pending service requests.
+                </p>
+            </section>
+            <section class="flex flex-col gap-4 text-gray-500">
+                <h2 class="text-2xl font-semibold text-black" id="data-sharing">Disclaimer</h2>
+                <p>
+                    To the extent permitted by applicable law, we exclude all representations, warranties and conditions
+                    relating to our website and the use of this website. Nothing in this disclaimer will exclude or
+                    limit :
+                </p>
+                <ol class="list-decimal flex flex-col gap-2 px-4 lg:px-12 text-gray-500">
+                    <li>our or your liability for death or personal injury.</li>
+                    <li>our or your liability for fraud or fraudulent misrepresentation.</li>
+                    <li>you provide incorrect or false information about yourself or about a Recipient.</li>
+                    <li>any of our or your liabilities in any way that is not permitted under applicable law; or</li>
+                    <li>any of our or your liabilities that may not be excluded under applicable law.</li>
+                </ol>
+                <p>
+                    The limitations and prohibitions of liability set in this Section and elsewhere in this disclaimer:
+                </p>
+                <ol class="list-decimal flex flex-col gap-2 px-4 lg:px-12 text-gray-500">
+                    <li>are subject to the preceding paragraph.</li>
+                    <li>
+                        govern all liabilities arising under the disclaimer, including liabilities arising in contract,
+                        in tort and for breach of statutory duty.
+                    </li>
+                </ol>
+                <p>
+                    As long as the website and the information and services on the website are provided free of charge,
+                    we will not be liable for any loss or damage of any nature.
+                </p>
+            </section>
+            <section class="flex flex-col gap-4 text-gray-500">
+                <h2 class="text-2xl font-semibold text-black" id="how-we-use">Cookies</h2>
+                <p>
+                    We employ the use of cookies. By accessing Banffpay website, you agreed to use cookies in agreement
+                    with Banffpay Limited Privacy Policy.
+                </p>
+                <p>
+                    Most interactive websites use cookies to let us retrieve the user's details for each visit. Cookies
+                    are used by our website to enable the functionality of certain areas to make it easier for people to
+                    visit our website. Some of our affiliate/advertising partners may also use cookies.
+                </p>
+            </section>
+            <section class="flex flex-col gap-4 text-gray-500">
+                <h2 class="text-2xl font-semibold text-black" id="how-we-use">Intellectual Property Rights</h2>
+                <p>This web site is &copy; <span class="currentYear"></span> Banffpay. All rights reserved.</p>
+                <p>
+                    The name Banffpay and other names, trademarks and service marks on this site are the property of
+                    Banffpay or other third parties and may not be used or copied without prior written permission from
+                    Banffpay.
+                </p>
+                <p>
+                    All communication, postings, and uploads to this site become the exclusive property of Banffpay. You
+                    may not reproduce, reverse engineer, disassemble, modify, or create derivative works from the site.
+                    You may not remove any copyright, trademark or other intellectual property or proprietary notice or
+                    legend contained on this site or its content.
+                </p>
+            </section>
+            <section class="flex flex-col gap-4 text-gray-500">
+              <h2 class="text-2xl font-semibold text-black" id="how-we-use">How We are Regulated</h2>
+              <p>
+                We are a Fintech and Money Service Business (MSB) authorized and regulated by the Financial Transactions and Reports Analysis Centre of Canada ('FINTRAC'). The financial Services Register is Available at https://fintrac-canafe.canada.ca/
+              </p>
+              <p>
+                For Questions, notices, and requests for further information, reach us at:
+                <ol class="text-sm">
+                  <li>Call at +1 (403) 453-5703</li>
+                  <li>Email at care@Banffpay.com</li>
+                </ol>
+              </p>
+          </section>
+        </main>
+    </div>
+
+    <style>
+        header {
+            background-image: url("../../assets/banffpay_bg.png");
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+        /* width */
+        nav::-webkit-scrollbar {
+            width: 5px;
+        }
+
+        /* Track */
+        nav::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
+
+        /* Handle */
+        nav::-webkit-scrollbar-thumb {
+            background: #888;
+        }
+
+        /* Handle on hover */
+        nav::-webkit-scrollbar-thumb:hover {
+            background: #555;
+        }
+    </style>
+
+    <script>
+        const listItem = document.querySelectorAll(".link-buttons")
+        const headings = document.querySelectorAll("h2")
+
+        const toggleBackground = (current) => {
+            listItem.forEach((item) => {
+                item.classList.remove("bg-brand-primary-200", "text-brand-primary-950")
+            })
+
+            current.classList.add("bg-brand-primary-200", "text-brand-primary-950")
+        }
+
+        listItem.forEach((item) => {
+            item.addEventListener("click", () => {
+                toggleBackground(item)
+
+                headings.forEach((heading) => {
+                    if (heading.id === item.id) {
+                        heading.scrollIntoView({ behavior: "smooth", block: "center" })
+                    }
+                })
+            })
+        })
+    </script>
+</BaseLayout>
