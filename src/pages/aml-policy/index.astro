@@ -13,7 +13,7 @@ import ListButton from "@components/ListButton.astro"
         <div class="flex flex-col gap-10 md:gap-20">
             <div class="self-center flex flex-col gap-12 items-center mt-20 mb-6 px-4">
                 <div class="rounded-full bg-white px-6 py-3 font-extrabold text-sm md:text-base uppercase">
-                    AML/ CFT POLICY
+                    AML / CFT POLICY
                 </div>
                 <h1 class="font-bold text-3xl xs:text-4xl md:text-6xl text-center max-w-sm md:max-w-4xl">
                     Here's our Anti-Money Laundering Policy
@@ -26,7 +26,8 @@ import ListButton from "@components/ListButton.astro"
     </header>
     <div class="px-6 md:px-14 lg:px-28 py-10 md:py-14 grid lg:grid-cols-12 gap-10">
         <!-- SIDEBAR - CONTENT HEADINGS -->
-        <aside class="hidden lg:block col-span-3 relative pb-10">
+        <!-- Switch lg:hidden to lg:block at appropriate time -->
+        <aside class="hidden lg:hidden col-span-3 relative pb-10">
             <nav class="sticky top-10 h-[80vh] overflow-auto">
                 <ul class="flex flex-col gap-4">
                     {antiMoneyLaundering.map((item) => <ListButton item={item} />)}
@@ -327,7 +328,9 @@ import ListButton from "@components/ListButton.astro"
                 </ol>
             </section>
             <section class="text-gray-500 flex flex-col gap-4">
-                <h2 class="text-2xl font-semibold text-black" id="updating-risk-assessment">Updating the Risk Assessment</h2>
+                <h2 class="text-2xl font-semibold text-black" id="updating-risk-assessment">
+                    Updating the Risk Assessment
+                </h2>
                 <ol>
                     <li>HIGH: Quarterly;</li>
                     <li>MEDIUM: Half Yearly;</li>
@@ -352,7 +355,9 @@ import ListButton from "@components/ListButton.astro"
                 </p>
             </section>
             <section class="text-gray-500 flex flex-col gap-4">
-                <h2 class="text-2xl font-semibold text-black" id="politically-exposed-persons">Politically Exposed Persons</h2>
+                <h2 class="text-2xl font-semibold text-black" id="politically-exposed-persons">
+                    Politically Exposed Persons
+                </h2>
 
                 <p>
                     “Politically Exposed Persons” (PEPs) are individuals who are or have been entrusted with prominent
@@ -460,7 +465,9 @@ import ListButton from "@components/ListButton.astro"
                 </p>
             </section>
             <section class="text-gray-500 flex flex-col gap-4">
-                <h2 class="text-2xl font-semibold text-black" id="compliance-training-program">Compliance Training Program</h2>
+                <h2 class="text-2xl font-semibold text-black" id="compliance-training-program">
+                    Compliance Training Program
+                </h2>
                 <p>Sole proprietors do not need a training program.</p>
                 <p>
                     All of the Company's employees, or other individuals authorized to act on behalf of compliance
