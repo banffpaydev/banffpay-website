@@ -9,9 +9,9 @@ import iconEmail from "@assets/icon-email.svg"
 import iconFb from "@assets/icon-fb.svg"
 import iconMsg from "@assets/icon-message.svg"
 
-
 import NavBarOverlay from "./NavBarOverlay.astro"
 ---
+
 <NavBarOverlay />
 <div class="flex gap-4 justify-center items-center self-center z-10 w-[90%] xl:w-3/4 md:w-[85%] sticky top-10">
     <nav class="bg-brand-primary-200 flex gap-4 justify-between py-2 px-2 rounded-full">
@@ -122,11 +122,17 @@ import NavBarOverlay from "./NavBarOverlay.astro"
                 <div class="rounded-full bg-gray-100 w-8 h-8 flex justify-center items-center">
                     <Image src={arrowDown} alt="arrow down icon" class="w-3" />
                 </div>
-                <span id="openMenu" class="text-sm font-medium mr-2">EN</span>
+                <span class="text-sm font-medium mr-2">EN</span>
             </button>
         </div>
     </nav>
-    <button class="hidden lg:block border-8 border-brand-primary-300 bg-white rounded-full px-6 self-stretch"> Sign in on web </button>
+    <button class="hidden lg:block border-8 border-brand-primary-300 bg-white rounded-full px-6 self-stretch">
+        Sign in on web
+    </button>
+    <ion-icon
+        id="openMenu"
+        name="menu-outline"
+        class="block md:hidden text-2xl bg-slate-800 text-white px-5 py-3 rounded-full"></ion-icon>
 </div>
 
 <style>

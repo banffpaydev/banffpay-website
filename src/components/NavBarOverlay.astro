@@ -9,33 +9,22 @@ import iconMsg from "@assets/icon-message.svg"
 ---
 
 <div id="myNav" class="overlay">
-    <a href="javascript:void(0)" class="closebtn text-white">&times;</a>
-    <div class="overlay-content flex flex-col gap-5 items-center text-3xl text-gray-400">
+    <div class="overlay-content flex flex-col gap-10 items-center text-3xl text-gray-400">
         <!-- About use -->
         <a href="/about" class="text-3xl text-gray-400 hover:text-white">About</a>
-        <!-- Services -->
-        <button class="dropdown-btn text-gray-400 flex items-center gap-2">
-            <span class="text-3xl hover:text-white active:text-white">Services</span>
-            <ion-icon name="caret-down-outline" class="text-2xl"></ion-icon>
-        </button>
-        <div class="dropdown-container flex flex-col gap-2 text-2xl text-gray-400 text-center">
-            <a href="#send-money" class="hover:text-white p-3">Send Money</a>
-            <a href="#exchange-money" class="hover:text-white p-3">Exchange Money</a>
-            <a href="#add-money" class="hover:text-white p-3">Add Money</a>
-        </div>
         <!-- Contact -->
         <button class="dropdown-btn text-gray-400 flex items-center gap-2">
             <span class="text-3xl hover:text-white active:text-white">Contact</span>
             <ion-icon name="caret-down-outline" class="text-2xl"></ion-icon>
         </button>
         <div class="dropdown-container flex flex-col gap-2 text-2xl text-gray-400">
-            <nav class="px-6 py-8">
+            <nav class="px-8 py-10">
                 <div>
                     <h3 class="font-medium">Talk to us</h3>
                     <p class="text-gray-500 text-sm pb-2 border-b">We will repond within 24 hours.</p>
                 </div>
                 <div class="flex flex-col gap-5">
-                    <div class="flex gap-4 pb-2 border-b">
+                    <div class="flex gap-4 py-2 border-b">
                         <Image src={iconCall} alt="call icon" class="w-5" />
                         <div class="flex flex-col gap-0.5">
                             <p class="text-gray-400 font-medium text-sm">Call us on:</p>
@@ -86,10 +75,9 @@ import iconMsg from "@assets/icon-message.svg"
 <style>
     .overlay {
         height: 100%;
-        /* width: 0; */
-        width: 100%;
+        width: 0;
         position: fixed;
-        z-index: 15;
+        z-index: 1;
         top: 0;
         left: 0;
         background-color: rgb(0, 0, 0);
@@ -100,7 +88,7 @@ import iconMsg from "@assets/icon-message.svg"
 
     .overlay-content {
         position: relative;
-        top: 10%;
+        top: 20%;
         width: 100%;
         /* text-align: center;
         margin-top: 30px; */
@@ -114,7 +102,7 @@ import iconMsg from "@assets/icon-message.svg"
     }
 
     .active {
-        background-color: #34acff;
+        background-color: #67c1ff;
         color: white;
     }
 
@@ -136,16 +124,19 @@ import iconMsg from "@assets/icon-message.svg"
 </style>
 
 <script>
+    const menuBtn = document.querySelector("#openMenu")
     function openNav() {
-        document.getElementById("myNav").style.width = "100%"
-    }
-
-    function closeNav() {
-        document.getElementById("myNav").style.width = "0%"
+        if (menuBtn.getAttribute("name") === "menu-outline") {
+            document.getElementById("myNav").style.width = "100%"
+            menuBtn.setAttribute("name", "close-outline")
+        } else {
+            document.getElementById("myNav").style.width = "0%"
+            menuBtn.setAttribute("name", "menu-outline")
+        }
     }
 
     document.querySelector("#openMenu").addEventListener("click", openNav)
-    document.querySelector(".closebtn").addEventListener("click", closeNav)
+    // document.querySelector(".closebtn").addEventListener("click", closeNav)
 
     var dropdown = document.getElementsByClassName("dropdown-btn")
 
@@ -161,8 +152,8 @@ import iconMsg from "@assets/icon-message.svg"
         })
     }
 
-    document.querySelector('a').addEventListener('click', function (e) {
-        // e.preventDefault()
-        closeNav()
-    })
+    // document.querySelector("a").addEventListener("click", function (e) {
+    //     // e.preventDefault()
+    //     closeNav()
+    // })
 </script>
