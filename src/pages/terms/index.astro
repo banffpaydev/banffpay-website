@@ -27,7 +27,7 @@ import ListButton from "@components/ListButton.astro"
     <div class="px-6 md:px-14 lg:px-28 py-10 md:py-14 grid lg:grid-cols-12 gap-10">
         <!-- SIDEBAR - CONTENT HEADINGS -->
         <!-- Switch lg:hidden to lg:block at appropriate time -->
-        <aside class="hidden lg:hidden col-span-3 relative pb-10">
+        <aside class="hidden lg:block col-span-3 relative pb-10">
             <nav class="sticky top-10 h-[80vh] overflow-auto">
                 <ul class="flex flex-col gap-4">
                     {termsData.map((item) => <ListButton item={item} />)}
