@@ -14,12 +14,12 @@ import NavBarOverlay from "./NavBarOverlay.astro"
 
 <!-- TO BE INCLUDED AFTER AGREEMENT -->
 <NavBarOverlay />
-<div class="flex gap-4 justify-center items-center self-center z-10 w-[95%] xl:w-3/4 md:w-[85%] sticky top-10">
+<div class="flex gap-4 justify-center items-center self-center z-10 w-[95%] md:w-[85%] xl:w-3/4 sticky top-10">
     <nav class="bg-brand-primary-200 flex-1 flex gap-4 justify-between py-2 px-2 rounded-full">
         <a href="/" class="bg-brand-primary-300 rounded-full px-2 xs:px-4 py-3">
             <Image src={banffLogo} alt="logo" class="w-full md:w-28" loading="eager" />
         </a>
-        <div class="flex gap-5">
+        <div class="flex gap-4 lg:gap-6 xl:gap-16">
             <button id="servicesBtn" class="hidden md:flex gap-x-1.5 items-center relative cursor-pointer">
                 <span class="text-sm dropdown-span">Services</span>
                 <Image
