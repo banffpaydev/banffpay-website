@@ -30,6 +30,7 @@ const { title } = Astro.props
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
     <script>
+        // More Features Section
         document.addEventListener("DOMContentLoaded", function () {
             const sections = document.querySelectorAll(".observer")
             const observer = new IntersectionObserver(
@@ -40,22 +41,44 @@ const { title } = Astro.props
                         if (entry.isIntersecting) {
                             header.classList.remove("text-gray-300")
                             header.classList.add("text-brand-primary-800")
-    
+
                             paragraph.classList.remove("text-gray-300")
                         } else {
                             header.classList.remove("text-brand-primary-800")
                             header.classList.add("text-gray-300")
-    
-    
+
                             paragraph.classList.add("text-gray-300")
                         }
                     })
                 },
                 { threshold: 0.95 }
             )
-    
+
             sections.forEach((section) => {
                 observer.observe(section)
+            })
+        })
+        // TERMS & CONDITIONS
+        const listItem = document.querySelectorAll(".link-buttons")
+        const headings = document.querySelectorAll("h2")
+
+        const toggleBackground = (current) => {
+            listItem.forEach((item) => {
+                item.classList.remove("bg-brand-primary-200", "text-brand-primary-950")
+            })
+
+            current.classList.add("bg-brand-primary-200", "text-brand-primary-950")
+        }
+
+        listItem.forEach((item) => {
+            item.addEventListener("click", () => {
+                toggleBackground(item)
+
+                headings.forEach((heading) => {
+                    if (heading.id === item.id) {
+                        heading.scrollIntoView({ behavior: "smooth", block: "center" })
+                    }
+                })
             })
         })
     </script>
