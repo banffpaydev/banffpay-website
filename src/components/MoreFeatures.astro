@@ -68,28 +68,4 @@ import mockup from "@assets/mockup.png"
         <Image class="max-w-xs" src={mockup} alt="mockup" />
     </div>
 </section>
-<script>
-    document.addEventListener("DOMContentLoaded", function () {
-        const sections = document.querySelectorAll(".observer")
-        const observer = new IntersectionObserver(
-            (entries) => {
-                entries.forEach((entry) => {
-                    const header = entry.target.children[0]
-                    const paragraph = entry.target.children[1]
-                    if (entry.isIntersecting) {
-                        header.classList.add("text-brand-primary-800")
-                        paragraph.classList.remove("text-gray-300")
-                    } else {
-                        header.classList.remove("text-brand-primary-800")
-                        paragraph.classList.add("text-gray-300")
-                    }
-                })
-            },
-            { threshold: 0.95 }
-        )
-
-        sections.forEach((section) => {
-            observer.observe(section)
-        })
-    })
-</script>
+<!-- ORIGINAL script moved to BaseLayout -->

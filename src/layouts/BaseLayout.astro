@@ -29,4 +29,34 @@ const { title } = Astro.props
     </body>
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const sections = document.querySelectorAll(".observer")
+            const observer = new IntersectionObserver(
+                (entries) => {
+                    entries.forEach((entry) => {
+                        const header = entry.target.children[0]
+                        const paragraph = entry.target.children[1]
+                        if (entry.isIntersecting) {
+                            header.classList.remove("text-gray-300")
+                            header.classList.add("text-brand-primary-800")
+    
+                            paragraph.classList.remove("text-gray-300")
+                        } else {
+                            header.classList.remove("text-brand-primary-800")
+                            header.classList.add("text-gray-300")
+    
+    
+                            paragraph.classList.add("text-gray-300")
+                        }
+                    })
+                },
+                { threshold: 0.95 }
+            )
+    
+            sections.forEach((section) => {
+                observer.observe(section)
+            })
+        })
+    </script>
 </html>
