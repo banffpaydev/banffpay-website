@@ -4,22 +4,19 @@ import { Image } from "astro:assets"
 import banffLogo from "@assets/banffpay-logo.svg"
 import arrowDown from "@assets/arrow-down.svg"
 
-import iconCall from "@assets/icon-call.svg"
-import iconEmail from "@assets/icon-email.svg"
-import iconFb from "@assets/icon-fb.svg"
-import iconMsg from "@assets/icon-message.svg"
-
 import NavBarOverlay from "./NavBarOverlay.astro"
 ---
 
 <!-- TO BE INCLUDED AFTER AGREEMENT -->
 <NavBarOverlay />
-<div class="flex gap-4 justify-center items-center self-center z-10 w-[95%] md:w-[85%] xl:w-3/4 sticky top-10">
+<div
+    class="flex gap-4 justify-center items-center self-center z-10 w-[95%] md:w-[85%] xl:w-[65%] fixed top-3"
+>
     <nav class="bg-brand-primary-200 flex-1 flex gap-4 justify-between py-2 px-2 rounded-full">
         <a href="/" class="bg-brand-primary-300 rounded-full px-2 xs:px-4 py-3">
             <Image src={banffLogo} alt="logo" class="w-full md:w-28" loading="eager" />
         </a>
-        <div class="flex gap-4 lg:gap-6 xl:gap-16">
+        <div class="flex gap-4 lg:gap-6 xl:gap-12">
             <button id="servicesBtn" class="hidden md:flex gap-x-1.5 items-center relative cursor-pointer">
                 <span class="text-sm dropdown-span">Services</span>
                 <Image
@@ -34,13 +31,13 @@ import NavBarOverlay from "./NavBarOverlay.astro"
                 >
                     <ul class="flex flex-col py-6 px-4 gap-3 text-gray-500">
                         <li>
-                            <a href="#send-money" class="hover:border-b border-gray-500">Send money</a>
+                            <a href="/#send-money" class="hover:border-b border-gray-500">Send money</a>
                         </li>
                         <li>
-                            <a href="#exchange-money" class="hover:border-b border-gray-500">Exchange currency</a>
+                            <a href="/#exchange-money" class="hover:border-b border-gray-500">Exchange currency</a>
                         </li>
                         <li>
-                            <a href="#add-money" class="hover:border-b border-gray-500">Add money</a>
+                            <a href="/#add-money" class="hover:border-b border-gray-500">Add money</a>
                         </li>
                     </ul>
                 </nav>
@@ -63,7 +60,7 @@ import NavBarOverlay from "./NavBarOverlay.astro"
                     </div>
                     <div class="flex flex-col gap-5">
                         <div class="flex gap-4 pb-2 border-b">
-                            <Image src={iconCall} alt="call icon" class="w-5" />
+                            <ion-icon name="call-outline" class="text-2xl text-blue-500"></ion-icon>
                             <div class="flex flex-col gap-0.5">
                                 <p class="text-gray-400 font-medium text-sm">Call us on:</p>
                                 <a href="tel:+14034535703" class="font-medium text-sm hover:underline transition-all"
@@ -72,7 +69,7 @@ import NavBarOverlay from "./NavBarOverlay.astro"
                             </div>
                         </div>
                         <div class="flex gap-4 pb-2 border-b">
-                            <Image src={iconEmail} alt="email icon" class="w-5" />
+                            <ion-icon name="mail-outline" class="text-2xl text-blue-500"></ion-icon>
                             <div class="flex flex-col gap-0.5">
                                 <p class="text-gray-400 font-medium text-sm">Email us on:</p>
                                 <a
@@ -82,17 +79,38 @@ import NavBarOverlay from "./NavBarOverlay.astro"
                             </div>
                         </div>
                         <div class="flex gap-4 pb-2 border-b">
-                            <Image src={iconFb} alt="facebook icon" class="w-5" />
+                            <ion-icon name="logo-facebook" class="text-2xl text-blue-500"></ion-icon>
                             <div class="flex flex-col gap-0.5">
                                 <p class="text-gray-400 font-medium text-sm">Connect with us on:</p>
                                 <a
-                                    href="https://www.facebook.com/profile.php?id=61556882105813"
+                                    href="https://www.facebook.com/profile.php?id=61557032189245&mibextid=ZbWKwL"
                                     class="font-medium text-sm hover:underline transition-all">Facebook</a
                                 >
                             </div>
                         </div>
+                        <div class="flex gap-4 pb-2 border-b">
+                            <ion-icon name="logo-instagram" class="text-2xl text-blue-500"></ion-icon>
+                            <div class="flex flex-col gap-0.5">
+                                <p class="text-gray-400 font-medium text-sm">Connect with us on:</p>
+                                <a
+                                    href="https://www.instagram.com/usebanffpay/"
+                                    class="font-medium text-sm hover:underline transition-all">Instagram</a
+                                >
+                            </div>
+                        </div>
+                        <div class="flex gap-4 pb-2 border-b">
+                            <ion-icon name="logo-twitter" class="text-2xl text-blue-500"></ion-icon>
+                            <div class="flex flex-col gap-0.5">
+                                <p class="text-gray-400 font-medium text-sm">Tweet us at:</p>
+                                <a
+                                    href="https://twitter.com/usebanffpay"
+                                    class="font-medium text-sm hover:underline transition-all">Twitter</a
+                                >
+                            </div>
+                        </div>
                         <div class="flex gap-4">
-                            <Image src={iconMsg} alt="facebook icon" class="w-5" />
+                            <!-- <Image src={iconMsg} alt="facebook icon" class="w-5" /> -->
+                            <ion-icon name="paper-plane-outline" class="text-2xl text-blue-500"></ion-icon>
                             <div class="flex flex-col gap-0.5">
                                 <a
                                     href="https://forms.zohopublic.com/cofor/form/Submitanenquiry/formperma/LHrDtHdNr1v6A8FZAkOeHFROYttVfp_z1Xi-rHlzbAA"

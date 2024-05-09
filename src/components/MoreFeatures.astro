@@ -14,7 +14,7 @@ import mockup from "@assets/mockup.png"
     </div>
     <div class="lg:col-start-1 lg:row-start-1 lg:h-[65vh]">
         <div class="observer">
-            <h3 id="send-money" class="font-semibold text-2xl py-3 text-brand-primary-400 transition-all duration-700">
+            <h3 id="send-money" class="font-semibold text-2xl py-3 text-gray-300 transition-all duration-700">
                 Send money and make payments seamlessly
             </h3>
             <p class="py-4 leading-7 text-gray-300 transition-all duration-500">
@@ -28,7 +28,7 @@ import mockup from "@assets/mockup.png"
     </div>
     <div class="lg:col-start-3 lg:row-start-2 lg:h-[65vh]">
         <div class="observer">
-            <h3 id="exchange-money" class="font-semibold text-2xl py-3 text-brand-primary-400 transition-all duration-700">
+            <h3 id="exchange-money" class="font-semibold text-2xl py-3 text-gray-300 transition-all duration-700">
                 Exchange currencies seamlessly with our transparent and competitive rates
             </h3>
             <p class="py-4 leading-7 text-gray-300 transition-all duration-700">
@@ -42,7 +42,7 @@ import mockup from "@assets/mockup.png"
     </div>
     <div class="lg:col-start-1 lg:row-start-3 lg:h-[65vh]">
         <div class="observer">
-            <h3 id="add-money" class="font-semibold text-2xl py-3 text-brand-primary-400 transition-all duration-700">
+            <h3 id="add-money" class="font-semibold text-2xl py-3 text-gray-300 transition-all duration-700">
                 Fund Multiple Accounts instantly
             </h3>
             <p class="py-4 leading-7 text-gray-300 transition-all duration-700">
@@ -77,10 +77,10 @@ import mockup from "@assets/mockup.png"
                     const header = entry.target.children[0]
                     const paragraph = entry.target.children[1]
                     if (entry.isIntersecting) {
-                        header.classList.remove("text-brand-primary-400")
+                        header.classList.add("text-brand-primary-800")
                         paragraph.classList.remove("text-gray-300")
                     } else {
-                        header.classList.add("text-brand-primary-400")
+                        header.classList.remove("text-brand-primary-800")
                         paragraph.classList.add("text-gray-300")
                     }
                 })

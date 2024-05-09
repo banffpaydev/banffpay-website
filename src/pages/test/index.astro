@@ -1,0 +1,220 @@
+---
+import BaseLayout from "@layouts/BaseLayout.astro"
+---
+
+<html>
+    <body>
+        <button class="show-modal">Show modal 1</button>
+        <button class="show-modal">Show modal 2</button>
+        <button class="show-modal">Show modal 3</button>
+
+        <!-- <div class="modal hidden">
+            <button class="close-modal">&times;</button>
+            <h1>I'm a modal window 😍</h1>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
+                dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+                ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
+                fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
+                deserunt mollit anim id est laborum.
+            </p>
+        </div> -->
+        <div class="modal hidden" id="zf_div_LHrDtHdNr1v6A8FZAkOeHFROYttVfp_z1Xi-rHlzbAA"></div>
+        <div class="overlay hidden">
+            <button class="close-modal">&times;</button>
+        </div>
+    </body>
+</html>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: inherit;
+    }
+
+    html {
+        font-size: 62.5%;
+        box-sizing: border-box;
+    }
+
+    body {
+        font-family: sans-serif;
+        color: #333;
+        line-height: 1.5;
+        height: 100vh;
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: linear-gradient(to top left, #28b487, #7dd56f);
+    }
+
+    .show-modal {
+        font-size: 2rem;
+        font-weight: 600;
+        padding: 1.75rem 3.5rem;
+        margin: 5rem 2rem;
+        border: none;
+        background-color: #fff;
+        color: #444;
+        border-radius: 10rem;
+        cursor: pointer;
+    }
+
+    h1 {
+        font-size: 2.5rem;
+        margin-bottom: 2rem;
+    }
+
+    p {
+        font-size: 1.8rem;
+    }
+
+    /* -------------------------- */
+    /* CLASSES TO MAKE MODAL WORK */
+    .hidden {
+        display: none;
+    }
+
+    .modal {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 600px;
+
+        /* background-color: white; */
+        max-height: 85vh;
+        overflow: auto;
+        /* padding: 6rem; */
+        border-radius: 5px;
+        box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.3);
+        z-index: 10;
+    }
+
+    .modal::-webkit-scrollbar {
+        width: 5px;
+    }
+
+    /* Track */
+    .modal::-webkit-scrollbar-track {
+        background: #f1f1f1;
+    }
+
+    /* Handle */
+    .modal::-webkit-scrollbar-thumb {
+        background: #888;
+    }
+
+    /* Handle on hover */
+    .modal::-webkit-scrollbar-thumb:hover {
+        background: #555;
+    }
+
+    .modal > * {
+        width: 100%;
+    }
+
+    .close-modal {
+        position: absolute;
+        top: 1.2rem;
+        right: 2rem;
+        font-size: 5rem;
+        color: #f1f1f1;
+        cursor: pointer;
+        border: none;
+        background: none;
+    }
+
+    .overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.6);
+        backdrop-filter: blur(3px);
+        z-index: 5;
+    }
+</style>
+
+<script>
+    const modal = document.querySelector(".modal")
+    const overlay = document.querySelector(".overlay")
+    const btnCloseModal = document.querySelector(".close-modal")
+    const btnsOpenModal = document.querySelectorAll(".show-modal")
+
+    const openModal = function () {
+        modal.classList.remove("hidden")
+        overlay.classList.remove("hidden")
+    }
+
+    const closeModal = function () {
+        modal.classList.add("hidden")
+        overlay.classList.add("hidden")
+    }
+
+    for (let i = 0; i < btnsOpenModal.length; i++) btnsOpenModal[i].addEventListener("click", openModal)
+
+    btnCloseModal.addEventListener("click", closeModal)
+    overlay.addEventListener("click", closeModal)
+
+    document.addEventListener("keydown", function (e) {
+        // console.log(e.key);
+
+        if (e.key === "Escape" && !modal.classList.contains("hidden")) {
+            closeModal()
+        }
+    })
+</script>
+<script type="text/javascript">
+    ;(function () {
+        try {
+            var f = document.createElement("iframe")
+            f.src =
+                "https://forms.zohopublic.com/cofor/form/Submitanenquiry/formperma/LHrDtHdNr1v6A8FZAkOeHFROYttVfp_z1Xi-rHlzbAA?zf_rszfm=1"
+            f.style.border = "none"
+            // f.style.height = "633px"
+            f.style.width = "100%"
+            f.style.transition = "all 0.5s ease"
+            f.setAttribute("aria-label", "Submit\x20an\x20enquiry")
+
+            var d = document.getElementById("zf_div_LHrDtHdNr1v6A8FZAkOeHFROYttVfp_z1Xi-rHlzbAA")
+            d.appendChild(f)
+            window.addEventListener(
+                "message",
+                function () {
+                    var evntData = event.data
+                    if (evntData && evntData.constructor == String) {
+                        var zf_ifrm_data = evntData.split("|")
+                        if (zf_ifrm_data.length == 2 || zf_ifrm_data.length == 3) {
+                            var zf_perma = zf_ifrm_data[0]
+                            var zf_ifrm_ht_nw = parseInt(zf_ifrm_data[1], 10) + 15 + "px"
+                            var iframe = document
+                                .getElementById("zf_div_LHrDtHdNr1v6A8FZAkOeHFROYttVfp_z1Xi-rHlzbAA")
+                                .getElementsByTagName("iframe")[0]
+                            if (iframe.src.indexOf("formperma") > 0 && iframe.src.indexOf(zf_perma) > 0) {
+                                var prevIframeHeight = iframe.style.height
+                                var zf_tout = false
+                                if (zf_ifrm_data.length == 3) {
+                                    iframe.scrollIntoView()
+                                    zf_tout = true
+                                }
+                                if (prevIframeHeight != zf_ifrm_ht_nw) {
+                                    if (zf_tout) {
+                                        setTimeout(function () {
+                                            iframe.style.height = zf_ifrm_ht_nw
+                                        }, 500)
+                                    } else {
+                                        iframe.style.height = zf_ifrm_ht_nw
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                false
+            )
+        } catch (e) {}
+    })()
+</script>

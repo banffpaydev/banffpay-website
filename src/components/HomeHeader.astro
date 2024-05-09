@@ -18,9 +18,9 @@ import NavBar from "./NavBar.astro"
 import AnimatedButton from "./AnimatedButton.astro"
 ---
 
-<header class="header gap-10 min-h-[85vh] pt-2 relative bg-200% sm:bg-150% lg:bg-100% flex flex-col justify-between">
+<header class="header gap-10 min-h-[85vh] lg:h-screen pt-2 relative bg-200% sm:bg-150% lg:bg-100% flex flex-col">
     <NavBar />
-    <div class="mt-10 xs:mt-5 md:mt-0 md:my-16">
+    <div class="mt-16 md:mt-20 md:my-16">
         <div class="flex flex-col items-center gap-8">
             <!-- <Image src={count} alt="available countries" class="w-1/3 md:w-1/5 2xl:w-1/6" /> -->
             <div class="flex justify-center">
@@ -28,29 +28,29 @@ import AnimatedButton from "./AnimatedButton.astro"
                     src={liberia}
                     alt="Liberia"
                     title="Liberia"
-                    class="w-16 h-16 rounded-full border-8 border-white -mr-4"
+                    class="w-14 h-14 rounded-full border-8 border-white -mr-4"
                 />
                 <Image
                     src={angola}
                     alt="Angola"
                     title="Angola"
-                    class="w-16 h-16 rounded-full border-8 border-white -mr-4"
+                    class="w-14 h-14 rounded-full border-8 border-white -mr-4"
                 />
                 <Image
                     src={ghana}
                     alt="Ghana"
                     title="Ghana"
-                    class="w-16 h-16 rounded-full border-8 border-white -mr-4"
+                    class="w-14 h-14 rounded-full border-8 border-white -mr-4"
                 />
                 <Image
                     src={nigeria}
                     alt="Nigeria"
                     title="Nigeria"
-                    class="w-16 h-16 rounded-full border-8 border-white -mr-4"
+                    class="w-14 h-14 rounded-full border-8 border-white -mr-4"
                 />
-                <Image src={canada} alt="Canada" title="Canada" class="w-16 h-16 rounded-full border-8 border-white" />
+                <Image src={canada} alt="Canada" title="Canada" class="w-14 h-14 rounded-full border-8 border-white" />
             </div>
-            <h1 class="font-extrabold text-3xl xs:text-4xl md:text-6xl text-center flex flex-col gap-2">
+            <h1 class="font-extrabold text-3xl xs:text-4xl md:text-5xl text-center flex flex-col gap-2">
                 <span
                     >Global
                     <span
@@ -62,19 +62,29 @@ import AnimatedButton from "./AnimatedButton.astro"
                 <span>Tip of your Fingers</span>
             </h1>
             <p class="flex flex-col text-center text-gray-500 font-medium text-base md:text-xl">
-                <span>Empowering Your Financial Success Unleashing</span>
-                <span>the Power of Numbers</span>
+                <span>Connect and support your loved ones as effortlessly as dreaming</span>
+                <span>Let's simplify every payment for you</span>
             </p>
         </div>
     </div>
-    <div class="flex justify-center w-full relative">
+    <div class="flex justify-center w-full relative bottom-0">
         <div class="relative flex justify-center">
             <AnimatedButton classList="bottom-[5%] left-8" imgSrc={user1} transactionAmt="50,000" time="4:28pm" />
-            <!-- <Image src={mainUser} alt="user" class="w-[60%] lg:w-auto" /> -->
-            <picture>
+            <!-- <picture>
                 <source media="(max-width: 768px)" srcset="/main_user-small.png" />
+                <source media="(min-width: 1280px)" srcset="/main_user-lg.png" />
                 <source media="(min-width: 769px)" srcset="/main_user.png" />
                 <img src="/main_user.png" alt="Description" class="w-full" />
+            </picture> -->
+            <picture>
+                <!-- image for screens smaller than 768px -->
+                <source media="(max-width: 899px)" srcset="/main_user-small.png" />
+                <!-- image for screens between 768px and 1280px -->
+                <source media="(min-width: 900px) and (max-width: 1023px)" srcset="/main_user-md.png" />
+                <!-- image for screens larger than 1280px -->
+                <source media="(min-width: 1024px)" srcset="/main_user.png" />
+                <!-- default image for browsers that do not support the picture element -->
+                <img src="/main_user.png" alt="Description" />
             </picture>
 
             <AnimatedButton classList="top-[5%] right-12" imgSrc={user2} transactionAmt="100,000" time="7:15am" />
@@ -83,7 +93,7 @@ import AnimatedButton from "./AnimatedButton.astro"
         <AnimatedButton classList="right-40 -top-24" imgSrc={user3} transactionAmt="200,000" time="1:45pm" />
 
         <AnimatedButton classList="right-10 top-1/3" imgSrc={user4} transactionAmt="150,000" time="11:24am" />
-        <AnimatedButton classList="left-40" imgSrc={user5} transactionAmt="420,000" time="9:31am"/>
+        <AnimatedButton classList="left-40" imgSrc={user5} transactionAmt="420,000" time="9:31am" />
     </div>
 </header>
 
