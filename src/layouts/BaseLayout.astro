@@ -20,7 +20,7 @@ const { title } = Astro.props
         <link rel="manifest" href="/site.webmanifest" />
         <title>{title}</title>
     </head>
-    <body>
+    <body class="bg-brand-primary-50">
         <slot />
         <!-- BANFFPAY APP SHOWCASE -->
         <AppShowcase />
@@ -40,11 +40,11 @@ const { title } = Astro.props
                         const paragraph = entry.target.children[1]
                         if (entry.isIntersecting) {
                             header.classList.remove("text-gray-300")
-                            header.classList.add("text-brand-primary-800")
+                            header.classList.add("text-brand-primary-950")
 
                             paragraph.classList.remove("text-gray-300")
                         } else {
-                            header.classList.remove("text-brand-primary-800")
+                            header.classList.remove("text-brand-primary-950")
                             header.classList.add("text-gray-300")
 
                             paragraph.classList.add("text-gray-300")

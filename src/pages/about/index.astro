@@ -5,44 +5,45 @@ import AboutHeader from "@components/AboutHeader.astro"
 import { Image } from "astro:assets"
 import arrowLeft from "@assets/dot-arrow-left.png"
 import arrowRight from "@assets/dot-arrow-right.png"
-
 ---
 
 <BaseLayout title="BanffPay — About Us">
     <AboutHeader />
-    <section class="flex flex-col px-8 md:px-16 lg:px-36 xl:px-40 py-16 md:py-24 gap-8 text-lg">
-        <p>
-            BanffPay Limited is a Canada based Fintech and Money Service business authorized by Financial Transactions
-            and Reports Analysis Centre of Canada (FINTRAC).
-        </p>
-        <p>
-            Our goal is delivering quality and fast cross-border payment to Africa by redefining service excellence,
-            elevating customer experience, and driving innovation in payment system.
-        </p>
-        <p>
-            We aspire to be a transformative forcein cross-border payment. At BanffPay, we are setting new standards in
-            accessibility, quality, and innovation, all in pursuit of a brighter financial future for all.
-        </p>
-    </section>
-    <!-- MISSION AND VISION -->
-    <section
-        class="logo-bg bg-gray-50 py-32 md:py-28 px-8 md:px-16 lg:px-36 xl:px-40 flex flex-col gap-y-12 lg:gap-y-20 xl:gap-y-28"
-    >
-        <div class="flex flex-wrap justify-between gap-4 lg:gap-0">
-            <h2 class="text-4xl md:text-6xl lg:text-8xl xl:text-9xl font-bold lg:basis-2/6">Mission</h2>
-            <Image src={arrowRight} alt="arrow icon" class="hidden xl:block self-center" />
-            <p class="mb-4 lg:mb-0 text-gray-600 lg:text-xl lg:basis-2/6 lg:self-center">
-                To provide seamless, secure, and innovative financial solutions that empower individuals and businesses
-                alike.
+    <section class="px-8 md:px-16 lg:px-36 xl:px-40 py-16 md:py-24">
+        <div class="flex flex-col gap-8 text-lg max-w-screen-lg mx-auto">
+            <p>
+                BanffPay Limited is a Canada based Fintech and Money Service business authorized by Financial
+                Transactions and Reports Analysis Centre of Canada (FINTRAC).
+            </p>
+            <p>
+                Our goal is delivering quality and fast cross-border payment to Africa by redefining service excellence,
+                elevating customer experience, and driving innovation in payment system.
+            </p>
+            <p>
+                We aspire to be a transformative forcein cross-border payment. At BanffPay, we are setting new standards
+                in accessibility, quality, and innovation, all in pursuit of a brighter financial future for all.
             </p>
         </div>
-        <div class="flex flex-wrap justify-between gap-4 lg:gap-0">
-            <h2 class="text-4xl md:text-6xl lg:text-8xl xl:text-9xl font-bold lg:basis-1/2 lg:order-3">Vision</h2>
-            <Image src={arrowLeft} alt="arrow icon" class="hidden xl:block self-center lg:order-2" />
-            <p class="mb-4 lg:mb-0 text-gray-600 lg:text-xl lg:basis-2/6 lg:self-center lg:order-1">
-                To provide seamless, secure, and innovative financial solutions that empower individuals and businesses
-                alike.
-            </p>
+    </section>
+    <!-- MISSION AND VISION -->
+    <section class="logo-bg py-32 md:py-28 px-8 md:px-16 lg:px-36 xl:px-40">
+        <div class="max-w-screen-lg mx-auto flex flex-col gap-y-12 lg:gap-y-20 xl:gap-y-28">
+            <div class="flex flex-wrap justify-between gap-4 lg:gap-0 lg:translate-x-10">
+                <h2 class="text-4xl md:text-6xl lg:text-8xl xl:text-9xl font-bold lg:basis-2/6">Mission</h2>
+                <Image src={arrowRight} alt="arrow icon" class="hidden xl:block self-center" />
+                <p class="mb-4 lg:mb-0 text-gray-600 lg:text-xl lg:basis-2/6 lg:self-center">
+                    To provide seamless, secure, and innovative financial solutions that empower individuals and
+                    businesses alike.
+                </p>
+            </div>
+            <div class="flex flex-wrap justify-between gap-4 lg:gap-0">
+                <h2 class="text-4xl md:text-6xl lg:text-8xl xl:text-9xl font-bold lg:basis-1/2 lg:order-3">Vision</h2>
+                <Image src={arrowLeft} alt="arrow icon" class="hidden xl:block self-center lg:order-2" />
+                <p class="mb-4 lg:mb-0 text-gray-600 lg:text-xl lg:basis-2/6 lg:self-center lg:order-1">
+                    To provide seamless, secure, and innovative financial solutions that empower individuals and
+                    businesses alike.
+                </p>
+            </div>
         </div>
     </section>
 </BaseLayout>

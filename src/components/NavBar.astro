@@ -10,13 +10,13 @@ import NavBarOverlay from "./NavBarOverlay.astro"
 <!-- TO BE INCLUDED AFTER AGREEMENT -->
 <NavBarOverlay />
 <div
-    class="flex gap-4 justify-center items-center self-center z-10 w-[95%] md:w-[85%] xl:w-[75%] fixed top-3"
+    class="w-[85%] md:w-auto flex gap-4 justify-center items-center self-center z-10 fixed top-3"
 >
-    <nav class="bg-brand-primary-200 flex-1 flex gap-4 justify-between py-2 px-2 rounded-full">
-        <a href="/" class="bg-brand-primary-300 rounded-full px-2 xs:px-4 py-3">
+    <nav class="bg-brand-primary-100 flex-1 flex gap-4 justify-between py-2 px-2 rounded-full">
+        <a href="/" class="bg-brand-primary-200 rounded-full px-2 xs:px-4 py-3">
             <Image src={banffLogo} alt="logo" class="w-full md:w-28" loading="eager" />
         </a>
-        <div class="flex gap-4 lg:gap-6 xl:gap-12">
+        <div class="flex gap-4 lg:gap-6">
             <button id="servicesBtn" class="hidden md:flex gap-x-1.5 items-center relative cursor-pointer">
                 <span class="text-sm dropdown-span">Services</span>
                 <Image
@@ -55,12 +55,12 @@ import NavBarOverlay from "./NavBarOverlay.astro"
                     class="dropdown-content transition-all duration-300 hidden absolute top-10 left-0 min-w-64 px-4 py-8 bg-white flex-col gap-4"
                 >
                     <div>
-                        <h3 class="font-medium">Talk to us</h3>
-                        <p class="text-gray-500 text-sm pb-2 border-b">We will repond within 24 hours.</p>
+                        <h3 class="font-medium pb-2 border-b">Talk to us</h3>
+                        <!-- <p class="text-gray-500 text-sm pb-2 border-b">We will respond within 24 hours.</p> -->
                     </div>
                     <div class="flex flex-col gap-5">
                         <div class="flex gap-4 pb-2 border-b">
-                            <ion-icon name="call-outline" class="text-2xl text-blue-500"></ion-icon>
+                            <ion-icon name="call-outline" class="text-2xl text-brand-primary-950"></ion-icon>
                             <div class="flex flex-col gap-0.5">
                                 <p class="text-gray-400 font-medium text-sm">Call us on:</p>
                                 <a href="tel:+14034535703" class="font-medium text-sm hover:underline transition-all"
@@ -69,7 +69,7 @@ import NavBarOverlay from "./NavBarOverlay.astro"
                             </div>
                         </div>
                         <div class="flex gap-4 pb-2 border-b">
-                            <ion-icon name="mail-outline" class="text-2xl text-blue-500"></ion-icon>
+                            <ion-icon name="mail-outline" class="text-2xl text-brand-primary-950"></ion-icon>
                             <div class="flex flex-col gap-0.5">
                                 <p class="text-gray-400 font-medium text-sm">Email us on:</p>
                                 <a
@@ -79,7 +79,7 @@ import NavBarOverlay from "./NavBarOverlay.astro"
                             </div>
                         </div>
                         <div class="flex gap-4 pb-2 border-b">
-                            <ion-icon name="logo-facebook" class="text-2xl text-blue-500"></ion-icon>
+                            <ion-icon name="logo-facebook" class="text-2xl text-brand-primary-950"></ion-icon>
                             <div class="flex flex-col gap-0.5">
                                 <p class="text-gray-400 font-medium text-sm">Connect with us on:</p>
                                 <a
@@ -89,7 +89,7 @@ import NavBarOverlay from "./NavBarOverlay.astro"
                             </div>
                         </div>
                         <div class="flex gap-4 pb-2 border-b">
-                            <ion-icon name="logo-instagram" class="text-2xl text-blue-500"></ion-icon>
+                            <ion-icon name="logo-instagram" class="text-2xl text-brand-primary-950"></ion-icon>
                             <div class="flex flex-col gap-0.5">
                                 <p class="text-gray-400 font-medium text-sm">Connect with us on:</p>
                                 <a
@@ -99,7 +99,7 @@ import NavBarOverlay from "./NavBarOverlay.astro"
                             </div>
                         </div>
                         <div class="flex gap-4 pb-2 border-b">
-                            <ion-icon name="logo-twitter" class="text-2xl text-blue-500"></ion-icon>
+                            <ion-icon name="logo-twitter" class="text-2xl text-brand-primary-950"></ion-icon>
                             <div class="flex flex-col gap-0.5">
                                 <p class="text-gray-400 font-medium text-sm">Tweet us at:</p>
                                 <a
@@ -110,7 +110,7 @@ import NavBarOverlay from "./NavBarOverlay.astro"
                         </div>
                         <div class="flex gap-4">
                             <!-- <Image src={iconMsg} alt="facebook icon" class="w-5" /> -->
-                            <ion-icon name="paper-plane-outline" class="text-2xl text-blue-500"></ion-icon>
+                            <ion-icon name="paper-plane-outline" class="text-2xl text-brand-primary-950"></ion-icon>
                             <div class="flex flex-col gap-0.5">
                                 <a
                                     href="https://forms.banffpay.com/cofor/form/Submitanenquiry/formperma/LHrDtHdNr1v6A8FZAkOeHFROYttVfp_z1Xi-rHlzbAA"
@@ -137,16 +137,17 @@ import NavBarOverlay from "./NavBarOverlay.astro"
                     onclick="zforms_open_window(this.href, 648, 700); return false">Download App</a
                 >
             </button>
-            <button class="rounded-full bg-white md:flex items-center px-2 gap-1.5 hidden">
-                <div class="rounded-full bg-gray-100 w-8 h-8 flex justify-center items-center">
-                    <Image src={arrowDown} alt="arrow down icon" class="w-3" />
-                </div>
-                <span class="text-sm font-medium mr-2">EN</span>
+
+            <button class="hidden lg:block border-8 border-brand-primary-300 bg-white rounded-full px-6 self-stretch">
+                Log In
             </button>
         </div>
     </nav>
-    <button class="hidden lg:block border-8 border-brand-primary-300 bg-white rounded-full px-6 self-stretch">
-        Sign in on web
+    <button class="rounded-full bg-brand-primary-950 text-white md:flex items-center py-2 px-2 gap-1.5 hidden">
+        <div class="rounded-full bg-gray-100 w-8 h-8 flex justify-center items-center">
+            <Image src={arrowDown} alt="arrow down icon" class="w-3" />
+        </div>
+        <span class="text-sm font-medium mr-2">ENGLISH</span>
     </button>
     <!-- TO BE INCLUDED AFTER AGREEMENT -->
     <!-- <ion-icon
