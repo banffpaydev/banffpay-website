@@ -9,9 +9,7 @@ import NavBarOverlay from "./NavBarOverlay.astro"
 
 <!-- TO BE INCLUDED AFTER AGREEMENT -->
 <NavBarOverlay />
-<div
-    class="w-[85%] md:w-auto flex gap-4 justify-center items-center self-center z-10 fixed top-3"
->
+<div class="w-[85%] md:w-auto flex gap-4 justify-center items-center self-center z-10 fixed top-3">
     <nav class="bg-brand-primary-100 flex-1 flex gap-4 justify-between py-2 px-2 rounded-full">
         <a href="/" class="bg-brand-primary-200 rounded-full px-2 xs:px-4 py-3">
             <Image src={banffLogo} alt="logo" class="w-full md:w-28" loading="eager" />
@@ -143,11 +141,29 @@ import NavBarOverlay from "./NavBarOverlay.astro"
             </button>
         </div>
     </nav>
-    <button class="rounded-full bg-brand-primary-950 text-white md:flex items-center py-2 px-2 gap-1.5 hidden">
-        <div class="rounded-full bg-gray-100 w-8 h-8 flex justify-center items-center">
-            <Image src={arrowDown} alt="arrow down icon" class="w-3" />
-        </div>
-        <span class="text-sm font-medium mr-2">ENGLISH</span>
+    <button
+        id="languageBtn"
+        class="rounded-full bg-brand-primary-950 text-white md:flex items-center py-3 px-2 gap-1.5 hidden relative"
+    >
+        <!-- <div class="rounded-full bg-gray-100 w-8 h-8 flex justify-center items-center">
+            <ion-icon name="earth-outline" class="text-black w-8"></ion-icon>
+        </div> -->
+        <ion-icon name="globe-outline" class="text-brand-primary-100 w-6 h-6"></ion-icon>
+        <span class="text-xs font-medium mr-2">ENGLISH</span>
+
+        <nav
+            id="language_dropdown"
+            class="dropdown-content hidden transition-all duration-300 absolute top-[120%] right-0 min-w-28 bg-white rounded-xl"
+        >
+            <ul class="flex flex-col py-6 px-4 gap-4 text-black font-medium">
+                <li class="w-full">
+                    <a href="#" class="pb-0.5 hover:border-b-2 border-b-slate-600">English</a>
+                </li>
+                <li>
+                    <a href="#" class="pb-0.5 hover:border-b-2 border-b-slate-600">French</a>
+                </li>
+            </ul>
+        </nav>
     </button>
     <!-- TO BE INCLUDED AFTER AGREEMENT -->
     <!-- <ion-icon
@@ -176,6 +192,11 @@ import NavBarOverlay from "./NavBarOverlay.astro"
     servicesBtn.addEventListener("click", () => {
         document.querySelector("#servicesBtn_arrow").classList.toggle("flip")
         document.querySelector("#servicesBtn_dropdown").classList.toggle("show")
+    })
+
+    const languageBtn = document.querySelector("#languageBtn")
+    languageBtn.addEventListener("click", () => {
+        document.querySelector("#language_dropdown").classList.toggle("show")
     })
 
     // Close the dropdown if the user clicks outside of it
