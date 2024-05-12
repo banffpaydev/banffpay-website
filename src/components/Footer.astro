@@ -25,10 +25,14 @@ import banffpayLogo from "@assets/banffpay-logo.svg"
             <h3 class="font-semibold text-lg mb-3">Services</h3>
             <ul class="text-gray-500 font-normal flex flex-col gap-4">
                 <li>
-                    <a href="/#exchange-money" class="scroll-items hover:text-gray-800 transition-all">Exchange Currencies</a>
+                    <a href="/#exchange-money" class="scroll-items hover:text-gray-800 transition-all"
+                        >Exchange Currencies</a
+                    >
                 </li>
                 <li>
-                    <a href="/#exchange-money" class="scroll-items hover:text-gray-800 transition-all">Multi-currency Wallet</a>
+                    <a href="/#exchange-money" class="scroll-items hover:text-gray-800 transition-all"
+                        >Multi-currency Wallet</a
+                    >
                 </li>
                 <li>
                     <a href="/#send-money" class="scroll-items hover:text-gray-800 transition-all">Send Money</a>
@@ -50,7 +54,18 @@ import banffpayLogo from "@assets/banffpay-logo.svg"
         <div class="col-span-full sm:col-span-2 xl:col-span-1">
             <h3 class="font-semibold text-lg mb-3">Support</h3>
             <ul class="text-gray-500 font-normal flex flex-col gap-4">
-                <li><a href="#" class="hover:text-gray-800 transition-all">Contact Us</a></li>
+                <li>
+                    <a
+                        href="https://www.facebook.com/profile.php?id=61557032189245&mibextid=ZbWKwL"
+                        class="hover:text-gray-800 transition-all">Facebook</a>
+                </li>
+                <li>
+                    <a href="https://www.instagram.com/usebanffpay/" class="hover:text-gray-800 transition-all"
+                        >Instagram</a>
+                </li>
+                <li>
+                    <a href="https://twitter.com/usebanffpay" class="hover:text-gray-800 transition-all">X (Twitter)</a>
+                </li>
                 <!-- <li><a href="#" class="hover:text-gray-800 transition-all">FAQs</a></li> -->
             </ul>
         </div>
@@ -70,7 +85,7 @@ import banffpayLogo from "@assets/banffpay-logo.svg"
             e.preventDefault()
             const target = item.getAttribute("href").slice(1)
             // const target = e.target.getAttribute("href")
-            document.querySelector(target).scrollIntoView({ behavior: "smooth", block: "center"})
+            document.querySelector(target).scrollIntoView({ behavior: "smooth", block: "center" })
         })
     })
 </script>
