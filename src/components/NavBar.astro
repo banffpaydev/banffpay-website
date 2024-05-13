@@ -9,7 +9,7 @@ import NavBarOverlay from "./NavBarOverlay.astro"
 
 <!-- TO BE INCLUDED AFTER AGREEMENT -->
 <NavBarOverlay />
-<div class="w-[85%] md:w-auto flex gap-4 justify-center items-center self-center z-10 fixed top-3">
+<div class="w-[90%] md:w-auto flex gap-4 justify-center items-center self-center z-10 fixed top-3">
     <nav class="bg-brand-primary-100 flex-1 flex gap-4 justify-between py-2 px-2 rounded-full">
         <a href="/" class="bg-brand-primary-200 rounded-full px-2 xs:px-4 py-3">
             <Image src={banffLogo} alt="logo" class="w-full md:w-28" loading="eager" />
@@ -122,11 +122,11 @@ import NavBarOverlay from "./NavBarOverlay.astro"
                     </div>
                 </nav>
             </div>
-            <div class="flex gap-x-1.5 items-center">
+            <div class="hidden md:flex gap-x-1.5 items-center">
                 <a href="/about" class="text-sm">About Us</a>
             </div>
         </div>
-        <div class="flex self-stretch gap-2">
+        <div class="hidden md:flex self-stretch gap-2">
             <button class="rounded-full bg-brand-primary-950 px-4 text-white font-semibold text-sm">
                 <a
                     href="https://forms.banffpay.com/cofor/form/Waitlist/formperma/3gfkggPKGMa3U8H3OWpOE_DkdPXJLJgyBtHl91gVA4g"
@@ -140,6 +140,11 @@ import NavBarOverlay from "./NavBarOverlay.astro"
                 Log In
             </button>
         </div>
+        <!-- TO BE INCLUDED AFTER AGREEMENT -->
+        <ion-icon
+            id="openMenu"
+            name="menu-outline"
+            class="block md:hidden self-center text-xl bg-brand-primary-950 text-white px-5 py-3 rounded-full"></ion-icon>
     </nav>
     <button
         id="languageBtn"
@@ -165,11 +170,6 @@ import NavBarOverlay from "./NavBarOverlay.astro"
             </ul>
         </nav>
     </button>
-    <!-- TO BE INCLUDED AFTER AGREEMENT -->
-    <!-- <ion-icon
-        id="openMenu"
-        name="menu-outline"
-        class="block md:hidden text-2xl bg-slate-800 text-white px-5 py-3 rounded-full"></ion-icon> -->
 </div>
 
 <style>

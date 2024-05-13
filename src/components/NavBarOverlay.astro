@@ -9,73 +9,54 @@ import iconMsg from "@assets/icon-message.svg"
 ---
 
 <div id="myNav" class="overlay">
-    <div class="overlay-content flex flex-col gap-10 items-center text-3xl text-gray-400">
+    <div class="overlay-content px-5 flex flex-col gap-5 text-lg text-white">
         <!-- About use -->
-        <a href="/about" class="text-3xl text-gray-400 hover:text-white">About</a>
-        <!-- Contact -->
-        <button class="dropdown-btn text-gray-400 flex items-center gap-2">
-            <span class="text-3xl hover:text-white active:text-white">Contact</span>
-            <ion-icon name="caret-down-outline" class="text-2xl"></ion-icon>
-        </button>
-        <div class="dropdown-container flex flex-col gap-2 text-2xl text-gray-400">
-            <nav class="px-8 py-10 rounded-md">
-                <div>
-                    <h3 class="font-medium">Talk to us</h3>
-                    <p class="text-gray-500 text-sm pb-2 border-b">We will repond within 24 hours.</p>
-                </div>
-                <div class="flex flex-col gap-5">
-                    <div class="flex gap-4 py-2 border-b">
-                        <Image src={iconCall} alt="call icon" class="w-5" />
-                        <div class="flex flex-col gap-0.5">
-                            <p class="text-gray-400 font-medium text-sm">Call us on:</p>
-                            <a href="tel:+14034535703" class="font-medium text-sm hover:underline transition-all"
-                                >+14034535703</a
-                            >
-                        </div>
-                    </div>
-                    <div class="flex gap-4 pb-2 border-b">
-                        <Image src={iconEmail} alt="email icon" class="w-5" />
-                        <div class="flex flex-col gap-0.5">
-                            <p class="text-gray-400 font-medium text-sm">Email us on:</p>
-                            <a
-                                href="mailto:care@banffpay.com"
-                                class="font-medium text-sm hover:underline transition-all">care@banffpay.com</a
-                            >
-                        </div>
-                    </div>
-                    <div class="flex gap-4 pb-2 border-b">
-                        <Image src={iconFb} alt="facebook icon" class="w-5" />
-                        <div class="flex flex-col gap-0.5">
-                            <p class="text-gray-400 font-medium text-sm">Connect with us on:</p>
-                            <a
-                                href="https://www.facebook.com/profile.php?id=61556882105813"
-                                class="font-medium text-sm hover:underline transition-all">Facebook</a
-                            >
-                        </div>
-                    </div>
-                    <div class="flex gap-4">
-                        <Image src={iconMsg} alt="facebook icon" class="w-5" />
-                        <div class="flex flex-col gap-0.5">
-                            <a
-                                href="https://forms.banffpay.com/cofor/form/Submitanenquiry/formperma/LHrDtHdNr1v6A8FZAkOeHFROYttVfp_z1Xi-rHlzbAA"
-                                title="Submit an enquiry"
-                                target="_blank"
-                                onclick="zforms_open_window(this.href, 648, 700); return false"
-                                class="font-medium text-base hover:underline transition-all">Submit an enquiry</a
-                            >
-                        </div>
-                    </div>
-                </div>
-            </nav>
+        <a href="/about" class="pb-3 hover:text-white border-b border-b-gray-600">About Us</a>
+        <div class="pb-3 hover:text-white border-b border-b-gray-600">
+            <span class="pb-3 inline-block">Services</span>
+            <ul class="list-disc flex flex-col px-6 text-base gap-2">
+                <li><a href="/#send-money" class="link-items hover:text-white border-b pb-1">Send Money</a></li>
+                <li>
+                    <a href="/#exchange-money" class="link-items hover:text-white border-b pb-1">Exchange Currency</a>
+                </li>
+                <li><a href="/#add-money" class="link-items hover:text-white border-b pb-1">Add Money</a></li>
+            </ul>
         </div>
+        <div class="pb-3 hover:text-white border-b border-b-gray-600">
+            <span class="pb-3 inline-block">Support</span>
+            <ul class="flex flex-col px-6 text-base gap-2">
+                <li class="flex items-center gap-2">
+                    <ion-icon name="logo-facebook" class="text-lg"></ion-icon>
+                    <a href="https://www.facebook.com/profile.php?id=61557032189245&mibextid=ZbWKwL" class="link-items hover:text-white">Facebook</a>
+                </li>
+                <li class="flex items-center gap-2">
+                    <ion-icon name="logo-instagram" class="text-lg"></ion-icon>
+                    <a href="https://www.instagram.com/usebanffpay/" class="link-items hover:text-white">Instagram</a>
+                </li>
+                <li class="flex items-center gap-2">
+                    <ion-icon name="logo-twitter" class="text-lg"></ion-icon>
+                    <a href="https://twitter.com/usebanffpay" class="link-items hover:text-white">X (Twitter)</a>
+                </li>
+                
+            </ul>
+        </div>
+        <button
+            class="self-start rounded-md bg-brand-primary-950 py-4 px-8 text-white font-semibold text-sm border-b border-b-gray-600"
+        >
+            <a
+                href="https://forms.banffpay.com/cofor/form/Waitlist/formperma/3gfkggPKGMa3U8H3OWpOE_DkdPXJLJgyBtHl91gVA4g"
+                title="Join Waitlist"
+                target="_blank"
+                onclick="zforms_open_window(this.href, 648, 700); return false">Download App</a
+            >
+        </button>
     </div>
 </div>
-<!-- <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; open</span> -->
 
 <style>
     .overlay {
         height: 100%;
-        width: 0;
+        width: 100%;
         position: fixed;
         z-index: 1;
         top: 0;
@@ -83,7 +64,7 @@ import iconMsg from "@assets/icon-message.svg"
         background-color: rgb(0, 0, 0);
         background-color: rgba(0, 0, 0, 0.9);
         overflow-x: hidden;
-        transition: 0.5s;
+        transition: 0.2s;
     }
 
     .overlay-content {
@@ -151,6 +132,16 @@ import iconMsg from "@assets/icon-message.svg"
             }
         })
     }
+
+    document.querySelectorAll(".link-items").forEach((item) => {
+        item.addEventListener("click", (e) => {
+            e.preventDefault()
+            const target = item.getAttribute("href").slice(1)
+            // const target = e.target.getAttribute("href")
+            document.querySelector(target).scrollIntoView({ behavior: "smooth", block: "center" })
+            openNav()
+        })
+    })
 
     // document.querySelector("a").addEventListener("click", function (e) {
     //     // e.preventDefault()
