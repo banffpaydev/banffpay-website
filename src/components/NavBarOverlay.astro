@@ -27,7 +27,10 @@ import iconMsg from "@assets/icon-message.svg"
             <ul class="flex flex-col px-6 text-base gap-2">
                 <li class="flex items-center gap-2">
                     <ion-icon name="logo-facebook" class="text-lg"></ion-icon>
-                    <a href="https://www.facebook.com/profile.php?id=61557032189245&mibextid=ZbWKwL" class="link-items hover:text-white">Facebook</a>
+                    <a
+                        href="https://www.facebook.com/profile.php?id=61557032189245&mibextid=ZbWKwL"
+                        class="link-items hover:text-white">Facebook</a
+                    >
                 </li>
                 <li class="flex items-center gap-2">
                     <ion-icon name="logo-instagram" class="text-lg"></ion-icon>
@@ -37,7 +40,6 @@ import iconMsg from "@assets/icon-message.svg"
                     <ion-icon name="logo-twitter" class="text-lg"></ion-icon>
                     <a href="https://twitter.com/usebanffpay" class="link-items hover:text-white">X (Twitter)</a>
                 </li>
-                
             </ul>
         </div>
         <button
@@ -136,10 +138,13 @@ import iconMsg from "@assets/icon-message.svg"
     document.querySelectorAll(".link-items").forEach((item) => {
         item.addEventListener("click", (e) => {
             e.preventDefault()
-            const target = item.getAttribute("href").slice(1)
-            // const target = e.target.getAttribute("href")
-            document.querySelector(target).scrollIntoView({ behavior: "smooth", block: "center" })
-            openNav()
+            if (window.location.pathname === "/") {
+                const target = item.getAttribute("href").slice(1)
+                document.querySelector(target).scrollIntoView({ behavior: "smooth", block: "center" })
+                openNav()
+            } else {
+                window.location.replace(item.getAttribute("href"))
+            }
         })
     })
 
