@@ -1,3 +1,81 @@
+// NAVBAR DROPDOWNS
+const supportBtn = document.querySelector("#supportBtn")
+supportBtn.addEventListener("click", () => {
+    document.querySelector("#supportBtn_arrow").classList.toggle("flip")
+    document.querySelector("#supportBtn_dropdown").classList.toggle("show")
+})
+
+const servicesBtn = document.querySelector("#servicesBtn")
+servicesBtn.addEventListener("click", () => {
+    document.querySelector("#servicesBtn_arrow").classList.toggle("flip")
+    document.querySelector("#servicesBtn_dropdown").classList.toggle("show")
+})
+
+const languageBtn = document.querySelector("#languageBtn")
+languageBtn.addEventListener("click", () => {
+    document.querySelector("#language_dropdown").classList.toggle("show")
+})
+
+// Close the dropdown if the user clicks outside of it
+window.onclick = function (event) {
+    if (
+        !event.target.matches(".dropdown-span") &&
+        !event.target.matches("#servicesBtn_arrow") &&
+        !event.target.matches("#supportBtn_arrow")
+    ) {
+        let dropdowns = document.querySelectorAll(".dropdown-content")
+        for (let i = 0; i < dropdowns.length; i++) {
+            let openDropdown = dropdowns[i]
+            if (openDropdown.classList.contains("show")) {
+                openDropdown.classList.remove("show")
+                openDropdown.previousElementSibling.classList.remove("flip")
+            }
+        }
+    }
+}
+// NAVBAR MOBILE OVERLAY ACTIONS
+const menuBtn = document.querySelector("#openMenu")
+function openNav() {
+    if (menuBtn.getAttribute("name") === "menu-outline") {
+        document.getElementById("myNav").style.width = "100%"
+        menuBtn.setAttribute("name", "close-outline")
+    } else {
+        document.getElementById("myNav").style.width = "0%"
+        menuBtn.setAttribute("name", "menu-outline")
+    }
+}
+
+document.querySelector("#openMenu").addEventListener("click", openNav)
+// document.querySelector(".closebtn").addEventListener("click", closeNav)
+
+var dropdown = document.getElementsByClassName("dropdown-btn")
+
+for (let i = 0; i < dropdown.length; i++) {
+    dropdown[i].addEventListener("click", function () {
+        this.classList.toggle("active")
+        var dropdownContent = this.nextElementSibling
+        if (dropdownContent.style.display === "flex") {
+            dropdownContent.style.display = "none"
+        } else {
+            dropdownContent.style.display = "flex"
+        }
+    })
+}
+
+document.querySelectorAll(".link-items").forEach((item) => {
+    item.addEventListener("click", (e) => {
+        e.preventDefault()
+        if (window.location.pathname === "/") {
+            const target = item.getAttribute("href").slice(1)
+            document.querySelector(target).scrollIntoView({ behavior: "smooth", block: "center" })
+            openNav()
+        } else {
+            window.location.replace(item.getAttribute("href"))
+        }
+    })
+})
+
+
 // More Features Section
 document.addEventListener("DOMContentLoaded", function () {
     const sections = document.querySelectorAll(".observer")
@@ -56,5 +134,22 @@ listItem.forEach((item) => {
                 })
             }
         })
+    })
+})
+
+// NAVBAR & FOOTER SERVICES SCROLL ACTIONS
+const currentYear = new Date().getFullYear()
+const curYearEl = document.querySelectorAll(".currentYear")
+curYearEl.forEach((element) => (element.textContent = currentYear.toString()))
+
+document.querySelectorAll(".scroll-items").forEach((item) => {
+    item.addEventListener("click", (e) => {
+        e.preventDefault()
+        if (window.location.pathname === "/") {
+            const target = item.getAttribute("href").slice(1)
+            document.querySelector(target).scrollIntoView({ behavior: "smooth", block: "center" })
+        } else {
+            window.location.replace(item.getAttribute("href"))
+        }
     })
 })

@@ -82,24 +82,6 @@ import banffpayLogo from "@assets/banffpay-logo.svg"
     </div>
 </footer>
 
-<script>
-    const currentYear = new Date().getFullYear()
-    const curYearEl = document.querySelectorAll(".currentYear")
-    curYearEl.forEach((element) => (element.textContent = currentYear.toString()))
-
-    document.querySelectorAll(".scroll-items").forEach((item) => {
-        item.addEventListener("click", (e) => {
-            e.preventDefault()
-            if (window.location.pathname === "/") {
-                const target = item.getAttribute("href").slice(1)
-                document.querySelector(target).scrollIntoView({ behavior: "smooth", block: "center" })
-            } else {
-                window.location.replace(item.getAttribute("href"))
-            }
-        })
-    })
-</script>
-
 <script type="text/javascript">
     function zforms_open_window(url, height, width) {
         var leftPos = 0
