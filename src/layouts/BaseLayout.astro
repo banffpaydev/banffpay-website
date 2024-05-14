@@ -27,8 +27,6 @@ const { title } = Astro.props
         <!-- FOOTER -->
         <Footer />
     </body>
-    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
     <script>
         // More Features Section
         document.addEventListener("DOMContentLoaded", function () {
@@ -78,7 +76,7 @@ const { title } = Astro.props
                     if (heading.id === item.id) {
                         // Get the offsetTop of the element
                         const offsetTop = heading.offsetTop
-                        console.log(offsetTop);
+                        console.log(offsetTop)
                         // Calculate the desired scroll position
                         const desiredScrollPosition = offsetTop - 100 // Adjust someOffset as needed
                         // Scroll to the desired position
@@ -86,10 +84,11 @@ const { title } = Astro.props
                             top: desiredScrollPosition,
                             behavior: "smooth", // You can change this to 'auto' for instant scrolling
                         })
-                        // heading.scrollIntoView({ behavior: "smooth", block: "center" })
                     }
                 })
             })
         })
     </script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </html>

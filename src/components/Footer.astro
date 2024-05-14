@@ -90,9 +90,12 @@ import banffpayLogo from "@assets/banffpay-logo.svg"
     document.querySelectorAll(".scroll-items").forEach((item) => {
         item.addEventListener("click", (e) => {
             e.preventDefault()
-            const target = item.getAttribute("href").slice(1)
-            // const target = e.target.getAttribute("href")
-            document.querySelector(target).scrollIntoView({ behavior: "smooth", block: "center" })
+            if (window.location.pathname === "/") {
+                const target = item.getAttribute("href").slice(1)
+                document.querySelector(target).scrollIntoView({ behavior: "smooth", block: "center" })
+            } else {
+                window.location.replace(item.getAttribute("href"))
+            }
         })
     })
 </script>
