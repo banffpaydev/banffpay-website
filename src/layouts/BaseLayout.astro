@@ -76,7 +76,17 @@ const { title } = Astro.props
 
                 headings.forEach((heading) => {
                     if (heading.id === item.id) {
-                        heading.scrollIntoView({ behavior: "smooth", block: "center"})
+                        // Get the offsetTop of the element
+                        const offsetTop = heading.offsetTop
+                        console.log(offsetTop);
+                        // Calculate the desired scroll position
+                        const desiredScrollPosition = offsetTop - 100 // Adjust someOffset as needed
+                        // Scroll to the desired position
+                        window.scrollTo({
+                            top: desiredScrollPosition,
+                            behavior: "smooth", // You can change this to 'auto' for instant scrolling
+                        })
+                        // heading.scrollIntoView({ behavior: "smooth", block: "center" })
                     }
                 })
             })
