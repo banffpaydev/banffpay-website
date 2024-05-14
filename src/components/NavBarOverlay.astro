@@ -1,13 +1,3 @@
----
-import { Image } from "astro:assets"
-import arrowDown from "@assets/arrow-down.svg"
-
-import iconCall from "@assets/icon-call.svg"
-import iconEmail from "@assets/icon-email.svg"
-import iconFb from "@assets/icon-fb.svg"
-import iconMsg from "@assets/icon-message.svg"
----
-
 <div id="myNav" class="overlay">
     <div class="overlay-content px-5 flex flex-col gap-5 text-lg text-white">
         <!-- About use -->
@@ -29,16 +19,17 @@ import iconMsg from "@assets/icon-message.svg"
                     <ion-icon name="logo-facebook" class="text-lg"></ion-icon>
                     <a
                         href="https://www.facebook.com/profile.php?id=61557032189245&mibextid=ZbWKwL"
-                        class="link-items hover:text-white">Facebook</a
+                        target="_blank"
+                        class="hover:text-white">Facebook</a
                     >
                 </li>
                 <li class="flex items-center gap-2">
                     <ion-icon name="logo-instagram" class="text-lg"></ion-icon>
-                    <a href="https://www.instagram.com/usebanffpay/" class="link-items hover:text-white">Instagram</a>
+                    <a href="https://www.instagram.com/usebanffpay/" target="_blank" class="hover:text-white">Instagram</a>
                 </li>
                 <li class="flex items-center gap-2">
                     <ion-icon name="logo-twitter" class="text-lg"></ion-icon>
-                    <a href="https://twitter.com/usebanffpay" class="link-items hover:text-white">X (Twitter)</a>
+                    <a href="https://twitter.com/usebanffpay" target="_blank" class="hover:text-white">X (Twitter)</a>
                 </li>
             </ul>
         </div>
