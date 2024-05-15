@@ -16,6 +16,11 @@ languageBtn.addEventListener("click", () => {
     document.querySelector("#language_dropdown").classList.toggle("show")
 })
 
+const service_parent = document.querySelector(".services-parent")
+service_parent.addEventListener("click", () => {
+    document.querySelector(".services-child").classList.toggle("hide")
+})
+
 // Close the dropdown if the user clicks outside of it
 window.onclick = function (event) {
     if (

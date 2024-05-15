@@ -1,7 +1,18 @@
-<div id="myNav" class="overlay">
-    <div class="overlay-content px-5 flex flex-col gap-5 text-lg text-white">
+<div id="myNav" class="overlay bg-brand-primary-500 opacity-95">
+    <div class="overlay-content px-5 flex flex-col gap-5 text-lg text-black">
         <!-- About use -->
-        <a href="/about" class="pb-3 hover:text-white border-b border-b-gray-600">About Us</a>
+        <div>
+            <p class="services-parent flex gap-2 items-center mb-4 cursor-pointer">
+                <span>Company</span>
+                <ion-icon name="chevron-down-circle-outline" class="text-xl"></ion-icon>
+            </p>
+            <div class="services-child hidden flex-col gap-3 text-base pl-4">
+                <a href="/about" class="hover:text-white">About Us</a>
+                <a href="/privacy" class="hover:text-white">Privacy Policy</a>
+                <a href="/terms" class="hover:text-white">Terms and Conditions</a>
+                <a href="/aml-policy" class="hover:text-white">AML/KYC Policy</a>
+            </div>
+        </div>
         <div class="pb-3 hover:text-white border-b border-b-gray-600">
             <span class="pb-3 inline-block">Services</span>
             <ul class="list-disc flex flex-col px-6 text-base gap-2">
@@ -16,6 +27,14 @@
             <span class="pb-3 inline-block">Support</span>
             <ul class="flex flex-col px-6 text-base gap-2">
                 <li class="flex items-center gap-2">
+                    <ion-icon name="call-outline" class="text-lg"></ion-icon>
+                    <a href="tel:+14034535703" target="_blank" class="hover:text-white">+1 403-453-5703</a>
+                </li>
+                <li class="flex items-center gap-2">
+                    <ion-icon name="mail-outline" class="text-lg"></ion-icon>
+                    <a href="mailto:care@banffpay.com" target="_blank" class="hover:text-white">care@banffpay.com</a>
+                </li>
+                <li class="flex items-center gap-2">
                     <ion-icon name="logo-facebook" class="text-lg"></ion-icon>
                     <a
                         href="https://www.facebook.com/profile.php?id=61557032189245&mibextid=ZbWKwL"
@@ -25,7 +44,9 @@
                 </li>
                 <li class="flex items-center gap-2">
                     <ion-icon name="logo-instagram" class="text-lg"></ion-icon>
-                    <a href="https://www.instagram.com/usebanffpay/" target="_blank" class="hover:text-white">Instagram</a>
+                    <a href="https://www.instagram.com/usebanffpay/" target="_blank" class="hover:text-white"
+                        >Instagram</a
+                    >
                 </li>
                 <li class="flex items-center gap-2">
                     <ion-icon name="logo-twitter" class="text-lg"></ion-icon>
@@ -34,7 +55,7 @@
             </ul>
         </div>
         <button
-            class="self-start rounded-md bg-brand-primary-950 py-4 px-8 text-white font-semibold text-sm border-b border-b-gray-600"
+            class="self-start rounded-full bg-brand-primary-950 py-4 px-8 font-semibold text-sm border-b border-b-gray-600"
         >
             <a
                 href="https://forms.banffpay.com/cofor/form/Waitlist/formperma/3gfkggPKGMa3U8H3OWpOE_DkdPXJLJgyBtHl91gVA4g"
@@ -54,8 +75,8 @@
         z-index: 1;
         top: 0;
         left: 0;
-        background-color: rgb(0, 0, 0);
-        background-color: rgba(0, 0, 0, 0.9);
+        /* background-color: rgb(0, 0, 0); */
+        /* background-color: rgba(0, 0, 0, 0.9); */
         overflow-x: hidden;
         transition: 0.2s;
     }
@@ -73,6 +94,10 @@
         top: 20px;
         right: 45px;
         font-size: 60px;
+    }
+
+    .hide {
+        display: flex;
     }
 
     .active {
