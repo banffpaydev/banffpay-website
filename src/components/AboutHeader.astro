@@ -1,5 +1,11 @@
 ---
 import NavBar from "../components/NavBar.astro"
+import { Image } from "astro:assets"
+import about1 from "@assets/about_1.png"
+import about2 from "@assets/about_2.png"
+import about3 from "@assets/about_3.png"
+import about4 from "@assets/about_4.png"
+import about5 from "@assets/about_5.png"
 ---
 
 <header class="flex flex-col gap-4 lg:bg-50% py-10 md:pb-14">
@@ -16,18 +22,61 @@ import NavBar from "../components/NavBar.astro"
                 Global Payments
             </h1>
         </div>
-        <picture>
-            <source media="(max-width: 600px)" srcset="/people_small.png" />
-            <source media="(min-width: 601px)" srcset="/people_large.png" />
-            <img src="people_large.png" alt="Description" class="w-full" />
-        </picture>
+        <div class="image-container">
+            <div class="image-strip">
+                <Image src={about1} alt="Image 1" />
+                <Image src={about2} alt="Image 2" />
+                <Image src={about3} alt="Image 3" />
+                <Image src={about4} alt="Image 4" />
+                <Image src={about5} alt="Image 5" />
+                <!-- Repeat the images to ensure seamless scrolling -->
+                <Image src={about1} alt="Image 1" />
+                <Image src={about2} alt="Image 2" />
+                <Image src={about3} alt="Image 3" />
+                <Image src={about4} alt="Image 4" />
+                <Image src={about5} alt="Image 5" />
+                <!-- Repeat the images to ensure seamless scrolling -->
+                <Image src={about1} alt="Image 1" />
+                <Image src={about2} alt="Image 2" />
+                <Image src={about3} alt="Image 3" />
+                <Image src={about4} alt="Image 4" />
+                <Image src={about5} alt="Image 5" />
+            </div>
+        </div>
     </div>
 </header>
 
 <style>
-      header {
+    header {
         background-image: url("/grid_background.png");
         background-position: center bottom;
         background-repeat: no-repeat;
+    }
+
+    .image-container {
+        width: 100%;
+        overflow: hidden;
+        position: relative;
+    }
+
+    .image-strip {
+        display: flex;
+        gap: 2rem;
+        width: calc(200%); /* Double the width to allow seamless looping */
+        animation: scroll 20s linear infinite;
+    }
+
+    .image-strip img {
+        max-width: 25%; /* Ensure each image takes up the correct portion */
+        object-fit: cover; /* Maintain image aspect ratio */
+    }
+
+    @keyframes scroll {
+        from {
+            transform: translateX(0);
+        }
+        to {
+            transform: translateX(-50%);
+        }
     }
 </style>
