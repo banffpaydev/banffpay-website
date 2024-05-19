@@ -10,7 +10,7 @@ import NavBarOverlay from "./NavBarOverlay.astro"
 <!-- TO BE INCLUDED AFTER AGREEMENT -->
 <NavBarOverlay />
 <div class="w-[90%] flex gap-4 justify-center md:justify-between items-center self-center z-10 fixed top-3">
-    <a href="/" class="hidden md:inline-block w-full md:w-28 lg:w-36 2xl:w-52">
+    <a href="/" class="hidden md:inline-block w-full md:w-28 lg:w-36 xl:w-40 2xl:w-52 min-[1920px]:w-64">
         <img src="/banffpay-logo.png" alt="logo" class="w-auto" />
         <!-- <img src= alt="" srcset=""> -->
     </a>
@@ -19,9 +19,9 @@ import NavBarOverlay from "./NavBarOverlay.astro"
             <img src="/banffpay-logo.png" alt="logo" class="w-auto" />
             <!-- <img src= alt="" srcset=""> -->
         </a>
-        <div class="flex gap-4 lg:gap-6">
+        <div class="flex gap-4 lg:gap-8 xl:gap-12 2xl:gap-16">
             <button id="servicesBtn" class="hidden md:flex gap-x-1.5 items-center relative cursor-pointer">
-                <span class="text-sm dropdown-span">Services</span>
+                <span class="text-base dropdown-span">Services</span>
                 <Image
                     src={arrowDown}
                     alt="arrow down icon"
@@ -48,7 +48,7 @@ import NavBarOverlay from "./NavBarOverlay.astro"
                 </nav>
             </button>
             <div id="supportBtn" class="hidden md:flex gap-x-1.5 items-center relative cursor-pointer">
-                <span class="text-sm dropdown-span">Support</span>
+                <span class="text-base dropdown-span">Support</span>
                 <Image
                     src={arrowDown}
                     alt="arrow down icon"
@@ -133,11 +133,11 @@ import NavBarOverlay from "./NavBarOverlay.astro"
                 </nav>
             </div>
             <div class="hidden md:flex gap-x-1.5 items-center">
-                <a href="/about" class="text-sm">About Us</a>
+                <a href="/about" class="text-base">About Us</a>
             </div>
         </div>
         <div class="hidden md:flex self-stretch gap-2">
-            <button class="rounded-full bg-brand-primary-950 py-3.5 px-4 text-white font-semibold text-sm">
+            <button class="rounded-full bg-brand-primary-950 py-3.5 px-4 text-white font-semibold text-base">
                 <a
                     href="https://forms.banffpay.com/cofor/form/Waitlist/formperma/3gfkggPKGMa3U8H3OWpOE_DkdPXJLJgyBtHl91gVA4g"
                     title="Join Waitlist"
