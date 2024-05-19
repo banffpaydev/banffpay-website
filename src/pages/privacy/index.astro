@@ -7,15 +7,15 @@ import ListButton from "@components/ListButton.astro"
 ---
 
 <BaseLayout title="BanffPay - Privacy Policy">
-    <header class="bg-slate-50 flex flex-col gap-4 bg-75% py-14 md:pb-20">
+    <header class="bg-slate-50 flex flex-col gap-4 bg-75% pt-14 pb-7 md:pb-20">
         <NavBar />
         <div class="flex flex-col gap-10 md:gap-20">
             <div class="self-center flex flex-col gap-12 items-center mt-20 mb-6 px-4">
                 <div
-                    class="rounded-full bg-white px-6 py-3 font-extrabold text-sm md:text-base uppercase"
-                >
-                    Privacy Policy
-                </div>
+                class="rounded-full bg-brand-primary-200 px-6 py-4 text-brand-primary-950 font-extrabold text-base uppercase"
+            >
+                Privacy Policy
+            </div>
                 <h1 class="font-bold text-3xl xs:text-4xl md:text-6xl text-center max-w-sm md:max-w-4xl">
                     We are also on the lookout for your utmost Privacy
                 </h1>
@@ -25,18 +25,18 @@ import ListButton from "@components/ListButton.astro"
             </div>
         </div>
     </header>
-    <div class="px-6 md:px-14 lg:px-28 py-10 md:py-14 grid lg:grid-cols-12 gap-10">
+    <div class="px-6 md:px-14 lg:px-28 py-10 md:py-7 grid lg:grid-cols-12 gap-10">
         <!-- Switch lg:hidden to lg:block at appropriate time -->
         <aside class="hidden lg:block col-span-3 relative pb-10">
-            <nav class="sticky top-10 h-[80vh] overflow-auto">
+            <nav class="sticky top-20 h-[80vh] overflow-auto">
                 <ul class="flex flex-col gap-4">
                     {privacyData.map((item) => <ListButton item={item} />)}
                 </ul>
             </nav>
         </aside>
-        <main class="max-w-screen-md lg:col-span-9 lg:px-6 lg:py-16 flex flex-col gap-5">
+        <main class="max-w-screen-md lg:col-span-9 lg:px-6 flex flex-col gap-5">
             <section class="flex flex-col gap-4">
-                <h2 class="text-2xl font-semibold text-black" id="introduction">Introduction</h2>
+                <h2 class="item-positions text-2xl font-semibold text-black" id="introduction">Introduction</h2>
                 <p class="text-gray-500">
                     At Banffpay, we take privacy and protection of your data very seriously and we are committed to
                     handling your information in an open and transparent manner and keeping your information secure. We
@@ -46,7 +46,7 @@ import ListButton from "@components/ListButton.astro"
                 </p>
             </section>
             <section class="flex flex-col gap-4">
-                <h2 class="text-2xl font-semibold text-black" id="consent">Consent</h2>
+                <h2 class="item-positions text-2xl font-semibold text-black" id="consent">Consent</h2>
                 <p class="text-gray-500">
                     By visiting this website, our partners' websites, or providing your personal information when you
                     browse our website, register for an account, request for an exchange of currency, enter a
@@ -56,7 +56,7 @@ import ListButton from "@components/ListButton.astro"
                 </p>
             </section>
             <section class="flex flex-col gap-4">
-                <h2 class="text-2xl font-semibold text-black" id="notice">Notice</h2>
+                <h2 class="item-positions text-2xl font-semibold text-black" id="notice">Notice</h2>
                 <p class="text-gray-500">
                     Please read this notice carefully, together with our Terms and Conditions and any other documents
                     referred to in it. Here we set out the basis on which any information we collect about you or from
@@ -67,7 +67,7 @@ import ListButton from "@components/ListButton.astro"
                 </p>
             </section>
             <section class="flex flex-col gap-4">
-                <h2 class="text-2xl font-semibold text-black" id="information-we-collect">Information We Collect</h2>
+                <h2 class="item-positions text-2xl font-semibold text-black" id="information-we-collect">Information We Collect</h2>
                 <p class="text-gray-500">
                     The personal information that you are asked to provide, and the reasons why you are asked to provide
                     it, will be made clear to you at the point we ask you to provide your personal information.
@@ -95,7 +95,7 @@ import ListButton from "@components/ListButton.astro"
                 </p>
             </section>
             <section class="flex flex-col gap-4">
-                <h2 class="text-2xl font-semibold text-black" id="how-we-collect">
+                <h2 class="item-positions text-2xl font-semibold text-black" id="how-we-collect">
                     How We Collect Your Personal Information
                 </h2>
                 <ol class="list-decimal flex flex-col gap-6 px-6 text-gray-500">
@@ -140,7 +140,7 @@ import ListButton from "@components/ListButton.astro"
                 </ol>
             </section>
             <section class="flex flex-col gap-4 text-gray-500">
-                <h2 class="text-2xl font-semibold text-black" id="how-we-use">
+                <h2 class="item-positions text-2xl font-semibold text-black" id="how-we-use">
                     How We Use Your Information We Collect
                 </h2>
                 <p>
@@ -180,7 +180,7 @@ import ListButton from "@components/ListButton.astro"
                 </p>
             </section>
             <section class="flex flex-col gap-4 text-gray-500">
-                <h2 class="text-2xl font-semibold text-black" id="data-sharing">Data Sharing</h2>
+                <h2 class="item-positions text-2xl font-semibold text-black" id="data-sharing">Data Sharing</h2>
                 <p>
                     Banffpay will only share your information with another party with your consent. Third party
                     information sharing will only be done in methods outlined in this policy. Your information may be
@@ -212,7 +212,7 @@ import ListButton from "@components/ListButton.astro"
                 </p>
             </section>
             <section class="flex flex-col gap-4 text-gray-500">
-                <h2 class="text-2xl font-semibold text-black" id="log-files">Log Files</h2>
+                <h2 class="item-positions text-2xl font-semibold text-black" id="log-files">Log Files</h2>
                 <p>
                     Banffpay follows a standard procedure of using log files. These files log visitors when they visit
                     websites. All hosting companies do this and are a part of hosting services' analytics. The
@@ -226,7 +226,7 @@ import ListButton from "@components/ListButton.astro"
                 </p>
             </section>
             <section class="flex flex-col gap-4 text-gray-500">
-                <h2 class="text-2xl font-semibold text-black" id="cookies">Cookies and Monitoring Mechanisms</h2>
+                <h2 class="item-positions text-2xl font-semibold text-black" id="cookies">Cookies and Monitoring Mechanisms</h2>
                 <p>
                     It is possible to manage cookie usage on your personal browser. You may work with or without cookies
                     within our website but operating with cookies disabled will restrict your ability to use some of our
@@ -265,7 +265,7 @@ import ListButton from "@components/ListButton.astro"
                 </p>
             </section>
             <section class="flex flex-col gap-4 text-gray-500">
-                <h2 class="text-2xl font-semibold text-black" id="information-security">Information Security</h2>
+                <h2 class="item-positions text-2xl font-semibold text-black" id="information-security">Information Security</h2>
                 <p>
                     Banffpay abides by industry standards and policies as it relates to user privacy and information
                     security, thus, users can be assured that information will be protected from the moment it is
@@ -285,7 +285,7 @@ import ListButton from "@components/ListButton.astro"
                 </p>
             </section>
             <section class="flex flex-col gap-4 text-gray-500">
-                <h2 class="text-2xl font-semibold text-black" id="third-party">Third Party Privacy Policies</h2>
+                <h2 class="item-positions text-2xl font-semibold text-black" id="third-party">Third Party Privacy Policies</h2>
                 <p>
                     Banffpay's Privacy Policy does not apply to other advertisers or websites. Thus, we are advising you
                     to consult the respective Privacy Policies of these third-party ad servers for more detailed
@@ -299,7 +299,7 @@ import ListButton from "@components/ListButton.astro"
                 </p>
             </section>
             <section class="flex flex-col gap-4 text-gray-500">
-                <h2 class="text-2xl font-semibold text-black" id="children-information">
+                <h2 class="item-positions text-2xl font-semibold text-black" id="children-information">
                     A Special Note About Children Information
                 </h2>
                 <p>
@@ -308,7 +308,7 @@ import ListButton from "@components/ListButton.astro"
                 </p>
             </section>
             <section class="flex flex-col gap-4 text-gray-500">
-                <h2 class="text-2xl font-semibold text-black" id="access-and-corrections">Access And Corrections</h2>
+                <h2 class="item-positions text-2xl font-semibold text-black" id="access-and-corrections">Access And Corrections</h2>
                 <p>
                     We want to have accurate information about our customers and users, and we want you to be able to
                     access the information we have collected about you. You can write to us to gain access to your
@@ -322,7 +322,7 @@ import ListButton from "@components/ListButton.astro"
                 </p>
             </section>
             <section class="flex flex-col gap-4 text-gray-500">
-                <h2 class="text-2xl font-semibold text-black" id="how-long-we-keep">
+                <h2 class="item-positions text-2xl font-semibold text-black" id="how-long-we-keep">
                     How Long We Keep Your Personal Information?
                 </h2>
                 <p>
@@ -337,7 +337,7 @@ import ListButton from "@components/ListButton.astro"
                 </p>
             </section>
             <section class="flex flex-col gap-4 text-gray-500">
-                <h2 class="text-2xl font-semibold text-black" id="policy-changes">Policy Changes</h2>
+                <h2 class="item-positions text-2xl font-semibold text-black" id="policy-changes">Policy Changes</h2>
                 <p>
                     This policy may be updated at any time. Users will either be notified of changes that may directly
                     affect them via the email address provided during sign up, by way of a website announcement, or
@@ -345,7 +345,7 @@ import ListButton from "@components/ListButton.astro"
                 </p>
             </section>
             <section class="flex flex-col gap-4 text-gray-500">
-                <h2 class="text-2xl font-semibold text-black" id="get-in-touch">Get In Touch</h2>
+                <h2 class="item-positions text-2xl font-semibold text-black" id="get-in-touch">Get In Touch</h2>
                 <p>
                     If you have any questions or concerns about this Privacy Policy or our practices, please contact us
                     at <a href="mailto:care@banffpay.com" class="text-brand-primary-950 font-semibold hover:underline"
@@ -382,29 +382,4 @@ import ListButton from "@components/ListButton.astro"
             background: #555;
         }
     </style>
-
-    <!-- <script>
-        const listItem = document.querySelectorAll(".link-buttons")
-        const headings = document.querySelectorAll("h2")
-
-        const toggleBackground = (current) => {
-            listItem.forEach((item) => {
-                item.classList.remove("bg-brand-primary-200", "text-brand-primary-950")
-            })
-
-            current.classList.add("bg-brand-primary-200", "text-brand-primary-950")
-        }
-
-        listItem.forEach((item) => {
-            item.addEventListener("click", () => {
-                toggleBackground(item)
-
-                headings.forEach((heading) => {
-                    if (heading.id === item.id) {
-                        heading.scrollIntoView({ behavior: "smooth", block: "center" })
-                    }
-                })
-            })
-        })
-    </script> -->
 </BaseLayout>

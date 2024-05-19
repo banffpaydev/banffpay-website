@@ -80,7 +80,6 @@ document.querySelectorAll(".link-items").forEach((item) => {
     })
 })
 
-
 // More Features Section
 document.addEventListener("DOMContentLoaded", function () {
     const sections = document.querySelectorAll(".observer")
@@ -89,12 +88,17 @@ document.addEventListener("DOMContentLoaded", function () {
             entries.forEach((entry) => {
                 const header = entry.target.children[0]
                 const paragraph = entry.target.children[1]
+                const img = `#${header.id}-img`
+
                 if (entry.isIntersecting) {
+                    document.querySelector(img).classList.add("lg:flex")
                     header.classList.remove("text-gray-300")
                     header.classList.add("text-brand-primary-950")
 
                     paragraph.classList.remove("text-gray-300")
                 } else {
+                    // document.querySelector(img).classList.remove("lg:flex")
+
                     header.classList.remove("text-brand-primary-950")
                     header.classList.add("text-gray-300")
 
@@ -102,14 +106,33 @@ document.addEventListener("DOMContentLoaded", function () {
                 }
             })
         },
-        { threshold: 0.95 }
+        { threshold: 0.65 }
     )
 
     sections.forEach((section) => {
         observer.observe(section)
     })
 })
+
+const observer = new IntersectionObserver(
+    (entries) => {
+        entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add("show")
+            } else {
+                entry.target.classList.remove("show")
+            }
+        })
+    },
+    { threshold: 0.6 }
+)
+
+const hiddenElements = document.querySelectorAll(".hide")
+hiddenElements.forEach((element) => observer.observe(element))
+
+////////////////////////////////////////
 // TERMS & CONDITIONS; PRIVACY POLIVY; AML & KYC POLICY SIDEBAR SCROLL ACTIONS
+////////////////////////////////////////
 const listItem = document.querySelectorAll(".link-buttons")
 const headings = document.querySelectorAll("h2")
 
@@ -141,6 +164,24 @@ listItem.forEach((item) => {
         })
     })
 })
+
+function checkPosition() {
+    const items = document.querySelectorAll(".item-positions")
+    items.forEach((item) => {
+        const rect = item.getBoundingClientRect()
+        if (rect.top <= 250 && rect.top >= 0) {
+            toggleBackground(document.querySelector(`#${item.id}`))
+        }
+    })
+}
+
+// Initial check when the page loads
+checkPosition()
+
+////////////////////////////////////////
+// Check position on scroll
+////////////////////////////////////////
+window.addEventListener("scroll", checkPosition)
 
 // NAVBAR & FOOTER SERVICES SCROLL ACTIONS
 const currentYear = new Date().getFullYear()

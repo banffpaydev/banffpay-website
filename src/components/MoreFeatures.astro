@@ -4,6 +4,8 @@ import { Image } from "astro:assets"
 import deviceUp from "@assets/device-up.png"
 import deviceDown from "@assets/device-down.png"
 import mockup from "@assets/mockup.png"
+import sendMoney from "@assets/send-money.png"
+import wallet from "@assets/wallet.png"
 ---
 
 <section
@@ -42,6 +44,23 @@ import mockup from "@assets/mockup.png"
     </div>
     <div class="lg:col-start-1 lg:row-start-3 lg:h-[65vh]">
         <div class="observer">
+            <h3
+                id="multi-currency-wallet"
+                class="font-semibold text-2xl py-3 text-gray-300 transition-all duration-700"
+            >
+                Manage Multiple Currencies with Ease
+            </h3>
+            <p class="py-4 leading-7 text-gray-300 transition-all duration-700">
+                Keep all your currencies in one place with our multi-currency wallet. Effortlessly switch between
+                currencies and make transactions without the hassle of conversion fees.
+            </p>
+        </div>
+    </div>
+    <div class="bg-brand-primary-200 rounded-xl pb-14 flex justify-center lg:hidden">
+        <Image src={deviceDown} alt="device mock" />
+    </div>
+    <div class="lg:col-start-3 lg:row-start-4 lg:h-[65vh]">
+        <div class="observer">
             <h3 id="add-money" class="font-semibold text-2xl py-3 text-gray-300 transition-all duration-700">
                 Fund Multiple Accounts instantly
             </h3>
@@ -50,22 +69,33 @@ import mockup from "@assets/mockup.png"
             </p>
         </div>
     </div>
-    <!-- <div class="bg-brand-primary-200 rounded-xl pt-14 flex justify-center lg:hidden">
-        <Image src={deviceUp} alt="device mock" />
+
+    <div id="send-money-img" class="hidden lg:col-start-2 lg:justify-center hide">
+        <Image class="max-w-[75%]" src={sendMoney} alt="mockup" />
     </div>
-    <div class="lg:col-start-3 lg:row-start-4 lg:h-[65vh]">
-        <div class="observer">
-            <h3 class="font-semibold text-2xl py-3 text-brand-primary-400 transition-all duration-700">
-                Exchange currencies seamlessly with our transparent and competitive rates.
-            </h3>
-            <p class="py-4 leading-7 text-gray-300 transition-all duration-700">
-                Our platform offers multiple currency wallets, simplifying the process of sending and receiving money in
-                your preferred currency, all within one global app accepted in our operating countries
-            </p>
-        </div>
-    </div> -->
-    <div class="hidden lg:flex lg:col-start-2 lg:justify-center sticky top-24">
-        <Image class="max-w-xs" src={mockup} alt="mockup" />
+    <div id="exchange-money-img" class="hidden lg:col-start-2 lg:justify-center hide">
+        <Image class="max-w-[75%]" src={mockup} alt="mockup" />
+    </div>
+    <div id="multi-currency-wallet-img" class="hidden lg:col-start-2 lg:justify-center hide">
+        <Image class="max-w-[75%]" src={wallet} alt="mockup" />
+    </div>
+    <div id="add-money-img" class="hidden lg:col-start-2 lg:justify-center hide">
+        <Image class="max-w-[75%]" src={mockup} alt="mockup" />
     </div>
 </section>
-<!-- ORIGINAL script moved to BaseLayout -->
+
+<style>
+    .hide {
+        opacity: 0;
+        filter: blur(5px);
+        transform: translateX(-100%);
+        transition: all 0.7s;
+    }
+
+    .show {
+        opacity: 1;
+        filter: blur(0);
+        transform: translateX(0);
+        transition: all 0.7s;
+    }
+</style>

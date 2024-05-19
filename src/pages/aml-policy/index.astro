@@ -8,13 +8,15 @@ import ListButton from "@components/ListButton.astro"
 
 <BaseLayout title="BanffPay - Privacy Policy">
     <!-- HEADER INCL. NAVBAR -->
-    <header class="bg-slate-50 flex flex-col gap-4 bg-75% py-14 md:pb-20">
+    <header class="bg-slate-50 flex flex-col gap-4 bg-75% pt-14 pb-7 md:pb-20">
         <NavBar />
         <div class="flex flex-col gap-10 md:gap-20">
             <div class="self-center flex flex-col gap-12 items-center mt-20 mb-6 px-4">
-                <div class="rounded-full bg-white px-6 py-3 font-extrabold text-sm md:text-base uppercase">
-                    AML/KYC POLICY
-                </div>
+                <div
+                class="rounded-full bg-brand-primary-200 px-6 py-4 text-brand-primary-950 font-extrabold text-base uppercase"
+            >
+                AML/KYC Policy
+            </div>
                 <h1 class="font-bold text-3xl xs:text-4xl md:text-6xl text-center max-w-sm md:max-w-4xl">
                     Here's our Anti-Money Laundering Policy
                 </h1>
@@ -28,16 +30,16 @@ import ListButton from "@components/ListButton.astro"
         <!-- SIDEBAR - CONTENT HEADINGS -->
         <!-- Switch lg:hidden to lg:block at appropriate time -->
         <aside class="hidden lg:block col-span-3 relative pb-10">
-            <nav class="sticky top-10 h-[80vh] overflow-auto">
+            <nav class="sticky top-20 h-[80vh] overflow-auto">
                 <ul class="flex flex-col gap-4">
                     {antiMoneyLaundering.map((item) => <ListButton item={item} />)}
                 </ul>
             </nav>
         </aside>
         <!-- MAIN CONTENTS -->
-        <main class="max-w-screen-md lg:col-span-9 lg:px-6 lg:py-16 flex flex-col gap-5">
+        <main class="max-w-screen-md lg:col-span-9 lg:px-6 flex flex-col gap-5">
             <section class="text-gray-500 flex flex-col gap-4">
-                <h2 class="text-2xl font-semibold text-black" id="purpose">Purpose</h2>
+                <h2 class="item-positions text-2xl font-semibold text-black" id="purpose">Purpose</h2>
                 <p>
                     Banffpay LIMITED supports a culture of compliance and strives to meet all obligations required to
                     operate as a Money Services Business. Voluntary self-declarations of non-compliance (VSDONC) in
@@ -54,7 +56,7 @@ import ListButton from "@components/ListButton.astro"
                 </p>
             </section>
             <section class="text-gray-500 flex flex-col gap-4">
-                <h2 class="text-2xl font-semibold text-black" id="business-acceptance-policy">
+                <h2 class="item-positions text-2xl font-semibold text-black" id="business-acceptance-policy">
                     Business/Customer Acceptance Policy
                 </h2>
                 <p>Banffpay will adopt the following criteria for business/customer relationship:</p>
@@ -84,7 +86,7 @@ import ListButton from "@components/ListButton.astro"
                 </p>
             </section>
             <section class="text-gray-500 flex flex-col gap-4">
-                <h2 class="text-2xl font-semibold text-black" id="kyc-policy">
+                <h2 class="item-positions text-2xl font-semibold text-black" id="kyc-policy">
                     Customer Identification/Know Your Customer Policy
                 </h2>
 
@@ -139,7 +141,7 @@ import ListButton from "@components/ListButton.astro"
                 </ol>
             </section>
             <section class="text-gray-500 flex flex-col gap-4">
-                <h2 class="text-2xl font-semibold text-black" id="ml-risk-assessment">
+                <h2 class="item-positions text-2xl font-semibold text-black" id="ml-risk-assessment">
                     Money Laundering/Terrorism Financing Risk Assessment Process
                 </h2>
                 <p>
@@ -163,7 +165,7 @@ import ListButton from "@components/ListButton.astro"
                 </p>
             </section>
             <section class="text-gray-500 flex flex-col gap-4">
-                <h2 class="text-2xl font-semibold text-black" id="risk-assessment">Risk Assessment</h2>
+                <h2 class="item-positions text-2xl font-semibold text-black" id="risk-assessment">Risk Assessment</h2>
                 <p>
                     The purpose of the Risk Assessment is to ensure that the Company remains compliant with the relevant
                     legislation and to assess the risks linked to the Company's business activities and clients. The
@@ -188,7 +190,7 @@ import ListButton from "@components/ListButton.astro"
                 </p>
             </section>
             <section class="text-gray-500 flex flex-col gap-4">
-                <h2 class="text-2xl font-semibold text-black" id="products-channels">
+                <h2 class="item-positions text-2xl font-semibold text-black" id="products-channels">
                     Products, Services and Delivery Channels
                 </h2>
                 <p>
@@ -211,7 +213,7 @@ import ListButton from "@components/ListButton.astro"
                 </ol>
             </section>
             <section class="text-gray-500 flex flex-col gap-4">
-                <h2 class="text-2xl font-semibold text-black" id="rb-approach-customerID">
+                <h2 class="item-positions text-2xl font-semibold text-black" id="rb-approach-customerID">
                     Risk Based Approach to Customer Identification
                 </h2>
                 <p>
@@ -250,7 +252,9 @@ import ListButton from "@components/ListButton.astro"
                 </p>
             </section>
             <section class="text-gray-500 flex flex-col gap-4">
-                <h2 class="text-2xl font-semibold text-black" id="matrix-and-rating">Matrix and Rating</h2>
+                <h2 class="item-positions text-2xl font-semibold text-black" id="matrix-and-rating">
+                    Matrix and Rating
+                </h2>
                 <p>
                     The Company will engage in a three-level scoring system, displayed below. As the business matures,
                     this scoring system should change and must be reviewed during any reviews of the Compliance Program.
@@ -328,7 +332,7 @@ import ListButton from "@components/ListButton.astro"
                 </ol>
             </section>
             <section class="text-gray-500 flex flex-col gap-4">
-                <h2 class="text-2xl font-semibold text-black" id="updating-risk-assessment">
+                <h2 class="item-positions text-2xl font-semibold text-black" id="updating-risk-assessment">
                     Updating the Risk Assessment
                 </h2>
                 <ol>
@@ -355,7 +359,7 @@ import ListButton from "@components/ListButton.astro"
                 </p>
             </section>
             <section class="text-gray-500 flex flex-col gap-4">
-                <h2 class="text-2xl font-semibold text-black" id="politically-exposed-persons">
+                <h2 class="item-positions text-2xl font-semibold text-black" id="politically-exposed-persons">
                     Politically Exposed Persons
                 </h2>
 
@@ -465,7 +469,7 @@ import ListButton from "@components/ListButton.astro"
                 </p>
             </section>
             <section class="text-gray-500 flex flex-col gap-4">
-                <h2 class="text-2xl font-semibold text-black" id="compliance-training-program">
+                <h2 class="item-positions text-2xl font-semibold text-black" id="compliance-training-program">
                     Compliance Training Program
                 </h2>
                 <p>Sole proprietors do not need a training program.</p>

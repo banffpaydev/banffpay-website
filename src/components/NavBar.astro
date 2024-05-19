@@ -1,7 +1,7 @@
 ---
 import { Image } from "astro:assets"
 
-import banffLogo from "@assets/banffpay-logo.svg"
+// import banffLogo from "@assets/banffpay-logo.png"
 import arrowDown from "@assets/arrow-down.svg"
 
 import NavBarOverlay from "./NavBarOverlay.astro"
@@ -9,10 +9,15 @@ import NavBarOverlay from "./NavBarOverlay.astro"
 
 <!-- TO BE INCLUDED AFTER AGREEMENT -->
 <NavBarOverlay />
-<div class="w-[90%] md:w-auto flex gap-4 justify-center items-center self-center z-10 fixed top-3">
-    <nav class="bg-brand-primary-100 flex-1 flex gap-4 justify-between py-2 px-2 rounded-full">
-        <a href="/" class="bg-brand-primary-200 rounded-full px-2 xs:px-4 py-3">
-            <Image src={banffLogo} alt="logo" class="w-full md:w-28" loading="eager" />
+<div class="w-[90%] flex gap-4 justify-center md:justify-between items-center self-center z-10 fixed top-3">
+    <a href="/" class="hidden md:inline-block w-full md:w-28 lg:w-36 2xl:w-52">
+        <img src="/banffpay-logo.png" alt="logo" class="w-auto" />
+        <!-- <img src= alt="" srcset=""> -->
+    </a>
+    <nav class="bg-brand-primary-100 flex gap-4 justify-between items-center py-3 px-4 rounded-full w-full md:w-auto">
+        <a href="/" class="w-32 md:hidden">
+            <img src="/banffpay-logo.png" alt="logo" class="w-auto" />
+            <!-- <img src= alt="" srcset=""> -->
         </a>
         <div class="flex gap-4 lg:gap-6">
             <button id="servicesBtn" class="hidden md:flex gap-x-1.5 items-center relative cursor-pointer">
@@ -32,7 +37,9 @@ import NavBarOverlay from "./NavBarOverlay.astro"
                             <a href="/#send-money" class="scroll-items hover:border-b border-gray-500">Send money</a>
                         </li>
                         <li>
-                            <a href="/#exchange-money" class="scroll-items hover:border-b border-gray-500">Exchange currency</a>
+                            <a href="/#exchange-money" class="scroll-items hover:border-b border-gray-500"
+                                >Exchange currency</a
+                            >
                         </li>
                         <li>
                             <a href="/#add-money" class="scroll-items hover:border-b border-gray-500">Add money</a>
@@ -130,17 +137,13 @@ import NavBarOverlay from "./NavBarOverlay.astro"
             </div>
         </div>
         <div class="hidden md:flex self-stretch gap-2">
-            <button class="rounded-full bg-brand-primary-950 px-4 text-white font-semibold text-sm">
+            <button class="rounded-full bg-brand-primary-950 py-3.5 px-4 text-white font-semibold text-sm">
                 <a
                     href="https://forms.banffpay.com/cofor/form/Waitlist/formperma/3gfkggPKGMa3U8H3OWpOE_DkdPXJLJgyBtHl91gVA4g"
                     title="Join Waitlist"
                     target="_blank"
                     onclick="zforms_open_window(this.href, 648, 700); return false">Download App</a
                 >
-            </button>
-
-            <button class="hidden lg:block border-8 border-brand-primary-300 bg-white rounded-full px-6 self-stretch">
-                Log In
             </button>
         </div>
         <!-- TO BE INCLUDED AFTER AGREEMENT -->
@@ -150,30 +153,35 @@ import NavBarOverlay from "./NavBarOverlay.astro"
             class="block md:hidden self-center text-xl bg-brand-primary-950 text-white px-5 py-3 rounded-full"
         ></ion-icon>
     </nav>
-    <button
-        id="languageBtn"
-        class="rounded-full bg-brand-primary-950 text-white md:flex items-center py-3 px-2 gap-1.5 hidden relative"
-    >
-        <!-- <div class="rounded-full bg-gray-100 w-8 h-8 flex justify-center items-center">
-            <ion-icon name="earth-outline" class="text-black w-8"></ion-icon>
-        </div> -->
-        <ion-icon name="globe-outline" class="text-brand-primary-100 w-6 h-6"></ion-icon>
-        <span class="text-xs font-medium mr-2">ENGLISH</span>
-
-        <nav
-            id="language_dropdown"
-            class="dropdown-content hidden transition-all duration-300 absolute top-[120%] right-0 min-w-28 bg-white rounded-xl"
+    <div class="flex gap-3">
+        <button class="hidden lg:block text-sm border-8 border-brand-primary-300 bg-white rounded-full py-2 px-6 self-stretch">
+            Log In
+        </button>
+        <button
+            id="languageBtn"
+            class="rounded-full bg-brand-primary-950 text-white md:flex items-center py-2 px-4 gap-1.5 hidden relative"
         >
-            <ul class="flex flex-col py-6 px-4 gap-4 text-black font-medium">
-                <li class="w-full">
-                    <a href="#" class="pb-0.5 hover:border-b-2 border-b-slate-600">English</a>
-                </li>
-                <li>
-                    <a href="#" class="pb-0.5 hover:border-b-2 border-b-slate-600">French</a>
-                </li>
-            </ul>
-        </nav>
-    </button>
+            <!-- <div class="rounded-full bg-gray-100 w-8 h-8 flex justify-center items-center">
+                <ion-icon name="earth-outline" class="text-black w-8"></ion-icon>
+            </div> -->
+            <ion-icon name="globe-outline" class="text-brand-primary-100 w-6 h-6"></ion-icon>
+            <span class="text-xs font-medium mr-2">ENGLISH</span>
+
+            <nav
+                id="language_dropdown"
+                class="dropdown-content hidden transition-all duration-300 absolute top-[120%] right-0 min-w-28 bg-white rounded-xl"
+            >
+                <ul class="flex flex-col py-6 px-4 gap-4 text-black font-medium">
+                    <li class="w-full">
+                        <a href="#" class="pb-0.5 hover:border-b-2 border-b-slate-600">English</a>
+                    </li>
+                    <li>
+                        <a href="#" class="pb-0.5 hover:border-b-2 border-b-slate-600">French</a>
+                    </li>
+                </ul>
+            </nav>
+        </button>
+    </div>
 </div>
 
 <style>
