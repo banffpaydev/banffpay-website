@@ -1,18 +1,24 @@
 {
-  "name": "",
-  "type": "module",
-  "version": "0.0.1",
-  "scripts": {
-    "dev": "astro dev",
-    "start": "astro dev",
-    "build": "astro build",
-    "preview": "astro preview",
-    "astro": "astro"
-  },
-  "dependencies": {
-    "@astrojs/tailwind": "^5.1.0",
-    "@fontsource-variable/onest": "^5.0.4",
-    "astro": "^4.7.0",
-    "tailwindcss": "^3.4.3"
-  }
+    "name": "BanffPay",
+    "type": "module",
+    "version": "0.0.1",
+    "scripts": {
+        "dev": "astro dev",
+        "start": "astro dev",
+        "build": "astro build",
+        "preview": "astro preview",
+        "astro": "astro",
+        "format": "prettier --write .",
+        "check-format": "prettier --check ."
+    },
+    "dependencies": {
+        "@astrojs/tailwind": "^5.1.0",
+        "@fontsource-variable/onest": "^5.0.4",
+        "astro": "^4.7.0",
+        "tailwindcss": "^3.4.3"
+    },
+    "devDependencies": {
+        "prettier": "^3.2.5",
+        "prettier-plugin-tailwindcss": "^0.5.14"
+    }
 }
