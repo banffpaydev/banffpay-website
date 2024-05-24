@@ -137,14 +137,15 @@ import NavBarOverlay from "./NavBarOverlay.astro"
             </div>
         </div>
         <div class="hidden md:flex self-stretch gap-2">
+            <a
+                href="https://forms.banffpay.com/cofor/form/Waitlist/formperma/3gfkggPKGMa3U8H3OWpOE_DkdPXJLJgyBtHl91gVA4g"
+                title="Join Waitlist"
+                target="_blank"
+                onclick="zforms_open_window(this.href, 648, 700); return false">
             <button class="rounded-full bg-brand-primary-950 py-3.5 px-4 text-white font-semibold text-base">
-                <a
-                    href="https://forms.banffpay.com/cofor/form/Waitlist/formperma/3gfkggPKGMa3U8H3OWpOE_DkdPXJLJgyBtHl91gVA4g"
-                    title="Join Waitlist"
-                    target="_blank"
-                    onclick="zforms_open_window(this.href, 648, 700); return false">Download App</a
-                >
+                Download App
             </button>
+            </a>
         </div>
         <!-- TO BE INCLUDED AFTER AGREEMENT -->
         <ion-icon
@@ -154,9 +155,18 @@ import NavBarOverlay from "./NavBarOverlay.astro"
         ></ion-icon>
     </nav>
     <div class="flex gap-3">
-        <button class="hidden lg:block text-sm border-8 border-brand-primary-300 bg-white rounded-full py-2 px-6 self-stretch">
-            Log In
-        </button>
+        <a
+            href="https://forms.banffpay.com/cofor/form/Waitlist/formperma/3gfkggPKGMa3U8H3OWpOE_DkdPXJLJgyBtHl91gVA4g"
+            title="Join Waitlist"
+            target="_blank"
+            onclick="zforms_open_window(this.href, 648, 700); return false"
+        >
+            <button
+                class="hidden lg:block text-sm border-8 border-brand-primary-300 bg-white rounded-full py-2 px-6 self-stretch"
+            >
+                Log In
+            </button>
+        </a>
         <!-- change from hidden to flex & md: flex ?? -->
         <button
             id="languageBtn"
