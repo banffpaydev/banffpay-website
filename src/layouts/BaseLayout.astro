@@ -27,7 +27,15 @@ const { title } = Astro.props
         <!-- FOOTER -->
         <Footer />
         <script src="../scripts/script.js"></script>
+        <!-- ZOHO LIVE CHAT INTEGRATION -->
+        <script>
+            window.$zoho = window.$zoho || {}
+            $zoho.salesiq = $zoho.salesiq || { ready: function () {} }
+        </script><script
+            id="zsiqscript"
+            src="https://salesiq.zohopublic.com/widget?wc=siq4c307361a44ff60fab3a3605cc36d5a0e88a372b0b74e436089042e86cbeee59"
+            defer></script>
+        <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+        <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
     </body>
-    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </html>
