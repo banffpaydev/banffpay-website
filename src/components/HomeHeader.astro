@@ -26,31 +26,21 @@ import AnimatedButton from "./AnimatedButton.astro"
         <div class="flex flex-col items-center gap-8">
             <!-- <Image src={count} alt="available countries" class="w-1/3 md:w-1/5 2xl:w-1/6" /> -->
             <div class="flex justify-center">
-                <Image
-                    src={liberia}
-                    alt="Liberia"
-                    title="Liberia"
-                    class="w-14 h-14 rounded-full border-8 border-white -mr-4"
-                />
-                <Image
-                    src={angola}
-                    alt="Angola"
-                    title="Angola"
-                    class="w-14 h-14 rounded-full border-8 border-white -mr-4"
-                />
-                <Image
-                    src={ghana}
-                    alt="Ghana"
-                    title="Ghana"
-                    class="w-14 h-14 rounded-full border-8 border-white -mr-4"
-                />
-                <Image
-                    src={nigeria}
-                    alt="Nigeria"
-                    title="Nigeria"
-                    class="w-14 h-14 rounded-full border-8 border-white -mr-4"
-                />
-                <Image src={canada} alt="Canada" title="Canada" class="w-14 h-14 rounded-full border-8 border-white" />
+                <div data-tooltip="Liberia" class="w-14 h-14 rounded-full border-8 border-white -mr-4">
+                    <Image src={liberia} alt="Liberia" class="w-full h-full rounded-full" />
+                </div>
+                <div data-tooltip="Angola" class="w-14 h-14 rounded-full border-8 border-white -mr-4">
+                    <Image src={angola} alt="Angola" class="w-full h-full rounded-full" />
+                </div>
+                <div data-tooltip="Ghana" class="w-14 h-14 rounded-full border-8 border-white -mr-4">
+                    <Image src={ghana} alt="ghana" class="w-full h-full rounded-full" />
+                </div>
+                <div data-tooltip="Nigeria" class="w-14 h-14 rounded-full border-8 border-white -mr-4">
+                    <Image src={nigeria} alt="nigeria" class="w-full h-full rounded-full" />
+                </div>
+                <div data-tooltip="Canada" class="w-14 h-14 rounded-full border-8 border-white -mr-4">
+                    <Image src={canada} alt="canada" class="w-full h-full rounded-full" />
+                </div>
             </div>
             <h1 class="font-extrabold text-3xl xs:text-4xl md:text-5xl text-center flex flex-col gap-2">
                 <span
@@ -97,7 +87,7 @@ import AnimatedButton from "./AnimatedButton.astro"
         />
         <AnimatedButton classList="left-[10%] xl:left-[15%]" imgSrc={user5} transactionAmt="Kz 42,000" time="9:31am" />
     </div>
-    <div class="container lg:hidden  bottom-0">
+    <div class="container lg:hidden bottom-0">
         <div class="big-image">
             <img src="/main_user-sm.png" alt="Big Image" />
         </div>
@@ -120,6 +110,71 @@ import AnimatedButton from "./AnimatedButton.astro"
         </div>
     </div>
 </header>
+
+<style>
+    /* Add this attribute to the element that needs a tooltip */
+    [data-tooltip] {
+        position: relative;
+        z-index: 2;
+        cursor: pointer;
+    }
+
+    /* Hide the tooltip content by default */
+    [data-tooltip]:before,
+    [data-tooltip]:after {
+        visibility: hidden;
+        -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+        filter: progid: DXImageTransform.Microsoft.Alpha(Opacity=0);
+        opacity: 0;
+        pointer-events: none;
+    }
+
+    /* Position tooltip above the element */
+    [data-tooltip]:before {
+        position: absolute;
+        top: 150%;
+        left: 50%;
+        margin-bottom: 5px;
+        margin-left: -50px;
+        padding: 7px;
+        width: 100px;
+        -webkit-border-radius: 3px;
+        -moz-border-radius: 3px;
+        border-radius: 3px;
+        background-color: #000;
+        background-color: hsla(0, 0%, 20%, 0.9);
+        color: #fff;
+        content: attr(data-tooltip);
+        text-align: center;
+        font-size: 14px;
+        line-height: 1.2;
+    }
+
+    /* Triangle hack to make tooltip look like a speech bubble */
+    [data-tooltip]:after {
+        position: absolute;
+        top: 130%;
+        left: 50%;
+        margin-left: -5px;
+        width: 0;
+        /* border-top: 5px solid #000; */
+        border-bottom: 5px solid hsla(0, 0%, 20%, 0.9);
+        border-right: 5px solid transparent;
+        border-left: 5px solid transparent;
+        content: " ";
+        font-size: 0;
+        line-height: 0;
+    }
+
+    /* Show tooltip content on hover */
+    [data-tooltip]:hover:before,
+    [data-tooltip]:hover:after {
+        visibility: visible;
+        -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+        filter: progid: DXImageTransform.Microsoft.Alpha(Opacity=100);
+        opacity: 1;
+    }
+</style>
 
 <style>
     header {
