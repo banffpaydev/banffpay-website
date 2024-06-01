@@ -4,6 +4,13 @@ import { Image } from "astro:assets"
 const { classList, imgSrc, transactionAmt, time } = Astro.props
 ---
 
+<!-- <div class=`custom-div ${classList}`>
+    <Image src={imgSrc} alt="users" class="custom-img" />
+    <div class="custom-content">
+        <span class="custom-amount">+ {transactionAmt}</span>
+        <span class="custom-info">From Toni &bull; {time}</span>
+    </div>
+</div> -->
 <div
     class=`group absolute ${classList} bg-white w-20 h-20 rounded-full hover:w-72 transition-all duration-300 hidden lg:block overflow-hidden`
 >
@@ -15,3 +22,89 @@ const { classList, imgSrc, transactionAmt, time } = Astro.props
         <span class="text-gray-400 font-medium block">From Toni &bull; {time}</span>
     </div>
 </div>
+
+<style>
+    /* Container */
+    .custom-div {
+        position: absolute;
+        background-color: white;
+        width: 5rem; /* 20 * 0.25rem */
+        height: 5rem; /* 20 * 0.25rem */
+        border-radius: 10000px;
+        transition: all 0.3s;
+        display: none;
+        overflow: hidden;
+    }
+
+    .custom-div:hover,
+    .custom-div.trigger-hover {
+        width: 18rem; /* 72 * 0.25rem */
+    }
+
+    /* Image */
+    .custom-img {
+        position: absolute;
+        width: 4rem; /* 16 * 0.25rem */
+        height: 4rem; /* 16 * 0.25rem */
+        top: 2.5rem; /* 10 * 0.25rem */
+        left: 2.5rem; /* 10 * 0.25rem */
+        transform: translate(-50%, -50%);
+    }
+
+    /* Content */
+    .custom-content {
+        width: 14rem; /* 56 * 0.25rem */
+        position: absolute;
+        left: 5rem; /* 20 * 0.25rem */
+        top: 0.75rem; /* 3 * 0.25rem */
+        transform: translateY(-4rem); /* -16 * 0.25rem */
+        transition: transform 0.5s 0.1s;
+    }
+
+    .custom-div:hover .custom-content,
+    .custom-div.trigger-hover .custom-content {
+        transform: translateY(0);
+    }
+
+    /* Amount */
+    .custom-amount {
+        color: #22c55e; /* Tailwind's green-500 */
+        font-size: 1.125rem; /* Tailwind's text-lg */
+        font-weight: 600; /* Tailwind's font-semibold */
+        display: block;
+    }
+
+    /* Info */
+    .custom-info {
+        color: #9ca3af; /* Tailwind's gray-400 */
+        font-weight: 500; /* Tailwind's font-medium */
+        display: block;
+    }
+
+    /* Display on large screens */
+    @media (min-width: 1024px) {
+        .custom-div {
+            display: block;
+        }
+    }
+</style>
+
+<script>
+    // Function to simulate hover effect
+    function simulateHover(element) {
+        element.classList.add("trigger-hover")
+        setTimeout(() => {
+            element.classList.remove("trigger-hover")
+        }, 2000) // Hover effect duration
+    }
+
+    // Get all elements to hover
+    const elements = document.querySelectorAll(".custom-div")
+
+    // Simulate hover on each element
+    elements.forEach((element, index) => {
+        setTimeout(() => {
+            simulateHover(element)
+        }, index * 3000) // Delay each hover effect by 3 seconds
+    })
+</script>

@@ -131,7 +131,7 @@ const hiddenElements = document.querySelectorAll(".hide")
 hiddenElements.forEach((element) => observer.observe(element))
 
 ////////////////////////////////////////
-// TERMS & CONDITIONS; PRIVACY POLIVY; AML & KYC POLICY SIDEBAR SCROLL ACTIONS
+// TERMS & CONDITIONS; PRIVACY POLICY; AML & KYC POLICY SIDEBAR SCROLL ACTIONS
 ////////////////////////////////////////
 const listItem = document.querySelectorAll(".link-buttons")
 const headings = document.querySelectorAll("h2")
