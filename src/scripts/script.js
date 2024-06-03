@@ -9,13 +9,13 @@ function isElementVisible(element) {
 // Function to show the overlay
 function showOverlay() {
     document.getElementById("consent-overlay").style.display = "block"
-    document.body.style.overflow = 'hidden'; // Disable background scrolling
+    document.body.style.overflow = "hidden" // Disable background scrolling
 }
 
 // Function to hide the overlay
 function hideOverlay() {
     document.getElementById("consent-overlay").style.display = "none"
-    document.body.style.overflow = ''; // Disable background scrolling
+    document.body.style.overflow = "" // Disable background scrolling
 }
 
 // Show the overlay and banner if the banner is visible
@@ -71,6 +71,10 @@ window.onclick = function (event) {
     let cookieBanner = document.getElementById("zpcookie-banner")
     if (!isElementVisible(cookieBanner)) {
         hideOverlay()
+    }
+    // iframe
+    if (document.querySelector("#siq_chatwindow")) {
+        document.querySelector('[data-zsqa="home"]').style.display = "none"
     }
 }
 
