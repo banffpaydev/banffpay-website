@@ -3,13 +3,11 @@
 ////////////////////////////////////////
 // Function to check if an element is visible
 function isElementVisible(element) {
-    console.log("visibility test");
     return element && element.style.display !== "none"
 }
 
 // Function to show the overlay
 function showOverlay() {
-    console.log("overlay area")
     document.getElementById("consent-overlay").style.display = "block"
     document.body.style.overflow = 'hidden'; // Disable background scrolling
 }
@@ -93,12 +91,12 @@ function openNav() {
 document.querySelector("#openMenu").addEventListener("click", openNav)
 // document.querySelector(".closebtn").addEventListener("click", closeNav)
 
-var dropdown = document.getElementsByClassName("dropdown-btn")
+let dropdown = document.getElementsByClassName("dropdown-btn")
 
 for (let i = 0; i < dropdown.length; i++) {
     dropdown[i].addEventListener("click", function () {
         this.classList.toggle("active")
-        var dropdownContent = this.nextElementSibling
+        let dropdownContent = this.nextElementSibling
         if (dropdownContent.style.display === "flex") {
             dropdownContent.style.display = "none"
         } else {
