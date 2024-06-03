@@ -1,4 +1,34 @@
+////////////////////////////////////////
+// ZOHO PAGESENSE OVERLAY
+////////////////////////////////////////
+// Function to check if an element is visible
+function isElementVisible(element) {
+    console.log("visibility test");
+    return element && element.style.display !== "none"
+}
+
+// Function to show the overlay
+function showOverlay() {
+    console.log("overlay area")
+    document.getElementById("consent-overlay").style.display = "block"
+}
+
+// Function to hide the overlay
+function hideOverlay() {
+    document.getElementById("consent-overlay").style.display = "none"
+}
+
+// Show the overlay and banner if the banner is visible
+window.onload = function () {
+    let cookieBanner = document.getElementById("zpcookie-banner")
+    if (isElementVisible(cookieBanner)) {
+        showOverlay()
+    }
+}
+
+////////////////////////////////////////
 // NAVBAR DROPDOWNS
+////////////////////////////////////////
 const supportBtn = document.querySelector("#supportBtn")
 supportBtn.addEventListener("click", () => {
     document.querySelector("#supportBtn_arrow").classList.toggle("flip")
@@ -37,8 +67,16 @@ window.onclick = function (event) {
             }
         }
     }
+    // Remove the consent overlay
+    let cookieBanner = document.getElementById("zpcookie-banner")
+    if (!isElementVisible(cookieBanner)) {
+        hideOverlay()
+    }
 }
+
+////////////////////////////////////////
 // NAVBAR MOBILE OVERLAY ACTIONS
+////////////////////////////////////////
 const menuBtn = document.querySelector("#openMenu")
 function openNav() {
     if (menuBtn.getAttribute("name") === "menu-outline") {
@@ -80,7 +118,9 @@ document.querySelectorAll(".link-items").forEach((item) => {
     })
 })
 
+////////////////////////////////////////
 // More Features Section
+////////////////////////////////////////
 document.addEventListener("DOMContentLoaded", function () {
     const sections = document.querySelectorAll(".observer")
     const observer = new IntersectionObserver(

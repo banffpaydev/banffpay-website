@@ -19,7 +19,8 @@ const { title } = Astro.props
         <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
         <link rel="manifest" href="/site.webmanifest" />
         <!-- ZOHO PAGESENSE -->
-        <script is:inline src="https://cdn.pagesense.io/js/banffpaylimited/99705dae87cf4a8890d187cd637b5059.js"></script>
+        <script is:inline src="https://cdn.pagesense.io/js/banffpaylimited/99705dae87cf4a8890d187cd637b5059.js"
+        ></script>
         <title>{title}</title>
     </head>
     <body class="bg-brand-primary-50">
@@ -28,6 +29,8 @@ const { title } = Astro.props
         <AppShowcase />
         <!-- FOOTER -->
         <Footer />
+        <!-- To create an overlay -->
+        <div id="consent-overlay" style="display: none;"></div>
         <script src="../scripts/script.js"></script>
         <!-- ZOHO LIVE CHAT INTEGRATION -->
         <!-- <script>
@@ -46,5 +49,24 @@ const { title } = Astro.props
 <style is:global>
     body .flogo {
         display: none !important;
+    }
+
+    /* Style the overlay to cover the entire page */
+    #consent-overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.5);
+        z-index: 9999; /* Ensure it's above all other content */
+        display: none; /* Hide by default */
+    }
+
+    /* Style the consent banner to be clearly visible */
+    #zpcookie-banner {
+        position: fixed;
+        bottom: 0;
+        z-index: 10000; /* Ensure it's above the overlay */
     }
 </style>
