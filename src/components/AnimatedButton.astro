@@ -4,14 +4,14 @@ import { Image } from "astro:assets"
 const { classList, imgSrc, transactionAmt, time } = Astro.props
 ---
 
-<!-- <div class=`custom-div ${classList}`>
+<div class=`custom-div ${classList}`>
     <Image src={imgSrc} alt="users" class="custom-img" />
     <div class="custom-content">
         <span class="custom-amount">+ {transactionAmt}</span>
         <span class="custom-info">From Toni &bull; {time}</span>
     </div>
-</div> -->
-<div
+</div>
+<!-- <div
     class=`group absolute ${classList} bg-white w-20 h-20 rounded-full hover:w-72 transition-all duration-300 hidden lg:block overflow-hidden`
 >
     <Image src={imgSrc} alt="users" class="absolute w-16 h-16 top-10 left-10 -translate-x-1/2 -translate-y-1/2" />
@@ -21,7 +21,7 @@ const { classList, imgSrc, transactionAmt, time } = Astro.props
         <span class="text-green-500 text-lg font-semibold block">+ {transactionAmt}</span>
         <span class="text-gray-400 font-medium block">From Toni &bull; {time}</span>
     </div>
-</div>
+</div> -->
 
 <style>
     /* Container */
@@ -101,10 +101,27 @@ const { classList, imgSrc, transactionAmt, time } = Astro.props
     // Get all elements to hover
     const elements = document.querySelectorAll(".custom-div")
 
-    // Simulate hover on each element
-    elements.forEach((element, index) => {
-        setTimeout(() => {
-            simulateHover(element)
-        }, index * 3000) // Delay each hover effect by 3 seconds
-    })
+    setInterval(() => {}, 15000)
+
+    function triggerAllElements() {
+        // Simulate hover on each element
+        elements.forEach((element, index) => {
+            setTimeout(() => {
+                simulateHover(element)
+            }, index * 3000) // Delay each hover effect by 3 seconds
+        })
+    }
+
+    function startAnimation() {
+        // Trigger all elements
+        triggerAllElements()
+
+        // Repeat the animation every 15 seconds
+        setInterval(() => {
+            triggerAllElements()
+        }, 15000)
+    }
+
+    // Start the animation
+    startAnimation()
 </script>
