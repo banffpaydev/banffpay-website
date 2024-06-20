@@ -53,6 +53,17 @@ const { title } = Astro.props
         height: 340px !important;
         width: 380px !important;
     }
+
+    @media screen and (max-width: 600px) {
+        #zsiq_chat_wrap {
+            min-height: 380px !important;
+            height: 340px !important;
+            width: 420px !important;
+        }
+        #zsiq_float {
+            transform: scale(1.1) !important;
+        }
+    }
     body .flogo {
         display: none !important;
     }
