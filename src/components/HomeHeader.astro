@@ -215,7 +215,7 @@ import AnimatedButton from "./AnimatedButton.astro"
         width: 350px;
         height: 350px;
         transform: translate(-50%, -50%);
-        animation: rotate 20s infinite linear;
+        animation: rotate 30s infinite linear;
     }
 
     .small-image {
@@ -258,6 +258,13 @@ import AnimatedButton from "./AnimatedButton.astro"
         transform: translate(-50%, -50%);
     }
 
+    #img1, #img3 {
+        animation: counterX 30s infinite linear;
+    }
+
+    #img2, #img4 {
+        animation: counterY 30s infinite linear;
+    }
     @keyframes rotate {
         from {
             transform: translate(-50%, -50%) rotate(0deg);
@@ -266,6 +273,27 @@ import AnimatedButton from "./AnimatedButton.astro"
             transform: translate(-50%, -50%) rotate(360deg);
         }
     }
+
+    /* The smaller images would rotate in the opposite direction to prevent the images from turning upside down */
+    @keyframes counterX {
+        from {
+            transform: translateX(-50%) rotate(0deg);
+        }
+        to {
+            transform: translateX(-50%) rotate(-360deg);
+        }
+    }
+
+    @keyframes counterY {
+        from {
+            transform: translateY(-50%) rotate(0deg);
+        }
+        to {
+            transform: translateY(-50%) rotate(-360deg);
+        }
+    }
+
+
     @media screen and (min-width: 480px) {
         .container {
             width: 400px;
