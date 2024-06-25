@@ -46,11 +46,20 @@ languageBtn.addEventListener("click", () => {
     document.querySelector("#language_dropdown").classList.toggle("show")
 })
 
+const company_parent = document.querySelector(".company-parent")
+company_parent.addEventListener("click", () => {
+    document.querySelector(".company-child").classList.toggle("hide")
+})
+
 const service_parent = document.querySelector(".services-parent")
 service_parent.addEventListener("click", () => {
     document.querySelector(".services-child").classList.toggle("hide")
 })
 
+const support_parent = document.querySelector(".support-parent")
+support_parent.addEventListener("click", () => {
+    document.querySelector(".support-child").classList.toggle("hide")
+})
 // Close the dropdown if the user clicks outside of it
 window.onclick = function (event) {
     if (
