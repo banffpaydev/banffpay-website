@@ -4,6 +4,7 @@ import "@fontsource-variable/onest"
 
 import AppShowcase from "../components/AppShowcase.astro"
 import Footer from "../components/Footer.astro"
+import ZohoLinks from "@components/ZohoLinks.astro"
 
 const { title } = Astro.props
 ---
@@ -31,15 +32,20 @@ const { title } = Astro.props
         <Footer />
         <!-- To create an overlay -->
         <div id="consent-overlay"></div>
-        <!-- ZOHO LIVE CHAT INTEGRATION -->
-        <script>
-            window.$zoho = window.$zoho || {}
-            $zoho.salesiq = $zoho.salesiq || { ready: function () {} }
+        <!-- ZOHO CAMPAIGNS -->
+        <!--ZC Popup Code Starts-->
+        <script type="text/javascript" id="ZC_Forms_Popup" src="https://campaigns.zoho.com/js/optin.min.js"></script>
+        <script type="text/javascript">
+            window.onload = function () {
+                loadZCPopup(
+                    "3z6e31596c22afb840168c9bec48f4be761486062db5fb531497f5d1b8d7f65d88",
+                    "ZCFORMVIEW",
+                    "3z95a03afe05e87cd61615d51476a527fc"
+                )
+            }
         </script>
-        <script
-            id="zsiqscript"
-            src="https://salesiq.zohopublic.com/widget?wc=siq4c307361a44ff60fab3a3605cc36d5a0e88a372b0b74e436089042e86cbeee59"
-            defer></script>
+        <!-- ZOHO Links -->
+        <ZohoLinks />
         <!-- ION-ICON -->
         <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
         <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
@@ -77,8 +83,6 @@ const { title } = Astro.props
             bottom: 25px;
         }
     }
-
-
 
     /* Style the overlay to cover the entire page */
     #consent-overlay {
