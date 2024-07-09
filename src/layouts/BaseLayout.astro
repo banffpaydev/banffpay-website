@@ -64,13 +64,22 @@ const { title } = Astro.props
             transform: scale(1.1) !important;
         }
     }
-    body .flogo {
-        display: none !important;
+
+    @media screen and (max-width: 768px) {
+        #zsiq_chat_wrap {
+            min-height: 440px !important;
+            height: 640px !important;
+        }
+
+        #zsiq_float {
+            transform: scale(1.2) !important;
+            right: 25px;
+            bottom: 25px;
+        }
     }
 
-    #zsiq_chat_wrap .curP {
-        display: none !important;
-    }
+
+
     /* Style the overlay to cover the entire page */
     #consent-overlay {
         position: fixed;
