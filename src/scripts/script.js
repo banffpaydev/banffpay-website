@@ -231,7 +231,7 @@ function checkPosition() {
 // Initial check when the page loads
 checkPosition()
 
-////////////////////////////////////////
+/////////////////////////////////////////
 // Check position on scroll
 ////////////////////////////////////////
 window.addEventListener("scroll", checkPosition)
